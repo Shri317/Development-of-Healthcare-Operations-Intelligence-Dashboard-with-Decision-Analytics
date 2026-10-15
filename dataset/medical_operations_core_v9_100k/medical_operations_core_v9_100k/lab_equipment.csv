@@ -1,0 +1,41 @@
+equipment_id,facility_id,equipment_type,status,utilization_pct
+EQ0001,FAC001,Hematology Analyzer,Maintenance,82.3
+EQ0002,FAC001,X-Ray Machine,Maintenance,89.5
+EQ0003,FAC001,Biochemistry Analyzer,Operational,97.3
+EQ0004,FAC001,ECG Machine,Maintenance,92.0
+EQ0005,FAC001,Ultrasound,Operational,82.6
+EQ0006,FAC001,Ultrasound,Operational,95.9
+EQ0007,FAC002,ECG Machine,Operational,93.0
+EQ0008,FAC002,Ultrasound,Operational,76.4
+EQ0009,FAC002,Hematology Analyzer,Operational,71.8
+EQ0010,FAC002,PCR Analyzer,Maintenance,87.7
+EQ0011,FAC002,Hematology Analyzer,Maintenance,79.9
+EQ0012,FAC002,Hematology Analyzer,Maintenance,95.0
+EQ0013,FAC003,ECG Machine,Maintenance,75.4
+EQ0014,FAC003,X-Ray Machine,Operational,71.2
+EQ0015,FAC003,Ultrasound,Operational,89.1
+EQ0016,FAC003,PCR Analyzer,Operational,97.1
+EQ0017,FAC003,X-Ray Machine,Operational,80.4
+EQ0018,FAC003,Hematology Analyzer,Operational,75.3
+EQ0019,FAC004,X-Ray Machine,Operational,83.3
+EQ0020,FAC004,Biochemistry Analyzer,Operational,88.8
+EQ0021,FAC004,PCR Analyzer,Operational,93.3
+EQ0022,FAC004,Ultrasound,Operational,78.7
+EQ0023,FAC004,ECG Machine,Maintenance,92.5
+EQ0024,FAC004,PCR Analyzer,Operational,78.1
+EQ0025,FAC005,Biochemistry Analyzer,Operational,73.9
+EQ0026,FAC005,ECG Machine,Operational,70.2
+EQ0027,FAC005,ECG Machine,Maintenance,88.6
+EQ0028,FAC005,X-Ray Machine,Operational,91.9
+EQ0029,FAC005,Ultrasound,Operational,85.9
+EQ0030,FAC005,Hematology Analyzer,Operational,73.2
+EQ0031,FAC002,ECG Machine,Maintenance,93.0
+EQ0032,FAC004,Ultrasound,Operational,89.3
+EQ0033,FAC004,Biochemistry Analyzer,Operational,72.8
+EQ0034,FAC002,PCR Analyzer,Operational,82.4
+EQ0035,FAC004,ECG Machine,Operational,62.9
+EQ0036,FAC003,ECG Machine,Operational,88.3
+EQ0037,FAC004,ECG Machine,Operational,88.4
+EQ0038,FAC005,Biochemistry Analyzer,Operational,71.4
+EQ0039,FAC001,ECG Machine,Operational,73.1
+EQ0040,FAC005,Ultrasound,Operational,86.6

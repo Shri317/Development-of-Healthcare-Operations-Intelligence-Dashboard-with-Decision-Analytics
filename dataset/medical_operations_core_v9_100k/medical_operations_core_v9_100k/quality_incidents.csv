@@ -1,0 +1,980 @@
+incident_id,facility_id,department_id,incident_date,incident_type,severity,status,corrective_action_required
+INC11501,FAC003,DEP003,2026-03-31,Medication Error,Low,Closed,No
+INC12586,FAC002,DEP007,2023-12-27,Medication Error,Low,Reported,No
+INC12653,FAC002,DEP005,2025-05-21,Patient Safety,Moderate,Closed,No
+INC11055,FAC003,DEP007,2025-11-16,Medication Error,Moderate,Under Investigation,No
+INC10705,FAC004,DEP002,2025-08-02,Equipment Issue,High,Reported,No
+INC10106,FAC003,DEP004,2025-02-02,Documentation Error,High,Closed,Yes
+INC10589,FAC002,DEP005,2025-06-28,Patient Safety,Low,Under Investigation,No
+INC12468,FAC005,DEP003,2026-04-10,Documentation Error,Low,Under Investigation,Yes
+INC12413,FAC004,DEP006,2024-10-18,Equipment Issue,Moderate,Closed,Yes
+INC11600,FAC001,DEP007,2026-04-30,Equipment Issue,Low,Closed,No
+INC12464,FAC004,DEP001,2026-02-04,Documentation Error,Low,Reported,No
+INC10228,FAC004,DEP006,2025-03-11,Infection,Low,Closed,No
+INC10915,FAC002,DEP005,2025-10-05,Documentation Error,Moderate,Closed,Yes
+INC10794,FAC003,DEP001,2025-08-29,Documentation Error,Moderate,Closed,No
+INC13021,FAC005,DEP006,2024-10-13,Infection,High,Closed,No
+INC13543,FAC003,DEP005,2021-03-18,Patient Safety,Low,Reported,Yes
+INC11073,FAC004,DEP005,2025-11-22,Infection,High,Under Investigation,No
+INC13351,FAC003,DEP003,2021-09-06,Medication Error,Low,Closed,No
+INC11744,FAC001,DEP004,2026-06-13,Medication Error,Low,Closed,No
+INC11084,FAC002,DEP005,2025-11-25,Patient Safety,Low,Reported,No
+INC10926,FAC002,DEP008,2025-10-08,Patient Safety,Low,Closed,No
+INC13049,FAC005,DEP007,2024-07-06,Equipment Issue,Moderate,Closed,Yes
+INC11117,FAC005,DEP007,2025-12-05,Medication Error,Low,Closed,No
+INC10642,FAC005,DEP001,2025-07-14,Documentation Error,Low,Closed,No
+INC14767,FAC003,DEP008,2021-10-24,Equipment Issue,Moderate,Closed,No
+INC10501,FAC004,DEP006,2025-06-01,Documentation Error,High,Closed,No
+INC14066,FAC005,DEP007,2022-10-27,Infection,Moderate,Closed,No
+INC10333,FAC004,DEP001,2025-04-11,Patient Fall,Moderate,Reported,No
+INC14684,FAC005,DEP008,2023-04-24,Documentation Error,Moderate,Reported,Yes
+INC10486,FAC005,DEP005,2025-05-28,Patient Fall,High,Closed,Yes
+INC11962,FAC001,DEP003,2026-12-16,Documentation Error,Moderate,Closed,Yes
+INC10393,FAC002,DEP005,2025-04-30,Documentation Error,High,Closed,No
+INC14842,FAC001,DEP008,2022-03-12,Infection,Low,Closed,No
+INC14866,FAC002,DEP006,2026-04-14,Infection,Low,Reported,No
+INC11755,FAC002,DEP002,2026-06-16,Patient Fall,Low,Reported,Yes
+INC12515,FAC002,DEP002,2026-05-15,Medication Error,Moderate,Closed,No
+INC13585,FAC003,DEP005,2024-04-09,Infection,High,Reported,No
+INC14315,FAC003,DEP001,2022-03-07,Medication Error,Low,Closed,Yes
+INC14966,FAC005,DEP001,2021-11-10,Patient Safety,Low,Closed,No
+INC12099,FAC002,DEP005,2026-07-12,Patient Safety,Moderate,Closed,No
+INC13599,FAC004,DEP004,2022-11-05,Equipment Issue,High,Reported,Yes
+INC14121,FAC003,DEP008,2024-04-06,Medication Error,Low,Closed,Yes
+INC10029,FAC002,DEP003,2025-01-09,Patient Safety,Low,Closed,No
+INC10065,FAC003,DEP007,2025-01-20,Equipment Issue,High,Reported,No
+INC10838,FAC002,DEP002,2025-09-11,Patient Fall,Low,Under Investigation,Yes
+INC13906,FAC002,DEP005,2023-07-06,Patient Safety,Low,Closed,Yes
+INC13773,FAC002,DEP002,2022-06-21,Patient Fall,High,Closed,No
+INC14635,FAC004,DEP005,2023-10-03,Medication Error,Low,Closed,No
+INC13161,FAC004,DEP002,2026-04-08,Equipment Issue,High,Reported,No
+INC12659,FAC005,DEP006,2023-04-28,Patient Fall,Moderate,Closed,Yes
+INC14615,FAC003,DEP001,2026-01-12,Patient Fall,Moderate,Closed,No
+INC14628,FAC003,DEP003,2025-07-19,Infection,Moderate,Closed,No
+INC12451,FAC005,DEP001,2026-10-06,Patient Fall,High,Reported,Yes
+INC12846,FAC001,DEP004,2026-09-21,Documentation Error,Low,Closed,Yes
+INC11144,FAC001,DEP007,2025-12-13,Patient Fall,Moderate,Under Investigation,No
+INC13078,FAC002,DEP002,2022-12-29,Infection,Moderate,Under Investigation,No
+INC11103,FAC005,DEP002,2025-12-01,Patient Safety,High,Closed,No
+INC10168,FAC004,DEP005,2025-02-20,Patient Safety,Low,Closed,No
+INC11670,FAC003,DEP006,2026-05-21,Patient Fall,Low,Closed,Yes
+INC12570,FAC001,DEP004,2023-03-24,Equipment Issue,Low,Under Investigation,No
+INC12377,FAC005,DEP001,2021-01-10,Medication Error,Moderate,Closed,Yes
+INC14395,FAC004,DEP005,2025-11-24,Medication Error,High,Closed,No
+INC14257,FAC005,DEP005,2022-08-12,Equipment Issue,Moderate,Reported,No
+INC13862,FAC003,DEP007,2025-11-12,Medication Error,High,Closed,Yes
+INC10023,FAC004,DEP004,2025-01-07,Medication Error,Moderate,Closed,No
+INC12633,FAC001,DEP005,2021-07-05,Patient Safety,Moderate,Reported,Yes
+INC13340,FAC005,DEP003,2025-03-17,Medication Error,Moderate,Closed,No
+INC12215,FAC005,DEP007,2025-08-29,Medication Error,High,Closed,Yes
+INC13682,FAC001,DEP001,2022-01-28,Patient Safety,Moderate,Under Investigation,Yes
+INC14724,FAC003,DEP001,2024-12-28,Documentation Error,Moderate,Closed,No
+INC11907,FAC005,DEP005,2022-11-22,Infection,High,Closed,No
+INC10084,FAC005,DEP001,2025-01-26,Patient Fall,Low,Closed,No
+INC10227,FAC005,DEP004,2025-03-10,Infection,Moderate,Under Investigation,Yes
+INC10296,FAC004,DEP002,2025-03-31,Equipment Issue,Moderate,Closed,Yes
+INC11001,FAC005,DEP005,2025-10-31,Documentation Error,Low,Under Investigation,No
+INC12138,FAC003,DEP005,2023-12-16,Patient Fall,Moderate,Closed,No
+INC10711,FAC001,DEP007,2025-08-04,Equipment Issue,Low,Closed,No
+INC12801,FAC002,DEP006,2025-09-16,Patient Fall,Low,Closed,Yes
+INC12527,FAC002,DEP007,2023-04-05,Documentation Error,High,Closed,No
+INC13752,FAC003,DEP007,2024-05-03,Medication Error,Low,Reported,Yes
+INC13321,FAC003,DEP005,2025-12-20,Medication Error,Low,Closed,Yes
+INC13181,FAC002,DEP006,2026-08-27,Documentation Error,Moderate,Closed,No
+INC14183,FAC004,DEP002,2023-02-18,Patient Safety,Moderate,Closed,No
+INC11615,FAC001,DEP001,2026-05-05,Equipment Issue,Moderate,Reported,Yes
+INC13024,FAC005,DEP005,2023-09-06,Patient Safety,Moderate,Closed,No
+INC11413,FAC003,DEP001,2026-03-05,Equipment Issue,High,Under Investigation,No
+INC10763,FAC002,DEP003,2025-08-20,Equipment Issue,Low,Closed,No
+INC10655,FAC005,DEP006,2025-07-18,Documentation Error,Moderate,Closed,Yes
+INC14797,FAC004,DEP001,2026-02-16,Patient Safety,High,Closed,Yes
+INC13849,FAC005,DEP008,2025-06-11,Documentation Error,Low,Closed,No
+INC14153,FAC003,DEP001,2022-09-13,Infection,Moderate,Closed,No
+INC10468,FAC001,DEP005,2025-05-22,Infection,High,Closed,Yes
+INC10157,FAC003,DEP005,2025-02-17,Infection,Moderate,Under Investigation,No
+INC11295,FAC002,DEP006,2026-01-28,Equipment Issue,Low,Closed,No
+INC10497,FAC003,DEP002,2025-05-31,Medication Error,Moderate,Closed,No
+INC14740,FAC003,DEP005,2025-08-21,Medication Error,Moderate,Under Investigation,No
+INC12940,FAC003,DEP008,2026-06-01,Infection,Low,Closed,Yes
+INC13456,FAC003,DEP001,2024-09-25,Patient Fall,Moderate,Closed,No
+INC10373,FAC002,DEP007,2025-04-23,Infection,Moderate,Closed,Yes
+INC10079,FAC005,DEP003,2025-01-24,Medication Error,Moderate,Closed,No
+INC11553,FAC002,DEP007,2026-04-16,Equipment Issue,Moderate,Reported,No
+INC11669,FAC004,DEP001,2026-05-21,Equipment Issue,Low,Closed,No
+INC12131,FAC001,DEP005,2025-06-02,Infection,Low,Closed,Yes
+INC14439,FAC004,DEP006,2022-01-24,Documentation Error,High,Closed,Yes
+INC10465,FAC003,DEP006,2025-05-21,Documentation Error,Low,Closed,No
+INC10248,FAC004,DEP004,2025-03-17,Patient Safety,Low,Closed,Yes
+INC10931,FAC004,DEP003,2025-10-10,Infection,Moderate,Closed,Yes
+INC11335,FAC002,DEP001,2026-02-09,Medication Error,Low,Closed,No
+INC14524,FAC002,DEP007,2023-05-06,Infection,High,Under Investigation,Yes
+INC11338,FAC001,DEP001,2026-02-10,Documentation Error,Low,Closed,No
+INC11406,FAC003,DEP007,2026-03-02,Documentation Error,Moderate,Closed,No
+INC11090,FAC001,DEP006,2025-11-27,Patient Fall,Low,Reported,No
+INC14209,FAC002,DEP001,2024-01-27,Medication Error,Moderate,Under Investigation,Yes
+INC10742,FAC002,DEP006,2025-08-13,Medication Error,Critical,Closed,Yes
+INC12323,FAC001,DEP003,2021-02-16,Infection,Moderate,Under Investigation,Yes
+INC13601,FAC002,DEP001,2022-07-30,Medication Error,Low,Closed,Yes
+INC12123,FAC001,DEP002,2025-05-11,Equipment Issue,Low,Closed,Yes
+INC12094,FAC001,DEP008,2024-08-14,Infection,Low,Under Investigation,No
+INC10240,FAC002,DEP008,2025-03-14,Equipment Issue,Low,Under Investigation,No
+INC12351,FAC003,DEP003,2024-07-07,Documentation Error,Moderate,Reported,No
+INC11370,FAC002,DEP007,2026-02-20,Infection,Low,Closed,No
+INC11057,FAC002,DEP008,2025-11-17,Infection,Low,Reported,Yes
+INC14816,FAC005,DEP008,2024-03-03,Documentation Error,High,Reported,Yes
+INC10199,FAC005,DEP005,2025-03-02,Infection,Low,Closed,Yes
+INC12280,FAC001,DEP003,2025-10-18,Documentation Error,High,Under Investigation,No
+INC14749,FAC001,DEP002,2025-10-18,Patient Fall,High,Closed,No
+INC12220,FAC005,DEP008,2026-01-29,Patient Fall,Critical,Reported,No
+INC14771,FAC004,DEP006,2025-06-20,Infection,High,Reported,No
+INC12819,FAC001,DEP004,2025-02-22,Equipment Issue,Moderate,Reported,No
+INC13150,FAC005,DEP007,2021-10-12,Equipment Issue,Moderate,Closed,Yes
+INC14256,FAC002,DEP005,2023-11-23,Documentation Error,Low,Closed,Yes
+INC13107,FAC005,DEP003,2025-03-02,Patient Fall,Moderate,Reported,Yes
+INC11973,FAC001,DEP008,2023-12-23,Documentation Error,Moderate,Closed,No
+INC11375,FAC002,DEP002,2026-02-21,Patient Fall,Moderate,Under Investigation,Yes
+INC13968,FAC003,DEP008,2024-05-16,Patient Safety,Low,Closed,No
+INC14062,FAC004,DEP004,2025-11-14,Patient Fall,Low,Under Investigation,No
+INC14445,FAC005,DEP001,2023-03-24,Infection,Moderate,Closed,Yes
+INC13557,FAC003,DEP005,2023-07-07,Patient Safety,Low,Under Investigation,No
+INC10964,FAC001,DEP006,2025-10-20,Medication Error,High,Reported,No
+INC10179,FAC004,DEP001,2025-02-24,Equipment Issue,Low,Closed,No
+INC13698,FAC005,DEP003,2021-08-11,Medication Error,Low,Closed,Yes
+INC13821,FAC001,DEP001,2021-06-04,Equipment Issue,Low,Closed,No
+INC14878,FAC002,DEP002,2022-04-23,Patient Safety,Low,Closed,Yes
+INC13899,FAC005,DEP005,2026-01-18,Medication Error,Low,Closed,No
+INC14487,FAC002,DEP001,2021-08-29,Patient Fall,High,Closed,No
+INC13238,FAC001,DEP004,2022-01-16,Documentation Error,Moderate,Under Investigation,No
+INC12974,FAC005,DEP001,2023-06-04,Medication Error,Moderate,Reported,Yes
+INC13580,FAC003,DEP005,2024-08-08,Patient Safety,Moderate,Closed,No
+INC12887,FAC002,DEP005,2026-10-29,Medication Error,Low,Reported,Yes
+INC12575,FAC001,DEP003,2025-02-20,Medication Error,Low,Closed,No
+INC11419,FAC005,DEP005,2026-03-06,Patient Safety,High,Closed,Yes
+INC13907,FAC001,DEP003,2024-03-15,Equipment Issue,Low,Closed,No
+INC14673,FAC005,DEP001,2025-06-30,Medication Error,Low,Reported,No
+INC14902,FAC002,DEP001,2025-01-20,Documentation Error,Moderate,Closed,No
+INC11860,FAC002,DEP007,2026-12-01,Documentation Error,Low,Closed,Yes
+INC10008,FAC004,DEP007,2025-01-03,Equipment Issue,Moderate,Closed,Yes
+INC12894,FAC003,DEP003,2025-12-21,Infection,Moderate,Under Investigation,Yes
+INC12847,FAC003,DEP007,2026-01-12,Infection,High,Closed,No
+INC13664,FAC001,DEP001,2024-11-01,Medication Error,Moderate,Reported,No
+INC10144,FAC005,DEP002,2025-02-13,Patient Fall,Low,Under Investigation,Yes
+INC12104,FAC005,DEP006,2022-06-24,Patient Fall,Low,Closed,Yes
+INC13143,FAC004,DEP002,2022-12-17,Patient Safety,Moderate,Closed,No
+INC10841,FAC001,DEP001,2025-09-12,Patient Safety,Low,Under Investigation,No
+INC11128,FAC002,DEP007,2025-12-08,Equipment Issue,Low,Reported,No
+INC10151,FAC004,DEP006,2025-02-15,Documentation Error,Low,Closed,No
+INC13591,FAC004,DEP007,2026-10-02,Infection,Low,Closed,No
+INC11052,FAC003,DEP005,2025-11-15,Patient Safety,Moderate,Closed,Yes
+INC11590,FAC004,DEP005,2026-04-27,Equipment Issue,Low,Closed,No
+INC13008,FAC001,DEP003,2021-08-07,Patient Fall,High,Reported,No
+INC12029,FAC002,DEP006,2022-04-21,Patient Safety,Moderate,Closed,No
+INC13418,FAC001,DEP004,2022-05-07,Infection,Low,Closed,Yes
+INC11807,FAC003,DEP007,2021-02-18,Patient Fall,Low,Reported,No
+INC12696,FAC005,DEP001,2026-01-04,Medication Error,Moderate,Closed,No
+INC13039,FAC003,DEP007,2025-01-29,Patient Fall,Moderate,Closed,No
+INC10472,FAC005,DEP006,2025-05-23,Patient Fall,Low,Under Investigation,Yes
+INC13289,FAC004,DEP001,2025-06-13,Equipment Issue,Moderate,Closed,No
+INC14074,FAC004,DEP005,2026-10-01,Infection,Low,Closed,Yes
+INC13496,FAC002,DEP007,2026-01-13,Patient Safety,Low,Closed,Yes
+INC10279,FAC001,DEP001,2025-03-26,Documentation Error,Moderate,Reported,No
+INC11741,FAC002,DEP005,2026-06-12,Patient Fall,Low,Closed,No
+INC14624,FAC004,DEP001,2023-06-28,Equipment Issue,Low,Closed,No
+INC12886,FAC005,DEP006,2024-10-11,Medication Error,High,Closed,No
+INC11941,FAC004,DEP002,2021-11-19,Patient Fall,Low,Closed,No
+INC10100,FAC001,DEP006,2025-01-31,Patient Fall,Low,Closed,No
+INC12804,FAC003,DEP001,2026-07-21,Equipment Issue,Moderate,Reported,Yes
+INC13570,FAC004,DEP004,2026-08-04,Infection,High,Closed,No
+INC13684,FAC002,DEP007,2023-12-02,Infection,High,Closed,Yes
+INC13661,FAC005,DEP008,2021-04-05,Patient Safety,Low,Closed,No
+INC10530,FAC003,DEP007,2025-06-10,Documentation Error,Low,Closed,No
+INC11886,FAC003,DEP007,2025-01-18,Patient Fall,Low,Reported,No
+INC10681,FAC001,DEP005,2025-07-26,Patient Safety,Low,Closed,Yes
+INC13794,FAC001,DEP001,2021-12-11,Medication Error,Low,Closed,Yes
+INC13944,FAC005,DEP001,2021-10-07,Documentation Error,Moderate,Closed,No
+INC14666,FAC005,DEP001,2023-05-14,Infection,Moderate,Under Investigation,Yes
+INC12018,FAC002,DEP007,2026-04-05,Infection,High,Under Investigation,No
+INC11096,FAC002,DEP008,2025-11-29,Documentation Error,High,Closed,No
+INC10829,FAC002,DEP004,2025-09-09,Documentation Error,High,Closed,No
+INC12805,FAC005,DEP007,2023-01-11,Patient Safety,Low,Closed,No
+INC13829,FAC002,DEP001,2023-06-18,Medication Error,Low,Closed,No
+INC14381,FAC004,DEP007,2023-09-22,Medication Error,High,Closed,No
+INC13891,FAC004,DEP006,2021-03-25,Infection,Low,Reported,Yes
+INC10764,FAC001,DEP007,2025-08-20,Patient Fall,Moderate,Closed,No
+INC12767,FAC004,DEP005,2026-06-15,Infection,High,Reported,Yes
+INC14328,FAC001,DEP003,2023-08-07,Documentation Error,Low,Under Investigation,No
+INC13295,FAC002,DEP002,2025-01-05,Documentation Error,Low,Reported,No
+INC12194,FAC002,DEP001,2024-02-29,Patient Safety,Moderate,Closed,No
+INC12357,FAC001,DEP005,2026-04-29,Patient Safety,High,Reported,No
+INC13425,FAC003,DEP001,2023-11-18,Patient Fall,High,Closed,No
+INC13979,FAC005,DEP006,2024-05-12,Equipment Issue,Low,Closed,No
+INC10911,FAC001,DEP008,2025-10-03,Equipment Issue,Low,Closed,Yes
+INC13145,FAC005,DEP007,2024-03-26,Patient Safety,High,Closed,Yes
+INC10999,FAC003,DEP005,2025-10-30,Equipment Issue,Low,Closed,Yes
+INC13653,FAC001,DEP008,2024-07-12,Medication Error,High,Reported,Yes
+INC12483,FAC003,DEP008,2026-03-09,Infection,Low,Under Investigation,No
+INC14076,FAC001,DEP001,2024-01-10,Patient Fall,Moderate,Reported,No
+INC12370,FAC005,DEP007,2022-12-16,Equipment Issue,Moderate,Closed,No
+INC14838,FAC002,DEP006,2023-08-20,Medication Error,Low,Closed,Yes
+INC10033,FAC001,DEP007,2025-01-10,Patient Fall,High,Closed,Yes
+INC13789,FAC004,DEP004,2024-01-24,Medication Error,Low,Reported,No
+INC11020,FAC004,DEP007,2025-11-06,Medication Error,High,Closed,No
+INC11647,FAC001,DEP002,2026-05-14,Patient Safety,Moderate,Closed,No
+INC10733,FAC004,DEP002,2025-08-11,Patient Safety,Low,Closed,No
+INC14582,FAC003,DEP008,2023-10-06,Patient Safety,Low,Closed,Yes
+INC13274,FAC001,DEP008,2025-08-20,Patient Safety,Low,Closed,Yes
+INC11620,FAC003,DEP002,2026-05-06,Documentation Error,Moderate,Reported,No
+INC13135,FAC002,DEP006,2024-03-22,Patient Fall,High,Closed,Yes
+INC12689,FAC005,DEP003,2026-10-16,Equipment Issue,Moderate,Under Investigation,No
+INC12707,FAC002,DEP005,2021-10-10,Infection,High,Closed,Yes
+INC10297,FAC003,DEP005,2025-03-31,Infection,High,Closed,Yes
+INC12339,FAC003,DEP008,2025-09-26,Patient Safety,Low,Closed,No
+INC10653,FAC004,DEP002,2025-07-17,Medication Error,Low,Closed,Yes
+INC13774,FAC002,DEP007,2023-02-22,Infection,Moderate,Closed,No
+INC11255,FAC001,DEP008,2026-01-16,Documentation Error,Moderate,Under Investigation,Yes
+INC14520,FAC002,DEP001,2023-08-17,Documentation Error,High,Under Investigation,No
+INC10230,FAC002,DEP007,2025-03-11,Patient Fall,Low,Closed,No
+INC13276,FAC004,DEP005,2022-06-26,Patient Safety,Low,Closed,No
+INC13230,FAC003,DEP008,2025-06-08,Medication Error,Low,Closed,No
+INC10691,FAC004,DEP002,2025-07-29,Equipment Issue,Moderate,Closed,No
+INC12754,FAC003,DEP005,2026-01-14,Medication Error,Critical,Closed,No
+INC14863,FAC001,DEP003,2026-05-15,Documentation Error,Low,Closed,No
+INC10969,FAC005,DEP002,2025-10-21,Documentation Error,Critical,Reported,Yes
+INC10633,FAC005,DEP001,2025-07-11,Medication Error,Low,Under Investigation,No
+INC14092,FAC002,DEP006,2025-05-06,Patient Safety,Moderate,Closed,No
+INC14077,FAC002,DEP007,2021-08-24,Patient Safety,Low,Reported,Yes
+INC11321,FAC001,DEP002,2026-02-05,Patient Fall,Moderate,Closed,No
+INC11831,FAC004,DEP006,2023-08-27,Patient Fall,Low,Under Investigation,Yes
+INC12178,FAC002,DEP002,2025-03-11,Medication Error,Moderate,Closed,No
+INC11417,FAC001,DEP001,2026-03-06,Infection,High,Closed,Yes
+INC11782,FAC001,DEP005,2026-06-24,Infection,Moderate,Under Investigation,No
+INC14715,FAC004,DEP006,2021-10-21,Medication Error,Low,Closed,Yes
+INC14701,FAC005,DEP007,2026-08-05,Patient Safety,Moderate,Closed,Yes
+INC14118,FAC001,DEP004,2024-10-06,Patient Safety,Moderate,Closed,No
+INC11652,FAC004,DEP007,2026-05-16,Documentation Error,Low,Closed,Yes
+INC11483,FAC005,DEP002,2026-03-26,Patient Fall,Moderate,Under Investigation,No
+INC12275,FAC001,DEP002,2022-10-28,Documentation Error,Moderate,Closed,No
+INC10877,FAC001,DEP005,2025-09-23,Infection,High,Under Investigation,No
+INC13525,FAC002,DEP002,2026-03-27,Patient Safety,Low,Reported,No
+INC12016,FAC003,DEP007,2021-09-18,Equipment Issue,High,Closed,Yes
+INC10426,FAC002,DEP006,2025-05-10,Equipment Issue,Moderate,Closed,Yes
+INC10626,FAC003,DEP005,2025-07-09,Medication Error,Low,Closed,Yes
+INC11589,FAC002,DEP005,2026-04-27,Patient Fall,Moderate,Closed,No
+INC12223,FAC003,DEP005,2024-07-04,Documentation Error,High,Closed,No
+INC12217,FAC002,DEP007,2026-12-25,Medication Error,Low,Closed,No
+INC14483,FAC005,DEP007,2026-10-29,Medication Error,Low,Closed,No
+INC11485,FAC003,DEP001,2026-03-26,Patient Fall,Low,Closed,No
+INC11739,FAC002,DEP008,2026-06-11,Medication Error,Low,Reported,No
+INC12480,FAC005,DEP007,2024-07-02,Documentation Error,Low,Reported,No
+INC12584,FAC004,DEP007,2022-11-04,Patient Safety,Moderate,Reported,No
+INC12893,FAC002,DEP002,2025-03-18,Medication Error,Low,Reported,Yes
+INC10149,FAC001,DEP002,2025-02-15,Medication Error,High,Closed,No
+INC10676,FAC005,DEP006,2025-07-24,Patient Safety,Moderate,Closed,No
+INC11261,FAC003,DEP001,2026-01-18,Equipment Issue,Moderate,Under Investigation,No
+INC14917,FAC004,DEP002,2026-08-17,Equipment Issue,Low,Reported,Yes
+INC10012,FAC004,DEP002,2025-01-04,Equipment Issue,Moderate,Closed,Yes
+INC11833,FAC005,DEP006,2023-01-15,Patient Fall,Moderate,Under Investigation,No
+INC13248,FAC002,DEP005,2023-01-21,Patient Fall,Low,Closed,No
+INC11491,FAC002,DEP001,2026-03-28,Infection,Low,Under Investigation,Yes
+INC12727,FAC004,DEP005,2024-06-23,Patient Fall,Low,Closed,No
+INC13686,FAC004,DEP006,2021-10-29,Infection,Low,Closed,Yes
+INC11424,FAC005,DEP004,2026-03-08,Infection,Moderate,Closed,No
+INC14605,FAC003,DEP003,2022-06-05,Documentation Error,High,Reported,No
+INC14595,FAC002,DEP002,2024-08-27,Patient Safety,Low,Closed,No
+INC10731,FAC004,DEP005,2025-08-10,Infection,High,Reported,No
+INC11231,FAC002,DEP001,2026-01-08,Equipment Issue,Low,Under Investigation,No
+INC11634,FAC003,DEP008,2026-05-11,Medication Error,Low,Under Investigation,No
+INC13936,FAC004,DEP001,2022-01-05,Medication Error,Low,Closed,Yes
+INC11210,FAC003,DEP001,2026-01-02,Infection,Low,Reported,No
+INC13268,FAC001,DEP003,2025-08-17,Patient Safety,Low,Reported,No
+INC11934,FAC003,DEP003,2025-07-08,Patient Fall,Moderate,Closed,Yes
+INC10553,FAC003,DEP008,2025-06-17,Patient Fall,Low,Closed,Yes
+INC10491,FAC003,DEP008,2025-05-29,Equipment Issue,Low,Under Investigation,Yes
+INC12962,FAC003,DEP005,2026-06-13,Documentation Error,Low,Closed,No
+INC12329,FAC003,DEP007,2026-03-16,Infection,Low,Closed,No
+INC12195,FAC005,DEP005,2025-01-29,Infection,Moderate,Closed,No
+INC13064,FAC002,DEP005,2021-02-11,Equipment Issue,Low,Closed,No
+INC10657,FAC003,DEP005,2025-07-19,Infection,Moderate,Closed,Yes
+INC12374,FAC001,DEP001,2025-03-30,Documentation Error,Low,Closed,No
+INC12225,FAC005,DEP003,2021-07-16,Equipment Issue,Moderate,Under Investigation,Yes
+INC14264,FAC003,DEP005,2024-07-28,Medication Error,Moderate,Reported,Yes
+INC11170,FAC004,DEP002,2025-12-21,Equipment Issue,Low,Closed,No
+INC10132,FAC004,DEP007,2025-02-09,Infection,Moderate,Closed,Yes
+INC10471,FAC003,DEP005,2025-05-23,Equipment Issue,Moderate,Closed,No
+INC13225,FAC002,DEP005,2024-12-31,Equipment Issue,Critical,Closed,Yes
+INC11405,FAC002,DEP001,2026-03-02,Infection,Low,Closed,Yes
+INC12876,FAC001,DEP003,2026-11-07,Documentation Error,Low,Under Investigation,Yes
+INC14504,FAC002,DEP006,2025-07-05,Documentation Error,High,Closed,No
+INC14692,FAC002,DEP007,2023-05-30,Patient Fall,Low,Closed,Yes
+INC12826,FAC003,DEP001,2022-07-09,Patient Safety,Low,Under Investigation,No
+INC10287,FAC002,DEP001,2025-03-28,Patient Fall,Low,Closed,Yes
+INC11869,FAC003,DEP003,2022-11-03,Patient Safety,Low,Closed,No
+INC13114,FAC003,DEP007,2026-03-28,Documentation Error,Low,Reported,No
+INC13625,FAC002,DEP007,2022-06-27,Documentation Error,Moderate,Closed,No
+INC12312,FAC002,DEP006,2023-04-21,Patient Safety,Low,Under Investigation,Yes
+INC14923,FAC002,DEP006,2024-10-22,Patient Fall,Low,Closed,No
+INC11618,FAC005,DEP006,2026-05-06,Infection,Low,Closed,Yes
+INC10994,FAC005,DEP005,2025-10-29,Medication Error,Moderate,Under Investigation,Yes
+INC11803,FAC005,DEP006,2022-06-03,Patient Safety,Low,Closed,No
+INC12642,FAC002,DEP001,2022-11-20,Medication Error,Low,Closed,Yes
+INC14802,FAC005,DEP007,2023-05-17,Patient Safety,Moderate,Closed,Yes
+INC13535,FAC001,DEP002,2023-01-30,Infection,Moderate,Under Investigation,Yes
+INC14831,FAC003,DEP001,2023-05-04,Equipment Issue,Moderate,Closed,Yes
+INC13911,FAC004,DEP006,2021-08-19,Patient Safety,High,Under Investigation,Yes
+INC12107,FAC003,DEP003,2024-09-17,Patient Fall,Low,Under Investigation,No
+INC13044,FAC001,DEP002,2025-08-23,Documentation Error,Moderate,Closed,No
+INC10416,FAC005,DEP004,2025-05-07,Equipment Issue,High,Closed,No
+INC10977,FAC004,DEP003,2025-10-23,Patient Safety,High,Under Investigation,No
+INC12417,FAC005,DEP005,2025-11-10,Equipment Issue,Moderate,Closed,No
+INC10505,FAC005,DEP005,2025-06-02,Patient Safety,Low,Closed,No
+INC14152,FAC003,DEP003,2025-12-18,Medication Error,Moderate,Closed,Yes
+INC14255,FAC003,DEP003,2021-11-28,Patient Safety,Low,Closed,Yes
+INC13941,FAC004,DEP001,2025-07-01,Patient Safety,Moderate,Reported,No
+INC10414,FAC004,DEP003,2025-05-06,Patient Fall,High,Under Investigation,Yes
+INC14148,FAC002,DEP007,2025-12-26,Patient Fall,Low,Closed,Yes
+INC11183,FAC004,DEP005,2025-12-25,Patient Fall,Moderate,Closed,No
+INC10485,FAC002,DEP008,2025-05-27,Infection,Low,Closed,No
+INC10893,FAC005,DEP006,2025-09-28,Infection,Moderate,Closed,Yes
+INC10805,FAC004,DEP003,2025-09-01,Patient Safety,Moderate,Reported,Yes
+INC10555,FAC003,DEP003,2025-06-18,Patient Safety,Critical,Closed,No
+INC13825,FAC002,DEP002,2023-08-30,Medication Error,High,Reported,No
+INC11197,FAC004,DEP005,2025-12-29,Patient Safety,Low,Closed,No
+INC14253,FAC003,DEP001,2023-12-24,Infection,Moderate,Closed,Yes
+INC14058,FAC005,DEP006,2025-04-25,Infection,Moderate,Closed,Yes
+INC11293,FAC002,DEP002,2026-01-27,Medication Error,High,Closed,No
+INC12221,FAC004,DEP007,2021-07-15,Medication Error,Moderate,Closed,No
+INC13504,FAC005,DEP006,2023-02-03,Patient Fall,High,Closed,No
+INC13654,FAC004,DEP005,2024-02-03,Patient Safety,Low,Under Investigation,No
+INC14758,FAC002,DEP001,2023-05-07,Infection,High,Reported,No
+INC13006,FAC004,DEP007,2022-04-14,Medication Error,Low,Under Investigation,Yes
+INC12093,FAC005,DEP001,2021-08-12,Documentation Error,Critical,Closed,No
+INC12187,FAC005,DEP001,2026-07-07,Infection,Moderate,Closed,No
+INC13036,FAC002,DEP007,2025-07-07,Infection,Low,Closed,No
+INC13918,FAC005,DEP006,2022-12-03,Documentation Error,Moderate,Closed,Yes
+INC11272,FAC003,DEP008,2026-01-21,Patient Safety,Moderate,Under Investigation,No
+INC10290,FAC001,DEP003,2025-03-29,Documentation Error,Moderate,Closed,No
+INC14827,FAC001,DEP004,2024-02-29,Patient Fall,Moderate,Closed,Yes
+INC10252,FAC004,DEP007,2025-03-18,Patient Fall,Low,Reported,No
+INC13245,FAC005,DEP001,2026-03-19,Infection,Low,Reported,Yes
+INC10350,FAC002,DEP006,2025-04-17,Medication Error,Moderate,Reported,Yes
+INC11187,FAC002,DEP003,2025-12-26,Patient Safety,High,Closed,No
+INC11961,FAC001,DEP008,2025-09-25,Medication Error,High,Closed,No
+INC10422,FAC004,DEP005,2025-05-08,Patient Safety,Moderate,Under Investigation,Yes
+INC10090,FAC005,DEP004,2025-01-28,Infection,Low,Closed,No
+INC13729,FAC005,DEP007,2026-07-19,Infection,Moderate,Closed,No
+INC12236,FAC003,DEP003,2026-11-16,Medication Error,Moderate,Closed,Yes
+INC10670,FAC002,DEP005,2025-07-22,Infection,Moderate,Reported,Yes
+INC13040,FAC002,DEP005,2025-02-19,Equipment Issue,Moderate,Closed,Yes
+INC10026,FAC005,DEP003,2025-01-08,Medication Error,Moderate,Closed,Yes
+INC10429,FAC004,DEP005,2025-05-10,Patient Fall,Low,Closed,No
+INC10683,FAC001,DEP007,2025-07-26,Infection,Low,Under Investigation,No
+INC14463,FAC001,DEP001,2024-01-02,Patient Safety,Low,Closed,Yes
+INC13945,FAC003,DEP003,2022-12-07,Patient Safety,High,Closed,No
+INC13523,FAC002,DEP005,2026-07-14,Infection,Low,Closed,Yes
+INC11541,FAC001,DEP005,2026-04-12,Equipment Issue,Low,Closed,No
+INC12031,FAC004,DEP004,2023-03-09,Documentation Error,Low,Closed,Yes
+INC12232,FAC003,DEP008,2023-10-07,Patient Safety,High,Reported,No
+INC14120,FAC001,DEP008,2021-03-22,Medication Error,Moderate,Closed,No
+INC13235,FAC001,DEP004,2026-02-22,Infection,Moderate,Closed,No
+INC10254,FAC005,DEP002,2025-03-18,Infection,Low,Closed,No
+INC11029,FAC005,DEP005,2025-11-08,Patient Safety,Moderate,Closed,No
+INC14392,FAC001,DEP005,2024-07-24,Medication Error,Moderate,Closed,Yes
+INC13800,FAC002,DEP005,2022-03-25,Medication Error,Low,Reported,Yes
+INC14310,FAC002,DEP005,2022-05-13,Equipment Issue,Moderate,Reported,Yes
+INC12509,FAC001,DEP004,2021-05-05,Equipment Issue,High,Closed,No
+INC12292,FAC005,DEP007,2024-07-10,Equipment Issue,Moderate,Closed,No
+INC11323,FAC003,DEP004,2026-02-05,Equipment Issue,Moderate,Under Investigation,No
+INC11550,FAC002,DEP002,2026-04-15,Patient Safety,Low,Closed,No
+INC14647,FAC004,DEP002,2022-07-12,Infection,High,Under Investigation,No
+INC10315,FAC004,DEP008,2025-04-06,Medication Error,Moderate,Closed,No
+INC11242,FAC003,DEP007,2026-01-12,Patient Fall,Moderate,Reported,No
+INC12450,FAC002,DEP005,2023-10-15,Documentation Error,Low,Closed,Yes
+INC11578,FAC001,DEP007,2026-04-24,Medication Error,Moderate,Closed,Yes
+INC14625,FAC004,DEP007,2022-01-05,Patient Fall,Low,Closed,Yes
+INC13116,FAC005,DEP008,2022-09-13,Equipment Issue,High,Closed,No
+INC10069,FAC005,DEP005,2025-01-21,Infection,Moderate,Closed,No
+INC10859,FAC005,DEP007,2025-09-18,Infection,Low,Closed,Yes
+INC12753,FAC003,DEP007,2023-05-11,Patient Safety,Low,Closed,No
+INC11632,FAC002,DEP008,2026-05-10,Medication Error,Moderate,Reported,No
+INC11650,FAC004,DEP003,2026-05-15,Medication Error,Low,Under Investigation,No
+INC13860,FAC005,DEP003,2023-05-21,Medication Error,Moderate,Closed,No
+INC13106,FAC004,DEP005,2025-08-01,Documentation Error,High,Reported,Yes
+INC11074,FAC004,DEP002,2025-11-22,Patient Fall,Low,Closed,No
+INC14001,FAC004,DEP006,2026-11-18,Documentation Error,High,Closed,Yes
+INC10787,FAC004,DEP005,2025-08-27,Infection,Moderate,Closed,No
+INC12605,FAC005,DEP007,2025-10-02,Patient Fall,High,Closed,No
+INC13630,FAC005,DEP005,2025-01-08,Documentation Error,High,Closed,No
+INC12121,FAC005,DEP006,2025-07-31,Medication Error,Moderate,Closed,Yes
+INC11874,FAC001,DEP003,2022-03-16,Equipment Issue,Low,Closed,Yes
+INC10811,FAC004,DEP005,2025-09-03,Patient Safety,Low,Closed,No
+INC10387,FAC002,DEP005,2025-04-28,Equipment Issue,Moderate,Closed,Yes
+INC12882,FAC004,DEP001,2021-07-26,Infection,Moderate,Reported,Yes
+INC11175,FAC001,DEP002,2025-12-22,Medication Error,Low,Closed,No
+INC13197,FAC001,DEP004,2026-04-03,Infection,Moderate,Closed,No
+INC12623,FAC002,DEP006,2022-08-20,Patient Fall,Low,Reported,Yes
+INC11351,FAC005,DEP008,2026-02-14,Documentation Error,Low,Reported,Yes
+INC10410,FAC004,DEP008,2025-05-05,Equipment Issue,Low,Closed,No
+INC14212,FAC005,DEP007,2026-08-09,Documentation Error,Moderate,Under Investigation,Yes
+INC10109,FAC005,DEP002,2025-02-03,Medication Error,Moderate,Reported,Yes
+INC14995,FAC004,DEP001,2021-11-01,Patient Fall,High,Closed,No
+INC13429,FAC001,DEP008,2026-07-19,Equipment Issue,Moderate,Reported,Yes
+INC12809,FAC004,DEP004,2023-08-17,Medication Error,High,Closed,Yes
+INC12594,FAC002,DEP002,2025-11-19,Medication Error,High,Closed,No
+INC12836,FAC004,DEP001,2026-09-21,Equipment Issue,High,Under Investigation,No
+INC12372,FAC003,DEP003,2024-11-11,Medication Error,Low,Closed,Yes
+INC11235,FAC004,DEP008,2026-01-10,Medication Error,Low,Closed,No
+INC12146,FAC004,DEP002,2024-01-07,Patient Fall,Low,Closed,Yes
+INC14975,FAC002,DEP006,2024-05-18,Medication Error,Low,Closed,Yes
+INC10599,FAC005,DEP007,2025-07-01,Infection,Low,Under Investigation,No
+INC11434,FAC001,DEP004,2026-03-11,Patient Fall,Moderate,Closed,No
+INC14996,FAC002,DEP002,2023-11-08,Medication Error,Low,Closed,No
+INC10538,FAC001,DEP005,2025-06-12,Infection,Low,Closed,No
+INC10721,FAC003,DEP005,2025-08-07,Patient Fall,Low,Closed,No
+INC14410,FAC001,DEP004,2025-02-23,Infection,Low,Closed,Yes
+INC11872,FAC005,DEP001,2022-06-16,Infection,Low,Closed,No
+INC12845,FAC002,DEP001,2021-10-03,Patient Safety,Moderate,Closed,No
+INC12053,FAC003,DEP003,2026-08-18,Equipment Issue,High,Closed,No
+INC12907,FAC004,DEP006,2023-11-19,Patient Safety,Moderate,Closed,Yes
+INC12254,FAC004,DEP007,2022-06-19,Infection,Low,Closed,Yes
+INC13912,FAC001,DEP002,2026-01-19,Patient Fall,Moderate,Closed,No
+INC10177,FAC003,DEP007,2025-02-23,Infection,Low,Closed,No
+INC12890,FAC004,DEP004,2022-02-14,Patient Safety,Low,Closed,No
+INC13673,FAC003,DEP003,2025-10-27,Equipment Issue,Moderate,Closed,No
+INC10080,FAC001,DEP005,2025-01-25,Medication Error,Low,Closed,Yes
+INC12561,FAC005,DEP008,2024-08-27,Documentation Error,Low,Closed,Yes
+INC11723,FAC002,DEP007,2026-06-06,Patient Safety,Low,Under Investigation,No
+INC11617,FAC004,DEP003,2026-05-05,Patient Fall,Low,Under Investigation,No
+INC11654,FAC004,DEP003,2026-05-17,Patient Fall,Low,Closed,Yes
+INC12328,FAC004,DEP002,2025-12-01,Equipment Issue,High,Closed,No
+INC14613,FAC004,DEP007,2026-05-22,Equipment Issue,Low,Reported,No
+INC10221,FAC005,DEP006,2025-03-08,Infection,Moderate,Closed,Yes
+INC10093,FAC004,DEP002,2025-01-29,Medication Error,Moderate,Closed,No
+INC12609,FAC004,DEP004,2026-01-15,Patient Safety,Low,Closed,No
+INC13382,FAC001,DEP001,2024-05-26,Documentation Error,Critical,Under Investigation,Yes
+INC14415,FAC003,DEP003,2024-05-13,Documentation Error,Low,Closed,Yes
+INC11397,FAC004,DEP005,2026-02-28,Documentation Error,Critical,Closed,No
+INC14686,FAC002,DEP001,2026-12-26,Documentation Error,Low,Reported,No
+INC11292,FAC002,DEP002,2026-01-27,Patient Fall,High,Closed,Yes
+INC12164,FAC005,DEP007,2024-11-26,Medication Error,Low,Closed,Yes
+INC12939,FAC003,DEP007,2021-06-29,Patient Fall,High,Reported,No
+INC13668,FAC002,DEP002,2022-11-13,Medication Error,Low,Closed,No
+INC10812,FAC001,DEP001,2025-09-03,Documentation Error,Moderate,Under Investigation,Yes
+INC11258,FAC004,DEP008,2026-01-17,Patient Fall,Low,Closed,No
+INC10889,FAC005,DEP004,2025-09-27,Patient Fall,High,Closed,No
+INC11451,FAC003,DEP007,2026-03-16,Equipment Issue,Low,Under Investigation,No
+INC13316,FAC002,DEP005,2024-07-31,Medication Error,Low,Under Investigation,No
+INC12559,FAC004,DEP001,2021-12-19,Infection,High,Reported,No
+INC13574,FAC005,DEP005,2022-01-01,Documentation Error,Moderate,Under Investigation,No
+INC12680,FAC003,DEP007,2024-04-23,Infection,Low,Closed,No
+INC14651,FAC001,DEP003,2021-12-05,Patient Safety,High,Reported,No
+INC14811,FAC004,DEP004,2023-07-07,Medication Error,Moderate,Closed,No
+INC14679,FAC001,DEP002,2022-11-25,Infection,Low,Reported,No
+INC12964,FAC002,DEP002,2021-06-21,Equipment Issue,Low,Closed,No
+INC12672,FAC004,DEP004,2025-01-08,Equipment Issue,High,Closed,No
+INC10561,FAC002,DEP006,2025-06-19,Medication Error,Low,Reported,No
+INC12778,FAC001,DEP004,2021-08-31,Equipment Issue,Low,Under Investigation,No
+INC12948,FAC005,DEP001,2024-01-05,Infection,Moderate,Closed,Yes
+INC12817,FAC004,DEP004,2021-12-19,Medication Error,Moderate,Reported,Yes
+INC12758,FAC001,DEP003,2026-12-25,Infection,Moderate,Under Investigation,Yes
+INC11756,FAC002,DEP002,2026-06-16,Documentation Error,Low,Under Investigation,No
+INC10724,FAC005,DEP001,2025-08-08,Equipment Issue,Moderate,Closed,Yes
+INC10219,FAC005,DEP004,2025-03-08,Patient Safety,Low,Closed,Yes
+INC14139,FAC004,DEP007,2021-09-12,Patient Safety,Moderate,Closed,Yes
+INC13957,FAC005,DEP005,2024-01-13,Medication Error,Moderate,Under Investigation,No
+INC11588,FAC004,DEP002,2026-04-27,Documentation Error,Low,Under Investigation,No
+INC13347,FAC003,DEP005,2023-02-08,Infection,Low,Under Investigation,No
+INC13970,FAC001,DEP002,2026-09-29,Medication Error,Moderate,Closed,Yes
+INC14707,FAC004,DEP001,2026-06-08,Medication Error,Moderate,Under Investigation,No
+INC10043,FAC005,DEP004,2025-01-14,Patient Safety,Low,Closed,No
+INC13001,FAC004,DEP006,2023-03-22,Documentation Error,Low,Closed,Yes
+INC10210,FAC003,DEP004,2025-03-05,Documentation Error,Critical,Closed,No
+INC10677,FAC003,DEP002,2025-07-25,Equipment Issue,High,Closed,Yes
+INC10354,FAC002,DEP002,2025-04-18,Patient Fall,High,Reported,No
+INC11433,FAC003,DEP002,2026-03-11,Documentation Error,Low,Closed,No
+INC10949,FAC001,DEP007,2025-10-15,Infection,High,Reported,No
+INC12843,FAC004,DEP002,2021-08-05,Equipment Issue,Critical,Closed,No
+INC10577,FAC001,DEP003,2025-06-24,Patient Fall,Low,Closed,No
+INC13928,FAC002,DEP005,2026-11-18,Documentation Error,High,Closed,No
+INC10544,FAC002,DEP004,2025-06-14,Medication Error,Low,Closed,Yes
+INC10367,FAC004,DEP007,2025-04-22,Infection,Moderate,Closed,No
+INC11612,FAC004,DEP006,2026-05-04,Patient Fall,High,Closed,No
+INC13550,FAC005,DEP007,2024-05-11,Equipment Issue,High,Under Investigation,No
+INC13716,FAC001,DEP003,2022-10-12,Equipment Issue,Moderate,Reported,No
+INC13779,FAC002,DEP005,2021-10-04,Medication Error,Low,Reported,Yes
+INC10135,FAC002,DEP003,2025-02-10,Infection,Low,Closed,No
+INC14480,FAC005,DEP008,2024-08-27,Documentation Error,High,Under Investigation,No
+INC11437,FAC003,DEP008,2026-03-12,Medication Error,Moderate,Reported,Yes
+INC10047,FAC003,DEP007,2025-01-15,Medication Error,Low,Under Investigation,No
+INC11360,FAC001,DEP005,2026-02-17,Patient Safety,Moderate,Closed,No
+INC10734,FAC003,DEP008,2025-08-11,Patient Fall,Moderate,Closed,No
+INC11534,FAC004,DEP007,2026-04-10,Patient Safety,Low,Closed,No
+INC12004,FAC001,DEP005,2024-02-10,Documentation Error,Moderate,Closed,No
+INC13795,FAC005,DEP007,2022-04-17,Equipment Issue,Moderate,Reported,No
+INC12519,FAC002,DEP006,2024-10-06,Documentation Error,Moderate,Reported,Yes
+INC11972,FAC001,DEP004,2026-05-21,Documentation Error,Moderate,Closed,Yes
+INC10996,FAC001,DEP007,2025-10-29,Documentation Error,Low,Closed,Yes
+INC10061,FAC005,DEP008,2025-01-19,Patient Safety,High,Closed,Yes
+INC11108,FAC002,DEP004,2025-12-02,Patient Fall,High,Under Investigation,No
+INC12405,FAC004,DEP006,2022-12-10,Patient Safety,Low,Closed,No
+INC10095,FAC003,DEP008,2025-01-29,Equipment Issue,Low,Reported,No
+INC10478,FAC003,DEP007,2025-05-25,Documentation Error,Low,Closed,No
+INC14359,FAC001,DEP001,2022-12-15,Patient Safety,High,Closed,Yes
+INC14112,FAC003,DEP008,2021-10-31,Medication Error,Low,Closed,Yes
+INC13707,FAC003,DEP003,2025-10-26,Medication Error,Moderate,Closed,No
+INC11101,FAC003,DEP005,2025-11-30,Patient Fall,High,Closed,No
+INC12746,FAC005,DEP008,2025-04-21,Patient Safety,High,Closed,No
+INC12170,FAC003,DEP005,2022-04-10,Equipment Issue,High,Closed,No
+INC10322,FAC003,DEP006,2025-04-08,Medication Error,Low,Closed,No
+INC14254,FAC002,DEP006,2024-12-25,Patient Fall,Low,Closed,Yes
+INC13142,FAC005,DEP006,2023-10-19,Infection,Moderate,Reported,No
+INC13537,FAC001,DEP002,2025-02-22,Patient Safety,Low,Closed,No
+INC14925,FAC004,DEP006,2023-01-31,Equipment Issue,High,Closed,Yes
+INC12924,FAC004,DEP007,2023-12-10,Infection,Low,Closed,No
+INC11149,FAC001,DEP005,2025-12-15,Infection,High,Closed,No
+INC13617,FAC005,DEP005,2026-09-07,Patient Fall,Moderate,Closed,Yes
+INC10291,FAC003,DEP002,2025-03-30,Patient Safety,Moderate,Closed,No
+INC13749,FAC001,DEP001,2026-03-31,Patient Safety,Moderate,Under Investigation,No
+INC13586,FAC003,DEP001,2021-02-06,Equipment Issue,Critical,Reported,No
+INC10533,FAC005,DEP007,2025-06-11,Patient Safety,High,Under Investigation,No
+INC13607,FAC003,DEP007,2025-06-21,Equipment Issue,High,Under Investigation,Yes
+INC12648,FAC002,DEP006,2024-02-26,Patient Safety,Low,Closed,Yes
+INC14810,FAC004,DEP004,2024-11-30,Medication Error,Low,Reported,No
+INC11983,FAC001,DEP005,2022-01-18,Infection,Moderate,Closed,Yes
+INC12932,FAC005,DEP008,2022-07-07,Medication Error,Low,Closed,Yes
+INC11536,FAC004,DEP004,2026-04-11,Medication Error,High,Reported,Yes
+INC14534,FAC001,DEP003,2026-07-13,Equipment Issue,Moderate,Closed,No
+INC14172,FAC002,DEP005,2021-11-23,Patient Safety,Low,Reported,Yes
+INC13360,FAC001,DEP002,2023-06-30,Documentation Error,Moderate,Closed,Yes
+INC13665,FAC004,DEP007,2026-02-22,Patient Safety,Critical,Closed,Yes
+INC14005,FAC001,DEP008,2022-07-23,Medication Error,Low,Closed,Yes
+INC13626,FAC001,DEP004,2025-01-25,Equipment Issue,Low,Reported,Yes
+INC10586,FAC002,DEP002,2025-06-27,Medication Error,High,Closed,Yes
+INC13256,FAC003,DEP005,2023-01-18,Patient Fall,Moderate,Closed,No
+INC12298,FAC002,DEP006,2023-12-03,Patient Fall,Critical,Under Investigation,No
+INC13988,FAC004,DEP001,2025-04-06,Patient Fall,Critical,Under Investigation,No
+INC10584,FAC003,DEP003,2025-06-26,Patient Safety,Low,Closed,No
+INC12423,FAC002,DEP001,2022-11-01,Patient Safety,Low,Reported,No
+INC11391,FAC001,DEP007,2026-02-26,Infection,Moderate,Closed,No
+INC14525,FAC001,DEP004,2026-09-01,Medication Error,Moderate,Closed,No
+INC14920,FAC004,DEP002,2026-09-19,Patient Safety,Low,Closed,No
+INC14800,FAC001,DEP003,2024-11-10,Patient Safety,Low,Closed,No
+INC13240,FAC002,DEP006,2025-10-19,Infection,Critical,Closed,No
+INC14281,FAC005,DEP005,2026-12-25,Equipment Issue,Low,Closed,No
+INC13338,FAC002,DEP006,2024-05-05,Medication Error,Low,Closed,No
+INC13220,FAC001,DEP001,2023-10-24,Infection,Moderate,Under Investigation,No
+INC12111,FAC003,DEP007,2023-08-01,Equipment Issue,Moderate,Reported,Yes
+INC11174,FAC003,DEP003,2025-12-22,Equipment Issue,Moderate,Closed,No
+INC14862,FAC004,DEP002,2024-01-15,Patient Safety,High,Closed,Yes
+INC13811,FAC004,DEP006,2025-09-10,Infection,Critical,Closed,Yes
+INC11867,FAC002,DEP002,2023-02-11,Equipment Issue,Moderate,Closed,No
+INC12614,FAC002,DEP005,2021-01-17,Equipment Issue,Moderate,Closed,No
+INC13866,FAC005,DEP001,2024-11-23,Infection,Moderate,Closed,No
+INC14885,FAC002,DEP001,2025-12-22,Medication Error,Moderate,Closed,Yes
+INC13778,FAC005,DEP008,2024-05-17,Documentation Error,High,Closed,Yes
+INC13846,FAC005,DEP007,2021-09-17,Equipment Issue,High,Under Investigation,Yes
+INC12416,FAC004,DEP005,2025-01-17,Patient Fall,High,Closed,Yes
+INC10070,FAC005,DEP007,2025-01-22,Infection,Low,Under Investigation,No
+INC14880,FAC005,DEP003,2026-10-22,Documentation Error,High,Closed,Yes
+INC11126,FAC005,DEP004,2025-12-08,Medication Error,Low,Reported,No
+INC14024,FAC002,DEP002,2025-11-09,Equipment Issue,Low,Closed,Yes
+INC13250,FAC005,DEP003,2022-08-26,Infection,Low,Reported,Yes
+INC13901,FAC002,DEP006,2021-12-26,Infection,Moderate,Reported,Yes
+INC11095,FAC001,DEP007,2025-11-28,Equipment Issue,Low,Reported,Yes
+INC14545,FAC005,DEP006,2024-12-16,Documentation Error,Low,Under Investigation,Yes
+INC11212,FAC005,DEP006,2026-01-03,Medication Error,High,Reported,No
+INC13921,FAC002,DEP002,2024-07-08,Patient Fall,Low,Reported,No
+INC11425,FAC004,DEP004,2026-03-08,Equipment Issue,Moderate,Reported,Yes
+INC13066,FAC003,DEP008,2025-11-23,Patient Safety,High,Closed,No
+INC14519,FAC003,DEP003,2023-01-18,Infection,Low,Closed,Yes
+INC12100,FAC003,DEP008,2026-07-18,Equipment Issue,Critical,Closed,No
+INC10807,FAC001,DEP006,2025-09-02,Equipment Issue,Low,Closed,Yes
+INC14743,FAC002,DEP002,2023-11-20,Documentation Error,Low,Closed,No
+INC13750,FAC001,DEP008,2021-01-14,Patient Fall,High,Closed,No
+INC11362,FAC001,DEP005,2026-02-17,Patient Fall,Low,Under Investigation,Yes
+INC12317,FAC005,DEP007,2021-10-06,Documentation Error,Low,Under Investigation,No
+INC14581,FAC001,DEP002,2023-06-30,Medication Error,Critical,Closed,No
+INC14741,FAC005,DEP008,2023-10-02,Equipment Issue,Low,Closed,Yes
+INC11025,FAC002,DEP003,2025-11-07,Documentation Error,Moderate,Under Investigation,No
+INC13109,FAC001,DEP008,2022-05-21,Patient Fall,High,Closed,No
+INC12110,FAC005,DEP007,2021-02-03,Patient Safety,Low,Closed,Yes
+INC11041,FAC002,DEP003,2025-11-12,Equipment Issue,High,Reported,No
+INC11876,FAC005,DEP007,2024-09-11,Infection,Low,Closed,Yes
+INC10881,FAC002,DEP008,2025-09-24,Equipment Issue,High,Under Investigation,No
+INC14299,FAC002,DEP002,2022-11-22,Patient Fall,Critical,Reported,No
+INC11192,FAC004,DEP006,2025-12-28,Medication Error,Moderate,Reported,No
+INC14587,FAC003,DEP003,2023-04-30,Patient Safety,Critical,Closed,Yes
+INC14510,FAC005,DEP007,2022-11-03,Infection,Moderate,Closed,Yes
+INC13670,FAC001,DEP008,2023-07-09,Patient Fall,Moderate,Closed,Yes
+INC10624,FAC004,DEP001,2025-07-09,Patient Fall,Moderate,Closed,No
+INC12796,FAC003,DEP001,2023-10-21,Patient Safety,Low,Closed,No
+INC14291,FAC002,DEP002,2025-07-20,Documentation Error,Critical,Closed,No
+INC14968,FAC001,DEP008,2022-07-25,Medication Error,Low,Closed,Yes
+INC10233,FAC005,DEP006,2025-03-12,Patient Fall,Moderate,Closed,No
+INC14566,FAC003,DEP005,2023-03-31,Equipment Issue,High,Closed,No
+INC11662,FAC001,DEP005,2026-05-19,Medication Error,Low,Closed,No
+INC10415,FAC004,DEP005,2025-05-06,Patient Safety,Low,Closed,No
+INC14246,FAC004,DEP001,2025-12-11,Infection,Moderate,Closed,Yes
+INC12173,FAC004,DEP006,2023-08-06,Patient Safety,Low,Closed,Yes
+INC11456,FAC005,DEP001,2026-03-18,Medication Error,Low,Under Investigation,No
+INC10746,FAC003,DEP006,2025-08-14,Medication Error,Low,Closed,No
+INC10017,FAC004,DEP006,2025-01-06,Medication Error,Moderate,Closed,No
+INC11200,FAC004,DEP003,2025-12-30,Documentation Error,High,Under Investigation,No
+INC11699,FAC005,DEP006,2026-05-30,Equipment Issue,Low,Closed,Yes
+INC13253,FAC004,DEP006,2024-12-30,Equipment Issue,Moderate,Reported,Yes
+INC10596,FAC001,DEP005,2025-06-30,Patient Fall,Low,Closed,Yes
+INC13226,FAC003,DEP007,2021-09-20,Equipment Issue,Low,Closed,Yes
+INC14405,FAC001,DEP002,2023-06-20,Medication Error,High,Closed,No
+INC14719,FAC003,DEP005,2026-01-26,Documentation Error,High,Reported,No
+INC11505,FAC001,DEP001,2026-04-01,Equipment Issue,Low,Reported,Yes
+INC11412,FAC002,DEP003,2026-03-04,Patient Fall,High,Closed,No
+INC11965,FAC005,DEP005,2022-09-01,Equipment Issue,Low,Closed,No
+INC10371,FAC002,DEP002,2025-04-23,Patient Fall,Low,Closed,No
+INC11340,FAC005,DEP001,2026-02-10,Medication Error,Low,Closed,No
+INC10598,FAC001,DEP002,2025-07-01,Equipment Issue,High,Reported,No
+INC10238,FAC003,DEP004,2025-03-14,Infection,High,Closed,No
+INC13400,FAC005,DEP008,2022-01-22,Patient Fall,High,Closed,No
+INC12067,FAC003,DEP005,2022-04-28,Equipment Issue,High,Closed,No
+INC10810,FAC002,DEP008,2025-09-03,Documentation Error,Moderate,Closed,No
+INC11094,FAC001,DEP008,2025-11-28,Patient Safety,Moderate,Reported,Yes
+INC14324,FAC001,DEP003,2025-02-27,Medication Error,Moderate,Reported,Yes
+INC14760,FAC001,DEP008,2022-12-02,Patient Safety,Low,Reported,Yes
+INC13676,FAC002,DEP007,2022-05-23,Infection,Moderate,Closed,Yes
+INC13464,FAC001,DEP002,2025-03-30,Medication Error,High,Closed,Yes
+INC13103,FAC002,DEP006,2022-02-19,Medication Error,High,Reported,Yes
+INC12749,FAC002,DEP006,2025-01-27,Equipment Issue,Moderate,Closed,Yes
+INC12295,FAC005,DEP001,2026-05-15,Infection,Low,Closed,Yes
+INC14192,FAC005,DEP008,2022-12-19,Documentation Error,Moderate,Closed,No
+INC13708,FAC001,DEP008,2024-03-21,Patient Fall,High,Under Investigation,No
+INC13018,FAC003,DEP003,2024-10-22,Documentation Error,Low,Reported,No
+INC14252,FAC004,DEP002,2026-02-27,Infection,Moderate,Closed,No
+INC10803,FAC005,DEP005,2025-09-01,Documentation Error,Moderate,Reported,Yes
+INC14190,FAC001,DEP001,2022-10-20,Infection,Moderate,Closed,No
+INC13705,FAC001,DEP003,2022-07-31,Equipment Issue,High,Reported,No
+INC10751,FAC005,DEP003,2025-08-16,Patient Safety,Moderate,Reported,No
+INC14644,FAC001,DEP003,2025-07-31,Infection,Low,Closed,Yes
+INC12531,FAC001,DEP004,2024-12-11,Medication Error,Moderate,Closed,No
+INC10621,FAC001,DEP006,2025-07-08,Equipment Issue,High,Closed,No
+INC12297,FAC005,DEP008,2021-07-20,Equipment Issue,Low,Closed,No
+INC13828,FAC001,DEP008,2024-07-04,Patient Safety,High,Reported,No
+INC10566,FAC002,DEP002,2025-06-21,Patient Fall,Moderate,Closed,No
+INC11135,FAC003,DEP008,2025-12-10,Medication Error,Moderate,Closed,No
+INC11204,FAC003,DEP003,2025-12-31,Patient Fall,Moderate,Closed,No
+INC11047,FAC004,DEP005,2025-11-14,Medication Error,Critical,Reported,No
+INC10051,FAC003,DEP003,2025-01-16,Documentation Error,High,Closed,Yes
+INC13651,FAC002,DEP005,2026-04-19,Documentation Error,Low,Closed,Yes
+INC11044,FAC005,DEP006,2025-11-13,Documentation Error,Low,Closed,No
+INC12181,FAC005,DEP003,2026-10-24,Patient Safety,Low,Closed,Yes
+INC12688,FAC004,DEP005,2022-07-30,Equipment Issue,Low,Closed,No
+INC10534,FAC005,DEP001,2025-06-11,Infection,Moderate,Reported,Yes
+INC13184,FAC003,DEP003,2022-11-04,Equipment Issue,High,Closed,No
+INC13857,FAC005,DEP001,2025-08-24,Patient Safety,Low,Under Investigation,No
+INC10443,FAC002,DEP008,2025-05-15,Equipment Issue,Moderate,Closed,No
+INC13604,FAC001,DEP004,2024-05-05,Medication Error,Low,Reported,No
+INC10195,FAC005,DEP005,2025-03-01,Equipment Issue,Low,Closed,No
+INC11115,FAC003,DEP006,2025-12-04,Equipment Issue,Moderate,Closed,Yes
+INC10765,FAC004,DEP005,2025-08-20,Patient Safety,Moderate,Reported,No
+INC11945,FAC004,DEP002,2026-10-28,Equipment Issue,Moderate,Closed,No
+INC13247,FAC002,DEP007,2024-02-20,Medication Error,Moderate,Closed,Yes
+INC13002,FAC002,DEP005,2022-12-17,Infection,Low,Closed,No
+INC11432,FAC005,DEP003,2026-03-10,Patient Safety,Moderate,Closed,No
+INC14200,FAC003,DEP001,2024-06-19,Infection,Low,Closed,No
+INC13095,FAC001,DEP001,2025-12-21,Patient Safety,Low,Closed,No
+INC12922,FAC001,DEP001,2025-08-25,Documentation Error,Low,Closed,No
+INC10644,FAC001,DEP001,2025-07-15,Patient Fall,Moderate,Closed,Yes
+INC11049,FAC002,DEP002,2025-11-14,Equipment Issue,Moderate,Reported,Yes
+INC13745,FAC005,DEP008,2023-01-06,Medication Error,Moderate,Closed,Yes
+INC14093,FAC003,DEP007,2021-08-03,Infection,Low,Closed,No
+INC14403,FAC002,DEP001,2025-10-24,Patient Safety,Moderate,Closed,No
+INC10120,FAC004,DEP003,2025-02-06,Patient Safety,Moderate,Closed,No
+INC12052,FAC005,DEP001,2026-11-02,Patient Safety,Moderate,Under Investigation,Yes
+INC14258,FAC005,DEP007,2023-10-22,Medication Error,Moderate,Reported,No
+INC14888,FAC005,DEP006,2024-07-18,Medication Error,Low,Closed,Yes
+INC14334,FAC002,DEP005,2026-04-11,Infection,Low,Under Investigation,Yes
+INC14691,FAC003,DEP008,2021-01-04,Infection,Low,Under Investigation,Yes
+INC10134,FAC002,DEP005,2025-02-10,Equipment Issue,Moderate,Closed,No
+INC12460,FAC003,DEP003,2023-09-03,Medication Error,Low,Reported,No
+INC11954,FAC005,DEP006,2024-10-10,Patient Fall,Low,Closed,Yes
+INC12463,FAC002,DEP001,2023-11-05,Patient Safety,Low,Closed,No
+INC10184,FAC002,DEP008,2025-02-25,Documentation Error,Moderate,Closed,No
+INC11392,FAC003,DEP005,2026-02-26,Equipment Issue,Low,Reported,No
+INC12276,FAC005,DEP005,2026-10-06,Documentation Error,Low,Closed,Yes
+INC10511,FAC001,DEP005,2025-06-04,Patient Safety,Moderate,Closed,Yes
+INC14729,FAC004,DEP004,2026-09-06,Infection,Low,Reported,No
+INC14054,FAC001,DEP005,2021-12-03,Documentation Error,High,Closed,Yes
+INC13137,FAC001,DEP003,2022-09-26,Patient Safety,Low,Closed,No
+INC12669,FAC001,DEP004,2026-05-18,Infection,High,Closed,Yes
+INC14773,FAC003,DEP005,2025-10-02,Medication Error,Low,Under Investigation,Yes
+INC14861,FAC001,DEP003,2024-08-15,Infection,Low,Closed,No
+INC12117,FAC005,DEP005,2023-07-01,Patient Fall,Critical,Closed,No
+INC10251,FAC002,DEP006,2025-03-18,Medication Error,High,Under Investigation,No
+INC13526,FAC004,DEP005,2026-05-15,Patient Fall,Low,Closed,No
+INC13559,FAC005,DEP003,2026-05-13,Documentation Error,High,Reported,No
+INC14011,FAC002,DEP005,2021-12-09,Infection,High,Closed,No
+INC11507,FAC005,DEP003,2026-04-02,Infection,Moderate,Closed,No
+INC10122,FAC005,DEP005,2025-02-06,Documentation Error,Moderate,Under Investigation,Yes
+INC14259,FAC001,DEP003,2026-04-07,Documentation Error,Moderate,Closed,No
+INC13333,FAC002,DEP002,2026-12-31,Medication Error,Low,Closed,Yes
+INC11871,FAC002,DEP002,2021-11-12,Infection,Moderate,Closed,Yes
+INC13692,FAC002,DEP007,2026-08-25,Patient Fall,Moderate,Closed,No
+INC10567,FAC001,DEP004,2025-06-21,Patient Fall,Moderate,Closed,No
+INC11371,FAC003,DEP003,2026-02-20,Documentation Error,Low,Closed,No
+INC13185,FAC002,DEP007,2025-08-16,Documentation Error,Low,Closed,Yes
+INC13955,FAC003,DEP005,2023-03-08,Equipment Issue,Moderate,Closed,No
+INC11056,FAC003,DEP002,2025-11-16,Patient Safety,Low,Closed,Yes
+INC10856,FAC001,DEP005,2025-09-17,Patient Safety,High,Closed,No
+INC13838,FAC001,DEP008,2024-05-08,Infection,Low,Under Investigation,No
+INC12860,FAC004,DEP007,2026-01-03,Documentation Error,Low,Closed,No
+INC14769,FAC002,DEP005,2024-05-19,Medication Error,High,Closed,Yes
+INC10776,FAC001,DEP005,2025-08-24,Documentation Error,Moderate,Under Investigation,Yes
+INC10720,FAC002,DEP006,2025-08-07,Patient Fall,Low,Closed,No
+INC12710,FAC004,DEP002,2024-08-07,Documentation Error,High,Reported,No
+INC12654,FAC005,DEP006,2022-12-09,Infection,Low,Reported,Yes
+INC14877,FAC005,DEP003,2025-04-21,Infection,Moderate,Closed,No
+INC10602,FAC003,DEP006,2025-07-02,Medication Error,High,Closed,No
+INC13822,FAC003,DEP001,2022-09-15,Patient Safety,High,Closed,No
+INC11244,FAC003,DEP003,2026-01-12,Patient Fall,Low,Under Investigation,No
+INC14845,FAC003,DEP007,2022-06-14,Patient Fall,Low,Under Investigation,Yes
+INC14841,FAC003,DEP001,2024-04-04,Documentation Error,Low,Reported,No
+INC10318,FAC004,DEP003,2025-04-07,Patient Safety,High,Under Investigation,Yes
+INC10828,FAC003,DEP006,2025-09-08,Equipment Issue,Moderate,Closed,Yes
+INC13263,FAC004,DEP002,2026-10-09,Infection,Low,Closed,No
+INC10274,FAC002,DEP002,2025-03-25,Medication Error,Low,Closed,No
+INC12664,FAC005,DEP008,2026-11-05,Patient Fall,Moderate,Reported,Yes
+INC10549,FAC002,DEP002,2025-06-16,Infection,Moderate,Closed,No
+INC13641,FAC004,DEP006,2026-06-30,Medication Error,High,Closed,Yes
+INC14053,FAC005,DEP001,2026-01-21,Medication Error,High,Closed,No
+INC14892,FAC003,DEP005,2021-09-30,Medication Error,Moderate,Closed,Yes
+INC12934,FAC005,DEP001,2025-05-20,Documentation Error,Moderate,Under Investigation,No
+INC10605,FAC001,DEP008,2025-07-03,Documentation Error,Low,Closed,No
+INC10896,FAC003,DEP006,2025-09-29,Infection,Low,Under Investigation,No
+INC10527,FAC001,DEP008,2025-06-09,Medication Error,Moderate,Closed,No
+INC14607,FAC005,DEP005,2026-08-08,Documentation Error,Moderate,Under Investigation,Yes
+INC12347,FAC003,DEP005,2026-08-22,Equipment Issue,Moderate,Reported,Yes
+INC13439,FAC003,DEP007,2021-03-11,Infection,Moderate,Closed,No
+INC14998,FAC002,DEP001,2025-07-29,Medication Error,Moderate,Reported,No
+INC14826,FAC005,DEP008,2023-06-22,Documentation Error,Low,Closed,Yes
+INC13922,FAC003,DEP007,2024-03-05,Documentation Error,Moderate,Under Investigation,No
+INC10298,FAC005,DEP008,2025-04-01,Patient Fall,Low,Closed,No
+INC12119,FAC005,DEP008,2023-07-25,Medication Error,Moderate,Closed,Yes
+INC12536,FAC003,DEP007,2026-05-01,Patient Safety,Low,Closed,No
+INC14203,FAC002,DEP002,2023-06-06,Infection,Moderate,Closed,No
+INC13254,FAC003,DEP001,2022-04-29,Documentation Error,Low,Reported,Yes
+INC13725,FAC001,DEP003,2026-11-27,Patient Safety,Low,Under Investigation,No
+INC11260,FAC003,DEP005,2026-01-17,Patient Fall,Moderate,Reported,No
+INC11558,FAC002,DEP004,2026-04-17,Patient Safety,Low,Closed,Yes
+INC13269,FAC001,DEP001,2022-04-30,Patient Safety,Moderate,Under Investigation,No
+INC14046,FAC001,DEP002,2024-01-29,Equipment Issue,High,Under Investigation,No
+INC10756,FAC005,DEP008,2025-08-18,Equipment Issue,High,Reported,No
+INC11010,FAC001,DEP005,2025-11-02,Infection,Moderate,Closed,Yes
+INC12794,FAC003,DEP005,2025-07-25,Documentation Error,Low,Closed,Yes
+INC12905,FAC004,DEP001,2021-02-11,Patient Fall,High,Closed,No
+INC11870,FAC005,DEP007,2025-11-28,Medication Error,Moderate,Reported,No
+INC12229,FAC001,DEP005,2022-02-12,Medication Error,Low,Reported,No
+INC11173,FAC002,DEP001,2025-12-22,Patient Safety,Moderate,Under Investigation,No
+INC11832,FAC002,DEP007,2021-05-16,Infection,Critical,Closed,No
+INC10376,FAC002,DEP003,2025-04-24,Patient Safety,Moderate,Closed,Yes
+INC13853,FAC001,DEP005,2021-04-29,Patient Fall,Low,Closed,No
+INC13616,FAC001,DEP005,2022-01-06,Infection,Low,Closed,No
+INC10798,FAC002,DEP008,2025-08-30,Equipment Issue,Low,Closed,Yes
+INC10378,FAC004,DEP006,2025-04-25,Patient Safety,High,Closed,Yes
+INC11158,FAC004,DEP002,2025-12-17,Patient Fall,Moderate,Under Investigation,No
+INC13819,FAC001,DEP004,2025-01-10,Infection,Critical,Closed,No
+INC12792,FAC001,DEP008,2025-01-22,Equipment Issue,Low,Closed,Yes
+INC12240,FAC002,DEP001,2022-09-16,Medication Error,Moderate,Closed,Yes
+INC14035,FAC003,DEP003,2026-08-10,Medication Error,Low,Closed,No
+INC12662,FAC005,DEP005,2022-01-02,Patient Fall,Low,Under Investigation,Yes
+INC14012,FAC001,DEP005,2021-05-24,Infection,Moderate,Reported,No
+INC12957,FAC002,DEP007,2022-12-21,Patient Fall,Low,Closed,Yes
+INC13927,FAC005,DEP007,2022-12-19,Medication Error,High,Reported,Yes
+INC11038,FAC003,DEP002,2025-11-11,Patient Safety,High,Closed,Yes
+INC13259,FAC004,DEP007,2022-07-24,Patient Safety,Low,Under Investigation,No
+INC11344,FAC003,DEP005,2026-02-12,Medication Error,Moderate,Closed,Yes
+INC12505,FAC001,DEP008,2025-07-30,Medication Error,High,Closed,No
+INC11721,FAC002,DEP005,2026-06-06,Equipment Issue,Moderate,Reported,No
+INC14663,FAC004,DEP001,2023-05-17,Patient Safety,Moderate,Closed,Yes
+INC10175,FAC003,DEP004,2025-02-23,Infection,High,Closed,Yes
+INC14893,FAC004,DEP004,2025-05-14,Medication Error,Low,Closed,Yes
+INC11909,FAC005,DEP005,2021-10-04,Infection,Low,Closed,Yes
+INC10045,FAC005,DEP005,2025-01-14,Infection,Moderate,Under Investigation,Yes
+INC13409,FAC003,DEP007,2026-02-24,Infection,Moderate,Reported,No
+INC14674,FAC004,DEP006,2025-02-19,Medication Error,Moderate,Closed,No
+INC11075,FAC001,DEP005,2025-11-22,Medication Error,High,Closed,No
+INC12829,FAC003,DEP001,2025-08-25,Equipment Issue,Moderate,Closed,No
+INC11504,FAC002,DEP001,2026-04-01,Medication Error,High,Closed,No
+INC12309,FAC005,DEP003,2021-03-28,Medication Error,High,Closed,Yes
+INC11436,FAC004,DEP006,2026-03-12,Medication Error,Moderate,Closed,Yes
+INC12418,FAC005,DEP008,2025-02-13,Infection,Low,Closed,No
+INC13986,FAC005,DEP005,2025-05-01,Infection,Moderate,Closed,Yes
+INC13098,FAC001,DEP004,2021-09-15,Documentation Error,High,Closed,Yes
+INC14588,FAC003,DEP001,2026-10-17,Medication Error,Critical,Closed,No
+INC10283,FAC004,DEP002,2025-03-27,Patient Safety,Low,Under Investigation,No
+INC14918,FAC001,DEP002,2025-05-27,Equipment Issue,Low,Closed,Yes
+INC10842,FAC005,DEP003,2025-09-13,Equipment Issue,High,Closed,No
+INC11513,FAC002,DEP005,2026-04-04,Patient Fall,High,Closed,Yes
+INC11168,FAC003,DEP001,2025-12-20,Patient Safety,Low,Under Investigation,No
+INC11592,FAC003,DEP001,2026-04-28,Documentation Error,Moderate,Under Investigation,No
+INC13460,FAC005,DEP001,2022-11-06,Documentation Error,Low,Under Investigation,No
+INC13165,FAC004,DEP005,2021-12-25,Infection,Moderate,Closed,Yes
+INC12284,FAC002,DEP001,2026-11-10,Patient Fall,Low,Closed,No
+INC13575,FAC003,DEP007,2024-08-26,Medication Error,High,Reported,Yes
+INC14870,FAC004,DEP005,2022-12-21,Medication Error,Moderate,Closed,No
+INC12305,FAC003,DEP005,2025-08-24,Medication Error,Low,Reported,Yes
+INC10952,FAC002,DEP001,2025-10-16,Equipment Issue,Critical,Under Investigation,No
+INC14942,FAC005,DEP006,2022-01-30,Patient Safety,Moderate,Closed,Yes
+INC13053,FAC005,DEP006,2023-05-25,Medication Error,Low,Under Investigation,No
+INC14559,FAC002,DEP006,2024-09-01,Documentation Error,Moderate,Closed,Yes
+INC12685,FAC005,DEP008,2022-06-14,Equipment Issue,Low,Closed,No
+INC11489,FAC001,DEP005,2026-03-28,Medication Error,Low,Closed,Yes
+INC10927,FAC003,DEP002,2025-10-08,Equipment Issue,Moderate,Closed,No
+INC11209,FAC002,DEP006,2026-01-02,Equipment Issue,Low,Closed,No
+INC13973,FAC004,DEP002,2026-10-02,Patient Safety,Low,Reported,Yes
+INC13545,FAC003,DEP003,2025-07-30,Patient Safety,Critical,Under Investigation,Yes
+INC14361,FAC005,DEP007,2022-08-03,Patient Fall,Moderate,Closed,No
+INC11921,FAC004,DEP002,2024-06-08,Patient Fall,Low,Closed,Yes
+INC10351,FAC001,DEP006,2025-04-17,Documentation Error,High,Closed,No
+INC14898,FAC003,DEP001,2024-04-01,Documentation Error,Moderate,Closed,No
+INC13393,FAC005,DEP008,2026-05-03,Medication Error,Moderate,Under Investigation,Yes
+INC12721,FAC003,DEP008,2026-05-26,Documentation Error,Low,Closed,No
+INC14981,FAC001,DEP005,2021-08-31,Medication Error,Moderate,Reported,No
+INC10718,FAC005,DEP001,2025-08-06,Documentation Error,Low,Reported,No
+INC12702,FAC003,DEP001,2026-07-19,Patient Fall,Moderate,Closed,No
+INC12722,FAC001,DEP003,2023-02-18,Patient Fall,Moderate,Closed,No
+INC14561,FAC004,DEP006,2024-12-03,Patient Safety,Moderate,Reported,No
+INC10308,FAC001,DEP001,2025-04-04,Documentation Error,High,Reported,No
+INC11675,FAC004,DEP007,2026-05-23,Infection,Moderate,Closed,No
+INC10833,FAC005,DEP005,2025-09-10,Equipment Issue,High,Closed,Yes
+INC10366,FAC005,DEP007,2025-04-21,Infection,Low,Reported,No
+INC14506,FAC001,DEP002,2025-02-22,Infection,Low,Closed,No
+INC12078,FAC002,DEP006,2026-07-02,Medication Error,Critical,Closed,Yes
+INC14038,FAC003,DEP001,2022-04-08,Equipment Issue,Moderate,Reported,No
+INC14846,FAC004,DEP001,2022-10-11,Infection,Low,Closed,No
+INC14479,FAC002,DEP002,2022-08-22,Equipment Issue,High,Closed,No
+INC11746,FAC001,DEP007,2026-06-13,Patient Fall,Low,Closed,Yes
+INC10019,FAC002,DEP008,2025-01-06,Medication Error,Low,Closed,No
+INC11322,FAC001,DEP007,2026-02-05,Infection,Moderate,Closed,Yes
+INC13567,FAC001,DEP001,2022-03-12,Infection,Low,Closed,No
+INC12521,FAC001,DEP005,2025-05-14,Documentation Error,Low,Reported,No
+INC10218,FAC004,DEP007,2025-03-08,Equipment Issue,High,Reported,No
+INC11487,FAC002,DEP007,2026-03-27,Infection,Moderate,Closed,Yes
+INC10438,FAC004,DEP005,2025-05-13,Medication Error,Moderate,Closed,Yes
+INC14174,FAC003,DEP008,2025-11-08,Equipment Issue,Moderate,Reported,No
+INC12750,FAC001,DEP002,2026-06-27,Infection,Low,Reported,Yes
+INC13288,FAC004,DEP006,2023-03-28,Patient Safety,Low,Reported,No
+INC13433,FAC002,DEP002,2026-02-10,Patient Fall,Moderate,Closed,No
+INC12525,FAC003,DEP001,2022-02-14,Infection,Low,Closed,No
+INC14650,FAC003,DEP003,2024-03-13,Infection,Moderate,Reported,No
+INC13688,FAC004,DEP007,2023-05-07,Patient Fall,High,Closed,No
+INC12763,FAC004,DEP007,2025-09-21,Equipment Issue,Low,Closed,No
+INC10802,FAC002,DEP006,2025-08-31,Equipment Issue,High,Closed,No
+INC12997,FAC001,DEP003,2022-08-08,Patient Safety,High,Closed,No
+INC12228,FAC005,DEP008,2025-12-05,Patient Safety,Low,Under Investigation,Yes
+INC14785,FAC004,DEP006,2022-06-30,Medication Error,Moderate,Closed,Yes
+INC12077,FAC001,DEP008,2025-07-17,Patient Safety,Low,Closed,Yes
+INC10582,FAC005,DEP002,2025-06-26,Documentation Error,Moderate,Closed,No
+INC10203,FAC004,DEP007,2025-03-03,Patient Safety,Moderate,Closed,No
+INC14346,FAC003,DEP003,2025-12-23,Infection,Moderate,Under Investigation,Yes
+INC13478,FAC001,DEP004,2024-07-22,Medication Error,Moderate,Under Investigation,No
+INC12929,FAC001,DEP005,2024-09-12,Patient Fall,Moderate,Closed,Yes
+INC13085,FAC004,DEP004,2021-07-21,Medication Error,Moderate,Closed,Yes
+INC11018,FAC002,DEP001,2025-11-05,Documentation Error,High,Reported,Yes
+INC11583,FAC001,DEP002,2026-04-25,Medication Error,Low,Closed,Yes
+INC11032,FAC001,DEP003,2025-11-09,Documentation Error,Low,Closed,No
+INC11718,FAC002,DEP001,2026-06-05,Infection,Low,Closed,Yes
+INC11281,FAC003,DEP007,2026-01-24,Medication Error,Moderate,Reported,No
+INC12498,FAC003,DEP008,2023-07-20,Documentation Error,Low,Closed,Yes
+INC13350,FAC001,DEP003,2023-02-04,Medication Error,Low,Closed,No
+INC10517,FAC004,DEP005,2025-06-06,Infection,Low,Closed,Yes
+INC11747,FAC002,DEP007,2026-06-14,Equipment Issue,Moderate,Closed,Yes
+INC14652,FAC005,DEP007,2026-07-07,Documentation Error,High,Closed,No
+INC13732,FAC004,DEP005,2022-08-01,Equipment Issue,Moderate,Closed,No
+INC10668,FAC004,DEP007,2025-07-22,Documentation Error,Moderate,Reported,Yes
+INC14059,FAC004,DEP006,2022-01-24,Patient Fall,High,Reported,No
+INC13026,FAC003,DEP008,2025-02-22,Equipment Issue,Moderate,Closed,Yes
+INC14932,FAC002,DEP001,2025-02-18,Documentation Error,Moderate,Closed,Yes
+INC13286,FAC001,DEP003,2025-12-22,Medication Error,Low,Closed,Yes
+INC12650,FAC005,DEP008,2026-02-08,Equipment Issue,Low,Closed,No
+INC14453,FAC002,DEP007,2024-10-06,Medication Error,Low,Closed,No
+INC13192,FAC001,DEP003,2026-09-09,Infection,Low,Closed,No
+INC12124,FAC003,DEP001,2025-12-13,Patient Fall,Critical,Reported,Yes
+INC13375,FAC004,DEP001,2026-04-20,Equipment Issue,Moderate,Closed,No
+INC13392,FAC004,DEP001,2025-09-02,Medication Error,Low,Closed,No
+INC13485,FAC001,DEP005,2022-01-14,Equipment Issue,High,Reported,No
+INC10759,FAC001,DEP001,2025-08-18,Documentation Error,Low,Under Investigation,No
+INC13379,FAC001,DEP003,2025-03-03,Patient Safety,Moderate,Closed,Yes
+INC14440,FAC002,DEP007,2022-01-22,Equipment Issue,Moderate,Reported,Yes
+INC12526,FAC004,DEP004,2025-05-31,Infection,Moderate,Closed,No
+INC14858,FAC003,DEP008,2023-05-05,Patient Safety,Low,Under Investigation,No
+INC10907,FAC001,DEP003,2025-10-02,Documentation Error,Low,Closed,No
+INC12683,FAC003,DEP005,2023-05-26,Equipment Issue,Moderate,Closed,No
+INC10214,FAC001,DEP008,2025-03-06,Infection,Moderate,Reported,Yes
+INC13331,FAC005,DEP001,2023-05-21,Equipment Issue,Low,Closed,Yes
+INC14458,FAC001,DEP002,2023-05-28,Infection,Moderate,Reported,Yes
+INC10693,FAC004,DEP007,2025-07-29,Medication Error,Low,Closed,No
+INC11503,FAC004,DEP006,2026-04-01,Patient Fall,Moderate,Closed,Yes
+INC12414,FAC003,DEP007,2022-05-11,Patient Safety,Moderate,Closed,No
+INC12118,FAC001,DEP005,2022-07-31,Medication Error,Moderate,Reported,No
+INC13858,FAC004,DEP001,2026-11-24,Patient Safety,Low,Closed,Yes
+INC12462,FAC003,DEP007,2025-10-24,Equipment Issue,Low,Closed,No
+INC13635,FAC005,DEP005,2024-12-01,Patient Fall,Low,Under Investigation,No
+INC14105,FAC002,DEP005,2022-09-22,Medication Error,Low,Closed,Yes
+INC14478,FAC001,DEP002,2023-10-20,Equipment Issue,Moderate,Under Investigation,Yes
+INC10196,FAC005,DEP006,2025-03-01,Infection,High,Closed,Yes
+INC14667,FAC005,DEP008,2026-08-29,Infection,Critical,Closed,Yes
+INC11543,FAC005,DEP004,2026-04-13,Patient Safety,Moderate,Closed,No
+INC11330,FAC005,DEP005,2026-02-07,Patient Fall,High,Closed,No
+INC10879,FAC002,DEP008,2025-09-24,Documentation Error,High,Closed,No
+INC14502,FAC004,DEP006,2024-01-20,Infection,Low,Reported,No
+INC13501,FAC004,DEP002,2026-10-26,Patient Safety,Moderate,Closed,No
+INC13894,FAC003,DEP005,2024-12-07,Patient Safety,High,Closed,Yes
+INC14990,FAC001,DEP002,2023-01-25,Documentation Error,Low,Closed,Yes
+INC10887,FAC002,DEP008,2025-09-26,Patient Safety,Low,Reported,Yes
+INC11345,FAC004,DEP004,2026-02-12,Medication Error,Low,Closed,No
+INC10068,FAC004,DEP002,2025-01-21,Equipment Issue,Moderate,Closed,No
+INC14210,FAC001,DEP005,2022-08-24,Infection,Critical,Reported,No
+INC11815,FAC002,DEP006,2025-10-06,Patient Safety,Low,Reported,Yes
+INC10568,FAC002,DEP001,2025-06-22,Documentation Error,High,Closed,Yes
+INC12167,FAC005,DEP003,2025-05-14,Medication Error,Moderate,Closed,No
+INC10096,FAC002,DEP005,2025-01-30,Equipment Issue,Low,Closed,No
+INC14181,FAC003,DEP001,2021-04-04,Equipment Issue,Moderate,Closed,No
+INC13353,FAC003,DEP005,2024-05-05,Medication Error,Moderate,Closed,No
+INC10139,FAC002,DEP008,2025-02-12,Infection,High,Closed,No
+INC14954,FAC001,DEP003,2024-10-16,Equipment Issue,Low,Closed,No
+INC12602,FAC002,DEP005,2023-08-26,Patient Safety,Low,Closed,No
+INC14023,FAC005,DEP006,2025-07-15,Equipment Issue,Moderate,Closed,No
+INC14772,FAC005,DEP006,2024-02-04,Infection,Moderate,Reported,No
+INC11606,FAC004,DEP003,2026-05-02,Medication Error,Low,Closed,No
+INC11629,FAC003,DEP003,2026-05-09,Equipment Issue,Moderate,Under Investigation,No
+INC11539,FAC001,DEP002,2026-04-12,Equipment Issue,Low,Reported,Yes
+INC11694,FAC003,DEP005,2026-05-29,Infection,Moderate,Under Investigation,No
+INC12059,FAC005,DEP003,2023-09-20,Equipment Issue,Low,Closed,No
+INC10463,FAC005,DEP007,2025-05-21,Equipment Issue,Low,Under Investigation,Yes
+INC12330,FAC001,DEP001,2022-02-22,Patient Safety,Moderate,Closed,No
+INC13043,FAC003,DEP008,2025-07-01,Equipment Issue,Moderate,Closed,No
+INC14734,FAC002,DEP007,2021-05-16,Documentation Error,Low,Closed,No
+INC10594,FAC005,DEP005,2025-06-29,Patient Safety,Moderate,Under Investigation,No
+INC13814,FAC005,DEP003,2025-01-21,Patient Fall,Low,Closed,Yes
+INC10625,FAC001,DEP001,2025-07-09,Medication Error,High,Closed,No
+INC10450,FAC004,DEP008,2025-05-17,Documentation Error,Moderate,Closed,Yes
+INC11499,FAC004,DEP006,2026-03-31,Equipment Issue,Moderate,Closed,Yes
+INC12456,FAC003,DEP005,2024-01-26,Patient Fall,Low,Closed,Yes
+INC14722,FAC003,DEP005,2026-09-14,Equipment Issue,Low,Under Investigation,No
+INC12984,FAC001,DEP004,2026-08-31,Patient Fall,High,Closed,No
+INC11569,FAC002,DEP006,2026-04-21,Equipment Issue,Low,Closed,No
+INC11034,FAC002,DEP007,2025-11-10,Infection,High,Reported,No
+INC13518,FAC005,DEP006,2026-06-12,Equipment Issue,Low,Under Investigation,No
+INC11557,FAC003,DEP006,2026-04-17,Patient Safety,Moderate,Under Investigation,No
+INC13624,FAC001,DEP001,2024-04-23,Medication Error,Moderate,Closed,No
+INC14664,FAC004,DEP004,2025-12-03,Medication Error,High,Closed,No
+INC10150,FAC001,DEP006,2025-02-15,Medication Error,Moderate,Closed,Yes
+INC11420,FAC002,DEP007,2026-03-07,Patient Safety,Moderate,Reported,Yes
+INC12011,FAC005,DEP006,2022-02-28,Documentation Error,Low,Closed,No
+INC12686,FAC005,DEP005,2025-02-15,Equipment Issue,Critical,Closed,Yes
+INC11786,FAC002,DEP004,2026-06-26,Documentation Error,Moderate,Closed,Yes
+INC10088,FAC001,DEP005,2025-01-27,Documentation Error,Low,Closed,No
+INC10457,FAC002,DEP005,2025-05-19,Patient Fall,Low,Closed,No
+INC11305,FAC003,DEP007,2026-01-31,Equipment Issue,High,Closed,No
+INC12925,FAC005,DEP006,2026-06-11,Documentation Error,Low,Closed,No
+INC13270,FAC003,DEP001,2025-01-01,Medication Error,Moderate,Closed,No
+INC13227,FAC005,DEP003,2025-02-14,Medication Error,High,Closed,No
+INC11988,FAC004,DEP007,2022-07-14,Equipment Issue,Moderate,Reported,Yes
+INC13754,FAC002,DEP006,2022-03-24,Medication Error,High,Closed,No

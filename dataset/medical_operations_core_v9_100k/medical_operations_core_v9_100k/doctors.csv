@@ -1,0 +1,61 @@
+doctor_id,doctor_name,department_id,facility_id,specialization,experience_years,employment_type
+DOC001,Dr. Arjun Rao,DEP001,FAC001,Cardiology,22,Full-Time
+DOC002,Dr. Priya Kumar,DEP001,FAC002,Cardiology,3,Full-Time
+DOC003,Dr. Rahul Verma,DEP001,FAC003,Cardiology,11,Full-Time
+DOC004,Dr. Sneha Mehta,DEP001,FAC004,Cardiology,4,Full-Time
+DOC005,Dr. Kiran Rao,DEP001,FAC005,Cardiology,17,Full-Time
+DOC006,Dr. Ananya Kumar,DEP002,FAC001,Orthopedics,22,Part-Time
+DOC007,Dr. Vikram Verma,DEP002,FAC002,Orthopedics,19,Part-Time
+DOC008,Dr. Meera Mehta,DEP003,FAC003,Pediatrics,19,Full-Time
+DOC009,Dr. Rohit Rao,DEP002,FAC004,Orthopedics,22,Full-Time
+DOC010,Dr. Kavya Kumar,DEP003,FAC005,Pediatrics,5,Full-Time
+DOC011,Dr. Aditya Verma,DEP003,FAC001,Pediatrics,6,Part-Time
+DOC012,Dr. Divya Mehta,DEP005,FAC002,General Medicine,19,Part-Time
+DOC013,Dr. Sanjay Rao,DEP005,FAC003,General Medicine,9,Full-Time
+DOC014,Dr. Nisha Kumar,DEP004,FAC004,Neurology,16,Part-Time
+DOC015,Dr. Varun Verma,DEP005,FAC005,General Medicine,5,Full-Time
+DOC016,Dr. Pooja Mehta,DEP004,FAC001,Neurology,17,Part-Time
+DOC017,Dr. Arjun Rao,DEP006,FAC002,Dermatology,18,Full-Time
+DOC018,Dr. Priya Kumar,DEP007,FAC003,ENT,13,Full-Time
+DOC019,Dr. Rahul Verma,DEP005,FAC004,General Medicine,6,Full-Time
+DOC020,Dr. Sneha Mehta,DEP006,FAC005,Dermatology,6,Full-Time
+DOC021,Dr. Kiran Rao,DEP005,FAC001,General Medicine,22,Full-Time
+DOC022,Dr. Ananya Kumar,DEP007,FAC002,ENT,5,Full-Time
+DOC023,Dr. Vikram Verma,DEP008,FAC003,Emergency Medicine,9,Full-Time
+DOC024,Dr. Meera Mehta,DEP006,FAC004,Dermatology,22,Full-Time
+DOC025,Dr. Rohit Rao,DEP007,FAC005,ENT,13,Full-Time
+DOC026,Dr. Kavya Kumar,DEP008,FAC001,Emergency Medicine,25,Full-Time
+DOC027,Dr. Aditya Verma,DEP001,FAC002,Cardiology,6,Full-Time
+DOC028,Dr. Divya Mehta,DEP001,FAC003,Cardiology,13,Full-Time
+DOC029,Dr. Sanjay Rao,DEP007,FAC004,ENT,10,Full-Time
+DOC030,Dr. Nisha Kumar,DEP008,FAC005,Emergency Medicine,18,Full-Time
+DOC031,Dr. Varun Verma,DEP001,FAC001,Cardiology,25,Full-Time
+DOC032,Dr. Pooja Mehta,DEP002,FAC002,Orthopedics,24,Part-Time
+DOC033,Dr. Arjun Rao,DEP003,FAC003,Pediatrics,25,Part-Time
+DOC034,Dr. Priya Kumar,DEP001,FAC004,Cardiology,15,Full-Time
+DOC035,Dr. Rahul Verma,DEP001,FAC005,Cardiology,7,Full-Time
+DOC036,Dr. Sneha Mehta,DEP002,FAC001,Orthopedics,13,Part-Time
+DOC037,Dr. Kiran Rao,DEP005,FAC002,General Medicine,21,Full-Time
+DOC038,Dr. Ananya Kumar,DEP005,FAC003,General Medicine,16,Full-Time
+DOC039,Dr. Vikram Verma,DEP002,FAC004,Orthopedics,12,Part-Time
+DOC040,Dr. Meera Mehta,DEP003,FAC005,Pediatrics,3,Full-Time
+DOC041,Dr. Kiran Kumar,DEP001,FAC005,Cardiology,7,Full-Time
+DOC042,Dr. Ajay Krishnan,DEP003,FAC003,Pediatrics,12,Full-Time
+DOC043,Dr. Imran Rao,DEP008,FAC003,Emergency,11,Full-Time
+DOC044,Dr. Neha Krishnan,DEP005,FAC002,General Medicine,21,Part-Time
+DOC045,Dr. Rekha Kumar,DEP007,FAC004,ENT,25,Part-Time
+DOC046,Dr. Amit Dsouza,DEP001,FAC001,Cardiology,8,Full-Time
+DOC047,Dr. Yogesh Naidu,DEP006,FAC005,Dermatology,20,Full-Time
+DOC048,Dr. Nikhil Verma,DEP002,FAC001,Orthopedics,13,Full-Time
+DOC049,Dr. Naveen Reddy,DEP001,FAC003,Cardiology,17,Part-Time
+DOC050,Dr. Rahul Goel,DEP005,FAC003,General Medicine,18,Part-Time
+DOC051,Dr. Yogesh Kaur,DEP005,FAC002,General Medicine,15,Part-Time
+DOC052,Dr. Ritu Patel,DEP002,FAC004,Orthopedics,28,Full-Time
+DOC053,Dr. Arjun Rao,DEP007,FAC005,ENT,9,Full-Time
+DOC054,Dr. Sunita Ghosh,DEP003,FAC003,Pediatrics,15,Part-Time
+DOC055,Dr. Farah Singh,DEP006,FAC004,Dermatology,7,Part-Time
+DOC056,Dr. Aarti Raju,DEP001,FAC003,Cardiology,21,Full-Time
+DOC057,Dr. Ovi Menon,DEP001,FAC002,Cardiology,25,Full-Time
+DOC058,Dr. Gopal Patel,DEP001,FAC004,Cardiology,1,Full-Time
+DOC059,Dr. Preeti Sharma,DEP006,FAC005,Dermatology,22,Full-Time
+DOC060,Dr. Rhea Iyer,DEP006,FAC005,Dermatology,25,Full-Time

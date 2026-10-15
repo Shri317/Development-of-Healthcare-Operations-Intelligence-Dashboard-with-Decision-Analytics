@@ -1,0 +1,41 @@
+vendor_id,vendor_name,vendor_category,rating,on_time_delivery_pct,quality_score,avg_lead_time_days,risk_level
+VND001,Medical Supplier 001,Specialty Supplier,4.9,79.9,98.2,6.0,Low
+VND002,Medical Supplier 002,Pharmaceutical,4.6,82.0,85.2,7.8,High
+VND003,Medical Supplier 003,Medical Distributor,3.1,80.5,88.6,11.3,High
+VND004,Medical Supplier 004,Pharmaceutical,3.6,96.0,91.7,11.8,Low
+VND005,Medical Supplier 005,Specialty Supplier,2.8,78.9,76.3,4.8,Low
+VND006,Medical Supplier 006,Medical Distributor,4.4,88.5,72.7,4.9,Low
+VND007,Medical Supplier 007,Specialty Supplier,3.0,90.6,81.5,7.5,Low
+VND008,Medical Supplier 008,Specialty Supplier,3.6,84.6,81.8,17.3,Low
+VND009,Medical Supplier 009,Pharmaceutical,4.8,91.6,76.3,17.4,Medium
+VND010,Medical Supplier 010,Pharmaceutical,3.1,82.6,83.0,6.4,High
+VND011,Medical Supplier 011,Specialty Supplier,3.5,81.7,95.6,9.5,Medium
+VND012,Medical Supplier 012,Pharmaceutical,4.6,83.3,97.7,9.9,Low
+VND013,Medical Supplier 013,Specialty Supplier,4.2,95.2,88.2,17.1,Low
+VND014,Medical Supplier 014,Specialty Supplier,4.5,93.2,88.3,15.3,Low
+VND015,Medical Supplier 015,Medical Distributor,4.9,95.6,78.0,17.1,Low
+VND016,Medical Supplier 016,Medical Distributor,4.8,88.6,76.3,7.4,Medium
+VND017,Medical Supplier 017,Specialty Supplier,3.4,87.0,97.7,14.9,Low
+VND018,Medical Supplier 018,Medical Distributor,3.5,78.8,93.6,14.4,Low
+VND019,Medical Supplier 019,Specialty Supplier,3.0,93.8,88.5,6.9,Medium
+VND020,Medical Supplier 020,Medical Distributor,3.6,97.6,92.9,9.0,Low
+VND021,Medical Supplier 021,Medical Distributor,4.5,91.9,73.6,15.0,Low
+VND022,Medical Supplier 022,Specialty Supplier,3.4,91.2,90.9,17.1,Low
+VND023,Medical Supplier 023,Medical Distributor,4.6,84.0,82.3,11.3,Low
+VND024,Medical Supplier 024,Pharmaceutical,4.1,88.9,82.7,16.8,Medium
+VND025,Medical Supplier 025,Specialty Supplier,3.6,89.7,78.5,4.1,Medium
+VND026,Medical Supplier 026,Pharmaceutical,3.7,78.3,83.4,8.5,High
+VND027,Medical Supplier 027,Medical Distributor,4.5,85.5,81.3,12.8,Medium
+VND028,Medical Supplier 028,Specialty Supplier,3.5,98.4,84.3,10.2,Low
+VND029,Medical Supplier 029,Pharmaceutical,4.4,84.7,92.2,6.7,Low
+VND030,Medical Supplier 030,Pharmaceutical,3.7,93.5,74.2,11.6,Low
+VND031,Medical Supplier 031,Pharmaceutical,3.6,77.9,87.9,7.6,Medium
+VND032,Medical Supplier 032,Specialty Supplier,4.5,89.0,80.8,8.7,Low
+VND033,Medical Supplier 033,Specialty Supplier,4.2,85.2,81.4,3.8,High
+VND034,Medical Supplier 034,Medical Distributor,3.3,84.8,91.2,8.2,Low
+VND035,Medical Supplier 035,Pharmaceutical,3.4,89.3,82.1,10.6,High
+VND036,Medical Supplier 036,Medical Distributor,5.0,90.9,94.0,19.0,Low
+VND037,Medical Supplier 037,Specialty Supplier,4.9,89.4,78.7,6.8,Medium
+VND038,Medical Supplier 038,Medical Distributor,3.7,93.0,72.3,16.0,Low
+VND039,Medical Supplier 039,Specialty Supplier,2.4,88.5,98.5,16.4,Low
+VND040,Medical Supplier 040,Medical Distributor,4.0,91.4,73.1,5.4,Low

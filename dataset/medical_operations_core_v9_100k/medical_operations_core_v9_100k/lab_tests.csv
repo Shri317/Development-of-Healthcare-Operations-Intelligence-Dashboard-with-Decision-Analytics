@@ -1,0 +1,16 @@
+test_id,test_name,category,standard_cost,target_tat_hours,active_flag
+LAB001,Complete Blood Count,Hematology,350,24,Y
+LAB002,Blood Glucose,Biochemistry,150,4,Y
+LAB003,Lipid Profile,Biochemistry,500,24,Y
+LAB004,Liver Function Test,Biochemistry,650,24,Y
+LAB005,Kidney Function Test,Biochemistry,600,24,Y
+LAB006,Thyroid Profile,Immunology,700,48,Y
+LAB007,Urine Routine,Microbiology,200,8,Y
+LAB008,Urine Culture,Microbiology,750,72,Y
+LAB009,Chest X-Ray,Radiology,800,4,Y
+LAB010,Ultrasound Abdomen,Radiology,1200,24,Y
+LAB011,ECG,Cardiology Diagnostics,300,2,Y
+LAB012,HbA1c,Biochemistry,400,12,Y
+LAB013,COVID PCR,Molecular Diagnostics,900,24,Y
+LAB014,Blood Culture,Microbiology,1100,96,Y
+LAB015,Electrolytes Panel,Biochemistry,450,6,Y
