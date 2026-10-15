@@ -1,0 +1,1768 @@
+{
+  "admissions": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/admissions/",
+    "cols": [
+      {
+        "name": "admission_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "bed_id",
+        "type": "string"
+      },
+      {
+        "name": "admission_date",
+        "type": "string"
+      },
+      {
+        "name": "discharge_date",
+        "type": "string"
+      },
+      {
+        "name": "admission_type",
+        "type": "string"
+      },
+      {
+        "name": "length_of_stay_days",
+        "type": "double"
+      },
+      {
+        "name": "discharge_status",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 18922
+  },
+  "appointments": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/appointments/",
+    "cols": [
+      {
+        "name": "appointment_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "doctor_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "appointment_date",
+        "type": "string"
+      },
+      {
+        "name": "appointment_time",
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "booking_type",
+        "type": "string"
+      },
+      {
+        "name": "wait_time_minutes",
+        "type": "bigint"
+      },
+      {
+        "name": "consultation_duration_minutes",
+        "type": "bigint"
+      }
+    ],
+    "athena_rows": 35128
+  },
+  "bed_movements": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/bed_movements/",
+    "cols": [
+      {
+        "name": "movement_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "admission_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "from_bed_id",
+        "type": "string"
+      },
+      {
+        "name": "to_bed_id",
+        "type": "string"
+      },
+      {
+        "name": "from_department_id",
+        "type": "string"
+      },
+      {
+        "name": "to_department_id",
+        "type": "string"
+      },
+      {
+        "name": "movement_datetime",
+        "type": "string"
+      },
+      {
+        "name": "movement_reason",
+        "type": "string"
+      },
+      {
+        "name": "transfer_wait_minutes",
+        "type": "bigint"
+      }
+    ],
+    "athena_rows": 1952
+  },
+  "beds": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/beds/",
+    "cols": [
+      {
+        "name": "col0",
+        "type": "string"
+      },
+      {
+        "name": "col1",
+        "type": "string"
+      },
+      {
+        "name": "col2",
+        "type": "string"
+      },
+      {
+        "name": "col3",
+        "type": "string"
+      },
+      {
+        "name": "col4",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 901
+  },
+  "billing": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/billing/",
+    "cols": [
+      {
+        "name": "bill_id",
+        "type": "string"
+      },
+      {
+        "name": "appointment_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "doctor_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "bill_date",
+        "type": "string"
+      },
+      {
+        "name": "service_type",
+        "type": "string"
+      },
+      {
+        "name": "gross_amount",
+        "type": "double"
+      },
+      {
+        "name": "discount_amount",
+        "type": "double"
+      },
+      {
+        "name": "net_amount",
+        "type": "double"
+      },
+      {
+        "name": "insurance_amount",
+        "type": "double"
+      },
+      {
+        "name": "patient_amount",
+        "type": "double"
+      },
+      {
+        "name": "paid_amount",
+        "type": "double"
+      },
+      {
+        "name": "outstanding_amount",
+        "type": "double"
+      },
+      {
+        "name": "payment_status",
+        "type": "string"
+      },
+      {
+        "name": "payment_method",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 29199
+  },
+  "claims": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/claims/",
+    "cols": [
+      {
+        "name": "claim_id",
+        "type": "string"
+      },
+      {
+        "name": "bill_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "payer",
+        "type": "string"
+      },
+      {
+        "name": "submission_date",
+        "type": "string"
+      },
+      {
+        "name": "claimed_amount",
+        "type": "double"
+      },
+      {
+        "name": "claim_status",
+        "type": "string"
+      },
+      {
+        "name": "denial_reason",
+        "type": "string"
+      },
+      {
+        "name": "last_update_date",
+        "type": "string"
+      },
+      {
+        "name": "paid_amount",
+        "type": "double"
+      },
+      {
+        "name": "outstanding_claim_amount",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 20007
+  },
+  "corrective_actions": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/corrective_actions/",
+    "cols": [
+      {
+        "name": "col0",
+        "type": "string"
+      },
+      {
+        "name": "col1",
+        "type": "string"
+      },
+      {
+        "name": "col2",
+        "type": "string"
+      },
+      {
+        "name": "col3",
+        "type": "string"
+      },
+      {
+        "name": "col4",
+        "type": "string"
+      },
+      {
+        "name": "col5",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 416
+  },
+  "departments": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/departments/",
+    "cols": [
+      {
+        "name": "col0",
+        "type": "string"
+      },
+      {
+        "name": "col1",
+        "type": "string"
+      },
+      {
+        "name": "col2",
+        "type": "string"
+      },
+      {
+        "name": "col3",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 29
+  },
+  "discharge_records": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/discharge_records/",
+    "cols": [
+      {
+        "name": "discharge_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "admission_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "planned_discharge_date",
+        "type": "string"
+      },
+      {
+        "name": "actual_discharge_date",
+        "type": "string"
+      },
+      {
+        "name": "discharge_type",
+        "type": "string"
+      },
+      {
+        "name": "discharge_delay_hours",
+        "type": "bigint"
+      },
+      {
+        "name": "discharge_barrier",
+        "type": "string"
+      },
+      {
+        "name": "follow_up_required",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 2322
+  },
+  "doctor_workload": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/doctor_workload/",
+    "cols": [
+      {
+        "name": "workload_id",
+        "type": "string"
+      },
+      {
+        "name": "doctor_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "date",
+        "type": "string"
+      },
+      {
+        "name": "appointments_handled",
+        "type": "bigint"
+      },
+      {
+        "name": "emergency_cases",
+        "type": "bigint"
+      },
+      {
+        "name": "surgeries_performed",
+        "type": "bigint"
+      },
+      {
+        "name": "inpatient_rounds",
+        "type": "bigint"
+      },
+      {
+        "name": "working_hours",
+        "type": "double"
+      },
+      {
+        "name": "overtime_hours",
+        "type": "double"
+      },
+      {
+        "name": "workload_score",
+        "type": "double"
+      },
+      {
+        "name": "utilization_pct",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 2937
+  },
+  "doctors": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/doctors/",
+    "cols": [
+      {
+        "name": "doctor_id",
+        "type": "string"
+      },
+      {
+        "name": "doctor_name",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "specialization",
+        "type": "string"
+      },
+      {
+        "name": "experience_years",
+        "type": "bigint"
+      },
+      {
+        "name": "employment_type",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 60
+  },
+  "emergency_visits": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/emergency_visits/",
+    "cols": [
+      {
+        "name": "emergency_visit_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "arrival_datetime",
+        "type": "string"
+      },
+      {
+        "name": "arrival_mode",
+        "type": "string"
+      },
+      {
+        "name": "triage_level",
+        "type": "bigint"
+      },
+      {
+        "name": "chief_complaint",
+        "type": "string"
+      },
+      {
+        "name": "waiting_time_minutes",
+        "type": "bigint"
+      },
+      {
+        "name": "treatment_duration_minutes",
+        "type": "bigint"
+      },
+      {
+        "name": "disposition",
+        "type": "string"
+      },
+      {
+        "name": "admission_required",
+        "type": "string"
+      },
+      {
+        "name": "discharge_datetime",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 19460
+  },
+  "facilities": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/facilities/",
+    "cols": [
+      {
+        "name": "col0",
+        "type": "string"
+      },
+      {
+        "name": "col1",
+        "type": "string"
+      },
+      {
+        "name": "col2",
+        "type": "string"
+      },
+      {
+        "name": "col3",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 6
+  },
+  "financial_expenses": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/financial_expenses/",
+    "cols": [
+      {
+        "name": "expense_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "expense_date",
+        "type": "string"
+      },
+      {
+        "name": "expense_category",
+        "type": "string"
+      },
+      {
+        "name": "amount",
+        "type": "double"
+      },
+      {
+        "name": "payment_status",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 1175
+  },
+  "financial_monthly": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/financial_monthly/",
+    "cols": [
+      {
+        "name": "financial_id",
+        "type": "string"
+      },
+      {
+        "name": "month",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "revenue",
+        "type": "double"
+      },
+      {
+        "name": "operating_cost",
+        "type": "double"
+      },
+      {
+        "name": "operating_profit",
+        "type": "double"
+      },
+      {
+        "name": "payroll_cost",
+        "type": "double"
+      },
+      {
+        "name": "supply_cost",
+        "type": "double"
+      },
+      {
+        "name": "budget_revenue",
+        "type": "double"
+      },
+      {
+        "name": "budget_cost",
+        "type": "double"
+      },
+      {
+        "name": "revenue_variance",
+        "type": "double"
+      },
+      {
+        "name": "cost_variance",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 70
+  },
+  "icu_stays": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/icu_stays/",
+    "cols": [
+      {
+        "name": "icu_stay_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "admission_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "bed_id",
+        "type": "string"
+      },
+      {
+        "name": "admission_datetime",
+        "type": "string"
+      },
+      {
+        "name": "discharge_datetime",
+        "type": "string"
+      },
+      {
+        "name": "ventilation_required",
+        "type": "string"
+      },
+      {
+        "name": "ventilator_hours",
+        "type": "double"
+      },
+      {
+        "name": "oxygen_required",
+        "type": "string"
+      },
+      {
+        "name": "acuity_score",
+        "type": "bigint"
+      },
+      {
+        "name": "daily_cost",
+        "type": "double"
+      },
+      {
+        "name": "outcome",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 784
+  },
+  "inventory": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/inventory/",
+    "cols": [
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "medicine_id",
+        "type": "string"
+      },
+      {
+        "name": "current_stock",
+        "type": "bigint"
+      },
+      {
+        "name": "reorder_level",
+        "type": "bigint"
+      },
+      {
+        "name": "reserved_stock",
+        "type": "bigint"
+      },
+      {
+        "name": "stock_status",
+        "type": "string"
+      },
+      {
+        "name": "available_stock",
+        "type": "bigint"
+      }
+    ],
+    "athena_rows": 1000
+  },
+  "inventory_transactions": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/inventory_transactions/",
+    "cols": [
+      {
+        "name": "transaction_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "medicine_id",
+        "type": "string"
+      },
+      {
+        "name": "transaction_type",
+        "type": "string"
+      },
+      {
+        "name": "transaction_date",
+        "type": "string"
+      },
+      {
+        "name": "quantity",
+        "type": "bigint"
+      },
+      {
+        "name": "transaction_value",
+        "type": "double"
+      },
+      {
+        "name": "vendor_id",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 19394
+  },
+  "lab_equipment": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/lab_equipment/",
+    "cols": [
+      {
+        "name": "equipment_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "equipment_type",
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "utilization_pct",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 40
+  },
+  "lab_orders_results": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/lab_orders_results/",
+    "cols": [
+      {
+        "name": "lab_order_id",
+        "type": "string"
+      },
+      {
+        "name": "appointment_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "doctor_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "test_id",
+        "type": "string"
+      },
+      {
+        "name": "test_name",
+        "type": "string"
+      },
+      {
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "name": "order_date",
+        "type": "string"
+      },
+      {
+        "name": "collection_date",
+        "type": "string"
+      },
+      {
+        "name": "result_date",
+        "type": "string"
+      },
+      {
+        "name": "tat_hours",
+        "type": "bigint"
+      },
+      {
+        "name": "priority",
+        "type": "string"
+      },
+      {
+        "name": "result_status",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 5879
+  },
+  "lab_samples": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/lab_samples/",
+    "cols": [
+      {
+        "name": "col0",
+        "type": "string"
+      },
+      {
+        "name": "col1",
+        "type": "string"
+      },
+      {
+        "name": "col2",
+        "type": "string"
+      },
+      {
+        "name": "col3",
+        "type": "string"
+      },
+      {
+        "name": "col4",
+        "type": "string"
+      },
+      {
+        "name": "col5",
+        "type": "string"
+      },
+      {
+        "name": "col6",
+        "type": "string"
+      },
+      {
+        "name": "col7",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 5880
+  },
+  "lab_tests": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/lab_tests/",
+    "cols": [
+      {
+        "name": "test_id",
+        "type": "string"
+      },
+      {
+        "name": "test_name",
+        "type": "string"
+      },
+      {
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "name": "standard_cost",
+        "type": "bigint"
+      },
+      {
+        "name": "target_tat_hours",
+        "type": "bigint"
+      },
+      {
+        "name": "active_flag",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 15
+  },
+  "medicine_batches": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/medicine_batches/",
+    "cols": [
+      {
+        "name": "batch_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "medicine_id",
+        "type": "string"
+      },
+      {
+        "name": "vendor_id",
+        "type": "string"
+      },
+      {
+        "name": "expiry_date",
+        "type": "string"
+      },
+      {
+        "name": "batch_quantity",
+        "type": "bigint"
+      },
+      {
+        "name": "unit_cost",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 1175
+  },
+  "medicines": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/medicines/",
+    "cols": [
+      {
+        "name": "medicine_id",
+        "type": "string"
+      },
+      {
+        "name": "medicine_name",
+        "type": "string"
+      },
+      {
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "name": "dosage_form",
+        "type": "string"
+      },
+      {
+        "name": "strength",
+        "type": "string"
+      },
+      {
+        "name": "vendor_id",
+        "type": "string"
+      },
+      {
+        "name": "unit_cost",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 200
+  },
+  "nurse_shifts": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/nurse_shifts/",
+    "cols": [
+      {
+        "name": "shift_id",
+        "type": "string"
+      },
+      {
+        "name": "staff_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "shift_date",
+        "type": "string"
+      },
+      {
+        "name": "shift_type",
+        "type": "string"
+      },
+      {
+        "name": "scheduled_hours",
+        "type": "double"
+      },
+      {
+        "name": "worked_hours",
+        "type": "double"
+      },
+      {
+        "name": "overtime_hours",
+        "type": "double"
+      },
+      {
+        "name": "patients_assigned",
+        "type": "bigint"
+      },
+      {
+        "name": "patient_nurse_ratio",
+        "type": "double"
+      },
+      {
+        "name": "absenteeism_flag",
+        "type": "string"
+      },
+      {
+        "name": "workload_score",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 2349
+  },
+  "patient_complaints": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/patient_complaints/",
+    "cols": [
+      {
+        "name": "complaint_id",
+        "type": "string"
+      },
+      {
+        "name": "feedback_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "complaint_date",
+        "type": "string"
+      },
+      {
+        "name": "complaint_category",
+        "type": "string"
+      },
+      {
+        "name": "priority",
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "resolution_hours",
+        "type": "bigint"
+      }
+    ],
+    "athena_rows": 1563
+  },
+  "patient_feedback": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/patient_feedback/",
+    "cols": [
+      {
+        "name": "feedback_id",
+        "type": "string"
+      },
+      {
+        "name": "appointment_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "feedback_date",
+        "type": "string"
+      },
+      {
+        "name": "overall_rating",
+        "type": "bigint"
+      },
+      {
+        "name": "wait_time_rating",
+        "type": "bigint"
+      },
+      {
+        "name": "staff_rating",
+        "type": "bigint"
+      },
+      {
+        "name": "service_quality_rating",
+        "type": "bigint"
+      },
+      {
+        "name": "recommendation",
+        "type": "string"
+      },
+      {
+        "name": "sentiment",
+        "type": "string"
+      },
+      {
+        "name": "feedback_channel",
+        "type": "string"
+      },
+      {
+        "name": "complaint_flag",
+        "type": "string"
+      },
+      {
+        "name": "nps_score",
+        "type": "bigint"
+      },
+      {
+        "name": "csat_score",
+        "type": "bigint"
+      }
+    ],
+    "athena_rows": 3116
+  },
+  "patient_flow_events": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/patient_flow_events/",
+    "cols": [
+      {
+        "name": "event_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "admission_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "event_datetime",
+        "type": "string"
+      },
+      {
+        "name": "event_type",
+        "type": "string"
+      },
+      {
+        "name": "previous_location",
+        "type": "string"
+      },
+      {
+        "name": "current_location",
+        "type": "string"
+      },
+      {
+        "name": "waiting_time_minutes",
+        "type": "bigint"
+      },
+      {
+        "name": "event_duration_minutes",
+        "type": "bigint"
+      }
+    ],
+    "athena_rows": 1949
+  },
+  "patients": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/patients/",
+    "cols": [
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "gender",
+        "type": "string"
+      },
+      {
+        "name": "age",
+        "type": "bigint"
+      },
+      {
+        "name": "city",
+        "type": "string"
+      },
+      {
+        "name": "registration_date",
+        "type": "string"
+      },
+      {
+        "name": "patient_type",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 2937
+  },
+  "pharmacy_dispensing": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/pharmacy_dispensing/",
+    "cols": [
+      {
+        "name": "prescription_id",
+        "type": "string"
+      },
+      {
+        "name": "appointment_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "medicine_id",
+        "type": "string"
+      },
+      {
+        "name": "dispense_date",
+        "type": "string"
+      },
+      {
+        "name": "dispensed_quantity",
+        "type": "bigint"
+      },
+      {
+        "name": "pharmacist_id",
+        "type": "string"
+      },
+      {
+        "name": "dispense_value",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 4401
+  },
+  "prescriptions": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/prescriptions/",
+    "cols": [
+      {
+        "name": "prescription_id",
+        "type": "string"
+      },
+      {
+        "name": "appointment_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "doctor_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "medicine_id",
+        "type": "string"
+      },
+      {
+        "name": "prescription_date",
+        "type": "string"
+      },
+      {
+        "name": "route",
+        "type": "string"
+      },
+      {
+        "name": "quantity_prescribed",
+        "type": "bigint"
+      },
+      {
+        "name": "prescription_status",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 5374
+  },
+  "purchase_orders": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/purchase_orders/",
+    "cols": [
+      {
+        "name": "po_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "vendor_id",
+        "type": "string"
+      },
+      {
+        "name": "medicine_id",
+        "type": "string"
+      },
+      {
+        "name": "order_date",
+        "type": "string"
+      },
+      {
+        "name": "ordered_quantity",
+        "type": "bigint"
+      },
+      {
+        "name": "order_value",
+        "type": "double"
+      },
+      {
+        "name": "po_status",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 587
+  },
+  "quality_audits": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/quality_audits/",
+    "cols": [
+      {
+        "name": "audit_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "audit_date",
+        "type": "string"
+      },
+      {
+        "name": "audit_type",
+        "type": "string"
+      },
+      {
+        "name": "compliance_score",
+        "type": "double"
+      },
+      {
+        "name": "findings_count",
+        "type": "bigint"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 979
+  },
+  "quality_incidents": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/quality_incidents/",
+    "cols": [
+      {
+        "name": "col0",
+        "type": "string"
+      },
+      {
+        "name": "col1",
+        "type": "string"
+      },
+      {
+        "name": "col2",
+        "type": "string"
+      },
+      {
+        "name": "col3",
+        "type": "string"
+      },
+      {
+        "name": "col4",
+        "type": "string"
+      },
+      {
+        "name": "col5",
+        "type": "string"
+      },
+      {
+        "name": "col6",
+        "type": "string"
+      },
+      {
+        "name": "col7",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 980
+  },
+  "staff": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/staff/",
+    "cols": [
+      {
+        "name": "staff_id",
+        "type": "string"
+      },
+      {
+        "name": "staff_name",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "role",
+        "type": "string"
+      },
+      {
+        "name": "employment_type",
+        "type": "string"
+      },
+      {
+        "name": "experience_years",
+        "type": "bigint"
+      }
+    ],
+    "athena_rows": 500
+  },
+  "staff_attendance": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/staff_attendance/",
+    "cols": [
+      {
+        "name": "staff_id",
+        "type": "string"
+      },
+      {
+        "name": "attendance_date",
+        "type": "string"
+      },
+      {
+        "name": "shift",
+        "type": "string"
+      },
+      {
+        "name": "attendance_status",
+        "type": "string"
+      },
+      {
+        "name": "hours_worked",
+        "type": "double"
+      },
+      {
+        "name": "overtime_hours",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 4307
+  },
+  "staff_workload": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/staff_workload/",
+    "cols": [
+      {
+        "name": "workload_id",
+        "type": "string"
+      },
+      {
+        "name": "staff_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "work_date",
+        "type": "string"
+      },
+      {
+        "name": "appointments_handled",
+        "type": "bigint"
+      },
+      {
+        "name": "tasks_completed",
+        "type": "bigint"
+      },
+      {
+        "name": "available_hours",
+        "type": "double"
+      },
+      {
+        "name": "utilization_pct",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 3524
+  },
+  "supply_chain_purchase_orders": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/supply_chain_purchase_orders/",
+    "cols": [
+      {
+        "name": "supply_po_id",
+        "type": "string"
+      },
+      {
+        "name": "vendor_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "po_date",
+        "type": "string"
+      },
+      {
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "name": "order_amount",
+        "type": "double"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "expected_delivery_days",
+        "type": "bigint"
+      },
+      {
+        "name": "actual_delivery_days",
+        "type": "bigint"
+      },
+      {
+        "name": "on_time_flag",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 979
+  },
+  "surgeries": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/surgeries/",
+    "cols": [
+      {
+        "name": "surgery_id",
+        "type": "string"
+      },
+      {
+        "name": "patient_id",
+        "type": "string"
+      },
+      {
+        "name": "admission_id",
+        "type": "string"
+      },
+      {
+        "name": "facility_id",
+        "type": "string"
+      },
+      {
+        "name": "department_id",
+        "type": "string"
+      },
+      {
+        "name": "surgeon_id",
+        "type": "string"
+      },
+      {
+        "name": "surgery_type",
+        "type": "string"
+      },
+      {
+        "name": "scheduled_datetime",
+        "type": "string"
+      },
+      {
+        "name": "actual_start_datetime",
+        "type": "string"
+      },
+      {
+        "name": "actual_end_datetime",
+        "type": "string"
+      },
+      {
+        "name": "operating_room",
+        "type": "string"
+      },
+      {
+        "name": "surgery_status",
+        "type": "string"
+      },
+      {
+        "name": "cancellation_reason",
+        "type": "string"
+      },
+      {
+        "name": "complication_flag",
+        "type": "string"
+      },
+      {
+        "name": "estimated_cost",
+        "type": "double"
+      },
+      {
+        "name": "actual_cost",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 1184
+  },
+  "vendor_performance": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/vendor_performance/",
+    "cols": [
+      {
+        "name": "vendor_id",
+        "type": "string"
+      },
+      {
+        "name": "vendor_name",
+        "type": "string"
+      },
+      {
+        "name": "vendor_category",
+        "type": "string"
+      },
+      {
+        "name": "rating",
+        "type": "double"
+      },
+      {
+        "name": "on_time_delivery_pct",
+        "type": "double"
+      },
+      {
+        "name": "quality_score",
+        "type": "double"
+      },
+      {
+        "name": "avg_lead_time_days",
+        "type": "double"
+      },
+      {
+        "name": "risk_level",
+        "type": "string"
+      }
+    ],
+    "athena_rows": 40
+  },
+  "vendors": {
+    "s3_location": "s3://medical-operations-bharath-2026/raw/vendors/",
+    "cols": [
+      {
+        "name": "vendor_id",
+        "type": "string"
+      },
+      {
+        "name": "vendor_name",
+        "type": "string"
+      },
+      {
+        "name": "vendor_category",
+        "type": "string"
+      },
+      {
+        "name": "rating",
+        "type": "double"
+      }
+    ],
+    "athena_rows": 40
+  }
+}
