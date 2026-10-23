@@ -516,10 +516,4 @@ This project was developed for final major academic submission and evaluation un
 
 ---
 
-<div align="center">
 
-Built with rigorous data engineering, cloud architecture, and modern analytics.
-
-**Lead Engineer**: [Kummari Bharath](https://github.com/kummariBharath) · [MedOps Repository](https://github.com/kummariBharath/Development-of-Healthcare-Operations-Intelligence-Dashboard-with-Decision-Analytics) · [Production Application](https://development-of-healthcare-operation.vercel.app)
-
-</div>
