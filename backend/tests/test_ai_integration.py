@@ -53,8 +53,8 @@ class TestGeminiAIIntegration(unittest.TestCase):
 
     def test_deterministic_insights_builder(self):
         """Verify deterministic fallback produces structured insights without hallucination."""
-        insights = _build_deterministic_executive_insights(self.mock_metrics, "Metro Health Center")
-        self.assertIn("Metro Health Center", insights["executive_brief"])
+        insights = _build_deterministic_executive_insights(self.mock_metrics, "Hyderabad Central Hospital")
+        self.assertIn("Hyderabad Central Hospital", insights["executive_brief"])
         self.assertIn("78.4%", insights["executive_brief"])
         self.assertIsInstance(insights["key_trends"], list)
         self.assertGreater(len(insights["key_trends"]), 0)

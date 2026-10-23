@@ -4,6 +4,12 @@ from abc import ABC, abstractmethod
 from datetime import datetime, timezone
 from typing import Dict, Any, Optional, List
 from app.config import settings
+from app.services.facility_resolver import (
+    normalize_facility_id,
+    get_facility_canonical_name,
+    get_facility_display_label,
+    validate_and_sanitize_ai_response,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -283,15 +289,26 @@ def generate_executive_summary_insights(
     Synthesizes executive operational intelligence using verified metrics.
     Distinguishes factual observations from strategic management recommendations.
     Uses Google Gemini as primary provider; falls back deterministically if unavailable.
+    Guarantees canonical facility name enforcement and strict anti-hallucination controls.
     """
     provider = get_ai_provider()
     provider_name = provider.get_provider_name()
     timestamp = datetime.now(timezone.utc).isoformat()
 
+    norm_id = normalize_facility_id(facility_id)
+    canonical_name = get_facility_canonical_name(norm_id)
+    fac_label = get_facility_display_label(norm_id, include_id=True)
+
     # Base operational context for AI prompt
     context_data = {
-        "facility_id": facility_id,
-        "facility_name": facility_label,
+        "facility_id": norm_id,
+        "facility_name": canonical_name,
+        "facility_label": fac_label,
+        "authoritative_facility_identity": {
+            "facility_id": norm_id,
+            "canonical_facility_name": canonical_name,
+            "is_authoritative": True
+        },
         "reporting_timeframe": timeframe,
         "verified_metrics": {
             "total_admissions": raw_metrics.get("totalAdmissions"),
@@ -308,7 +325,14 @@ def generate_executive_summary_insights(
 
     prompt = (
         f"You are the Chief Healthcare Operations Executive Intelligence Analyst for MedOps.\n"
-        f"Analyze the following verified operational metrics for {facility_label} ({timeframe}):\n\n"
+        f"Analyze the following verified operational metrics for {fac_label} ({timeframe}):\n\n"
+        f"AUTHORITATIVE FACILITY IDENTIFIER:\n"
+        f"- Facility ID: {norm_id}\n"
+        f"- Canonical Facility Name: {canonical_name}\n"
+        f"CRITICAL FACILITY IDENTITY RULE: The facility name above is authoritative and verified. "
+        f"You must refer to the facility EXCLUSIVELY by its canonical name '{canonical_name}' (or verified ID '{norm_id}'). "
+        f"Never invent, rename, alias, or substitute facility names (e.g., do NOT use Metro Health, St. Jude, etc.). "
+        f"If a facility name cannot be verified, use the verified facility ID '{norm_id}' and request clarification rather than inventing a name.\n\n"
         f"STRICT RULES:\n"
         f"1. Rely EXCLUSIVELY on the verified numbers provided in the context. Never invent or hallucinate metrics.\n"
         f"2. Never fabricate trends not grounded in the numbers.\n"
@@ -340,38 +364,47 @@ def generate_executive_summary_insights(
         try:
             parsed = json.loads(raw_text)
             if isinstance(parsed, dict) and "executive_brief" in parsed:
+                # Sanitize all AI-generated strings against authoritative facility registry
+                exec_brief = validate_and_sanitize_ai_response(parsed.get("executive_brief", ""), norm_id)
+                key_trends = [validate_and_sanitize_ai_response(t, norm_id) for t in parsed.get("key_trends", [])]
+                operational_concerns = [validate_and_sanitize_ai_response(c, norm_id) for c in parsed.get("operational_concerns", [])]
+                management_recommendations = [validate_and_sanitize_ai_response(r, norm_id) for r in parsed.get("management_recommendations", [])]
+                observations = [validate_and_sanitize_ai_response(o, norm_id) for o in parsed.get("observations", [])]
+
                 return {
                     "status": "success",
                     "provider": provider_name,
                     "model": llm_res.get('modelId', settings.GEMINI_MODEL),
-                    "facility_id": facility_id,
-                    "facility_label": facility_label,
+                    "facility_id": norm_id,
+                    "facility_name": canonical_name,
+                    "facility_label": fac_label,
                     "timeframe": timeframe,
                     "generated_at": timestamp,
                     "data_freshness": "Real-time Telemetry (Athena / S3 Resilient Layer)",
-                    "executive_brief": parsed.get("executive_brief", ""),
-                    "key_trends": parsed.get("key_trends", []),
-                    "operational_concerns": parsed.get("operational_concerns", []),
-                    "management_recommendations": parsed.get("management_recommendations", []),
-                    "observations": parsed.get("observations", []),
+                    "executive_brief": exec_brief,
+                    "key_trends": key_trends,
+                    "operational_concerns": operational_concerns,
+                    "management_recommendations": management_recommendations,
+                    "observations": observations,
                     "metrics_used": context_data["verified_metrics"],
                     "is_fallback": False,
                     "errorMessage": None
                 }
         except Exception as json_err:
             logger.warning(f"Could not parse LLM response as JSON: {json_err}. Using text as brief.")
-            # If valid text was generated but not in strict JSON, use text as executive brief
-            det = _build_deterministic_executive_insights(raw_metrics, facility_label)
+            det = _build_deterministic_executive_insights(raw_metrics, fac_label)
+            clean_brief = validate_and_sanitize_ai_response(raw_text[:500], norm_id)
             return {
                 "status": "success",
                 "provider": provider_name,
                 "model": llm_res.get('modelId', settings.GEMINI_MODEL),
-                "facility_id": facility_id,
-                "facility_label": facility_label,
+                "facility_id": norm_id,
+                "facility_name": canonical_name,
+                "facility_label": fac_label,
                 "timeframe": timeframe,
                 "generated_at": timestamp,
                 "data_freshness": "Real-time Telemetry (Athena / S3 Resilient Layer)",
-                "executive_brief": raw_text[:500],
+                "executive_brief": clean_brief,
                 "key_trends": det["key_trends"],
                 "operational_concerns": det["operational_concerns"],
                 "management_recommendations": det["management_recommendations"],
@@ -383,13 +416,14 @@ def generate_executive_summary_insights(
 
     # Deterministic fallback when LLM is unavailable or quota error
     logger.info(f"Using deterministic executive summary fallback. Reason: {llm_res.get('errorMessage')}")
-    fallback_data = _build_deterministic_executive_insights(raw_metrics, facility_label)
+    fallback_data = _build_deterministic_executive_insights(raw_metrics, fac_label)
     return {
         "status": "fallback",
         "provider": f"{provider_name} (Deterministic Fallback)",
         "model": llm_res.get('modelId', settings.GEMINI_MODEL),
-        "facility_id": facility_id,
-        "facility_label": facility_label,
+        "facility_id": norm_id,
+        "facility_name": canonical_name,
+        "facility_label": fac_label,
         "timeframe": timeframe,
         "generated_at": timestamp,
         "data_freshness": "Real-time Telemetry (Athena / S3 Resilient Layer)",

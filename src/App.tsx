@@ -18,7 +18,6 @@ import { QualityCompliance } from './components/modules/QualityCompliance';
 import { PatientExperience } from './components/modules/PatientExperience';
 import { SupplyChainVendor } from './components/modules/SupplyChainVendor';
 import { FinancialIntelligence } from './components/modules/FinancialIntelligence';
-import { MedicalOpsAIAgentTab } from './components/modules/MedicalOpsAIAgentTab';
 
 // Modals
 import { EnterpriseDrilldownModal } from './components/modals/EnterpriseDrilldownModal';
@@ -78,11 +77,11 @@ export const MedOpsDashboard: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#252525] text-[#F9FAFB] flex flex-col font-sans selection:bg-[#22D3EE] selection:text-[#1E1E1E]">
       {/* Action Toast Notification */}
       {toastMessage && (
-        <div className="fixed top-16 right-6 z-50 bg-cyan-950 border border-cyan-500 text-cyan-200 px-4 py-3 rounded-2xl shadow-2xl text-xs font-semibold flex items-center gap-2 animate-bounce">
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+        <div className="fixed top-16 right-6 z-50 bg-[#2D2D2D] border border-[#22D3EE] text-[#F9FAFB] px-4 py-3 rounded-2xl shadow-2xl text-xs font-semibold flex items-center gap-2 animate-bounce">
+          <span className="w-2 h-2 rounded-full bg-cyan-500 animate-ping" />
           {toastMessage}
         </div>
       )}
@@ -108,7 +107,7 @@ export const MedOpsDashboard: React.FC = () => {
         />
 
         {/* Dynamic Module Content View */}
-        <main className="flex-1 p-4 lg:p-6 overflow-y-auto max-w-full">
+        <main className="flex-1 p-4 lg:p-6 overflow-y-auto max-w-full bg-[#252525] text-[#D1D5DB]">
           {activeModule === 'executive' && (
             <ExecutiveCommandCenter
               selectedFacility={selectedFacility}
@@ -187,14 +186,6 @@ export const MedOpsDashboard: React.FC = () => {
               selectedFacility={selectedFacility}
               selectedTimeframe={selectedTimeframe}
               onExecuteAction={handleExecuteAction}
-            />
-          )}
-
-          {activeModule === 'ai-copilot-tab' && (
-            <MedicalOpsAIAgentTab 
-              selectedFacility={selectedFacility}
-              selectedTimeframe={selectedTimeframe}
-              onExecuteAction={handleExecuteAction} 
             />
           )}
         </main>

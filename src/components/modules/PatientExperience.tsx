@@ -101,21 +101,35 @@ export const PatientExperience: React.FC<PatientExperienceProps> = ({
         <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1">
           <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Net Promoter Score (NPS)</span>
           <div className="text-2xl font-bold text-emerald-400 font-mono">
-            {data.npsScore > 0 ? `+${data.npsScore}` : data.npsScore}
+            {data.totalFeedback === 0 || data.npsScore == null
+              ? 'N/A'
+              : data.npsScore > 0 ? `+${data.npsScore}` : `${data.npsScore}`}
           </div>
-          <p className="text-[10px] text-slate-400">Promoters (9-10) vs Detractors (0-6)</p>
+          <p className="text-[10px] text-slate-400">
+            {data.totalFeedback === 0 ? 'No feedback in period' : 'Promoters (9-10) vs Detractors (0-6)'}
+          </p>
         </div>
 
         <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1">
           <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">CSAT Overall Satisfaction</span>
-          <div className="text-2xl font-bold text-white font-mono">{data.csatScore} / 5.0</div>
-          <p className="text-[10px] text-cyan-300">Mean overall rating: {data.overallRating} / 5.0</p>
+          <div className="text-2xl font-bold text-white font-mono">
+            {data.totalFeedback === 0 || data.csatScore == null ? 'N/A' : `${data.csatScore} / 5.0`}
+          </div>
+          <p className="text-[10px] text-cyan-300">
+            {data.totalFeedback === 0 || data.overallRating == null
+              ? 'No feedback in period'
+              : `Mean overall rating: ${data.overallRating} / 5.0`}
+          </p>
         </div>
 
         <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1">
           <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Positive Sentiment</span>
-          <div className="text-2xl font-bold text-cyan-400 font-mono">{posSentiment?.percentage || 0}%</div>
-          <p className="text-[10px] text-cyan-300">{posSentiment?.count?.toLocaleString() || 0} Positive Ratings</p>
+          <div className="text-2xl font-bold text-cyan-400 font-mono">
+            {data.totalFeedback === 0 ? 'N/A' : `${posSentiment?.percentage || 0}%`}
+          </div>
+          <p className="text-[10px] text-cyan-300">
+            {data.totalFeedback === 0 ? 'No survey responses' : `${posSentiment?.count?.toLocaleString() || 0} Positive Ratings`}
+          </p>
         </div>
 
         <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1">
@@ -131,18 +145,22 @@ export const PatientExperience: React.FC<PatientExperienceProps> = ({
         <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
           <h3 className="text-sm font-bold text-white">Feedback Sentiment Distribution</h3>
           <div className="space-y-2">
-            {data.sentimentBreakdown.map((s, idx) => {
-              const color = s.sentiment === 'Positive' ? 'text-emerald-400' : s.sentiment === 'Neutral' ? 'text-amber-400' : 'text-rose-400';
-              return (
-                <div key={idx} className="flex justify-between items-center p-3 bg-slate-950 rounded-xl border border-slate-800/80 text-xs">
-                  <span className={`font-semibold ${color}`}>{s.sentiment}</span>
-                  <div className="text-right">
-                    <span className="font-mono font-bold text-white mr-2">{s.count.toLocaleString()}</span>
-                    <span className="text-slate-500 font-mono">({s.percentage}%)</span>
+            {data.sentimentBreakdown.length > 0 ? (
+              data.sentimentBreakdown.map((s, idx) => {
+                const color = s.sentiment === 'Positive' ? 'text-emerald-400' : s.sentiment === 'Neutral' ? 'text-amber-400' : 'text-rose-400';
+                return (
+                  <div key={idx} className="flex justify-between items-center p-3 bg-slate-950 rounded-xl border border-slate-800/80 text-xs">
+                    <span className={`font-semibold ${color}`}>{s.sentiment}</span>
+                    <div className="text-right">
+                      <span className="font-mono font-bold text-white mr-2">{s.count.toLocaleString()}</span>
+                      <span className="text-slate-500 font-mono">({s.percentage}%)</span>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })
+            ) : (
+              <p className="text-xs text-slate-500">No sentiment data recorded in period</p>
+            )}
           </div>
         </div>
 
@@ -150,12 +168,16 @@ export const PatientExperience: React.FC<PatientExperienceProps> = ({
         <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
           <h3 className="text-sm font-bold text-white">Feedback Ingestion Channels</h3>
           <div className="space-y-2">
-            {data.feedbackChannelBreakdown.map((c, idx) => (
-              <div key={idx} className="flex justify-between items-center p-3 bg-slate-950 rounded-xl border border-slate-800/80 text-xs">
-                <span className="text-slate-300 font-medium">{c.channel}</span>
-                <span className="font-mono font-bold text-cyan-400">{c.count.toLocaleString()} submissions</span>
-              </div>
-            ))}
+            {data.feedbackChannelBreakdown.length > 0 ? (
+              data.feedbackChannelBreakdown.map((c, idx) => (
+                <div key={idx} className="flex justify-between items-center p-3 bg-slate-950 rounded-xl border border-slate-800/80 text-xs">
+                  <span className="text-slate-300 font-medium">{c.channel}</span>
+                  <span className="font-mono font-bold text-cyan-400">{c.count.toLocaleString()} submissions</span>
+                </div>
+              ))
+            ) : (
+              <p className="text-xs text-slate-500">No channel submissions in period</p>
+            )}
           </div>
         </div>
       </div>

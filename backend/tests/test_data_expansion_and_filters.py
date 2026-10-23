@@ -193,17 +193,23 @@ class TestTimeframeFiltering(unittest.TestCase):
         self.assertIsNone(s)
         self.assertIsNone(e)
 
-        # Today -> 2026-10-14 00:00:00 to 2026-10-14 23:59:59.999999
+        # Reference date today
+        now = datetime.datetime.now()
+        ref_date = now.date() if now.year == 2026 else datetime.date(2026, 10, 14)
+        ref_str = ref_date.strftime("%Y-%m-%d")
+        week_ago_str = (ref_date - datetime.timedelta(days=7)).strftime("%Y-%m-%d")
+
+        # Today
         s, e = _get_timeframe_range("today")
         self.assertIsNotNone(s)
         self.assertIsNotNone(e)
-        self.assertEqual(s.strftime("%Y-%m-%d"), "2026-10-14")
-        self.assertEqual(e.strftime("%Y-%m-%d"), "2026-10-14")
+        self.assertEqual(s.strftime("%Y-%m-%d"), ref_str)
+        self.assertEqual(e.strftime("%Y-%m-%d"), ref_str)
 
         # Weekly -> 7 days rolling to current day end
         s, e = _get_timeframe_range("weekly")
-        self.assertEqual(s.strftime("%Y-%m-%d"), "2026-10-07")
-        self.assertEqual(e.strftime("%Y-%m-%d"), "2026-10-14")
+        self.assertEqual(s.strftime("%Y-%m-%d"), week_ago_str)
+        self.assertEqual(e.strftime("%Y-%m-%d"), ref_str)
 
         # Monthly -> Sep 2026
         s, e = _get_timeframe_range("monthly")
@@ -215,10 +221,10 @@ class TestTimeframeFiltering(unittest.TestCase):
         self.assertEqual(s.strftime("%Y-%m-%d"), "2026-07-01")
         self.assertEqual(e.strftime("%Y-%m-%d"), "2026-09-30")
 
-        # YTD -> 2026-01-01 to 2026-10-14
+        # YTD -> 2026-01-01 to ref_str
         s, e = _get_timeframe_range("ytd")
         self.assertEqual(s.strftime("%Y-%m-%d"), "2026-01-01")
-        self.assertEqual(e.strftime("%Y-%m-%d"), "2026-10-14")
+        self.assertEqual(e.strftime("%Y-%m-%d"), ref_str)
 
         # Explicit start_date and end_date override
         s, e = _get_timeframe_range(start_date="2026-05-01", end_date="2026-05-31")
@@ -226,8 +232,13 @@ class TestTimeframeFiltering(unittest.TestCase):
         self.assertEqual(e.strftime("%Y-%m-%d"), "2026-05-31")
 
     def test_apply_date_filter_dataframe(self):
+        now = datetime.datetime.now()
+        ref_date = now.date() if now.year == 2026 else datetime.date(2026, 10, 14)
+        ref_str = ref_date.strftime("%Y-%m-%d")
+        week_inner_str = (ref_date - datetime.timedelta(days=2)).strftime("%Y-%m-%d")
+
         df = pd.DataFrame({
-            "event_date": ["2026-01-15", "2026-08-20", "2026-09-15", "2026-10-10", "2026-10-14"],
+            "event_date": ["2026-01-15", "2026-08-20", "2026-09-15", week_inner_str, ref_str],
             "val": [10, 20, 30, 40, 50]
         })
 
@@ -236,9 +247,9 @@ class TestTimeframeFiltering(unittest.TestCase):
         self.assertEqual(len(df_today), 1)
         self.assertEqual(df_today.iloc[0]["val"], 50)
 
-        # Weekly filter (2026-10-07 to 2026-10-14)
+        # Weekly filter
         df_week = _apply_date_filter(df, "event_date", timeframe="weekly")
-        self.assertEqual(len(df_week), 2)  # Oct 10 and Oct 14
+        self.assertEqual(len(df_week), 2)
 
         # Monthly filter (Sep 2026)
         df_month = _apply_date_filter(df, "event_date", timeframe="monthly")

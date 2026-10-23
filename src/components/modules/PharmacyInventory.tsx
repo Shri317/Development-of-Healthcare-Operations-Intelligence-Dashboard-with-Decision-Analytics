@@ -154,12 +154,12 @@ export const PharmacyInventory: React.FC<PharmacyInventoryProps> = ({
           {catData.length > 0 ? (
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={catData} margin={{ top: 10, right: 10, left: -10, bottom: 20 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                <XAxis dataKey="category" stroke="#64748b" tick={{ fontSize: 10 }} interval={0} angle={-15} textAnchor="end" />
-                <YAxis stroke="#64748b" tick={{ fontSize: 10 }} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#4B4B4B" />
+                <XAxis dataKey="category" stroke="#9CA3AF" tick={{ fontSize: 10 }} interval={0} angle={-15} textAnchor="end" />
+                <YAxis stroke="#9CA3AF" tick={{ fontSize: 10 }} />
                 <Tooltip 
                   formatter={(val: any, name: any) => [val, name === 'totalItems' ? 'Total Monitored' : 'Low Stock']}
-                  contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', color: '#fff' }}
+                  contentStyle={{ backgroundColor: '#2D2D2D', borderColor: '#4B4B4B', color: '#F9FAFB' }}
                 />
                 <Bar dataKey="totalItems" fill="#38bdf8" radius={[4, 4, 0, 0]} />
                 <Bar dataKey="lowStock" fill="#fbbf24" radius={[4, 4, 0, 0]} />

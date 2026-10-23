@@ -1,28 +1,74 @@
 @import "tailwindcss";
 
+@theme {
+  --color-slate-900: #333333;
+  --color-slate-950: #2D2D2D;
+  --color-slate-800: #383838;
+  --color-slate-700: #4B4B4B;
+  --color-slate-600: #5C5C5C;
+  --color-slate-500: #9CA3AF;
+  --color-slate-400: #9CA3AF;
+  --color-slate-300: #D1D5DB;
+  --color-slate-200: #D1D5DB;
+  --color-slate-100: #F9FAFB;
+  --color-cyan-400: #22D3EE;
+  --color-cyan-300: #67E8F9;
+  --color-emerald-400: #34D399;
+  --color-amber-400: #FBBF24;
+  --color-rose-400: #FB7185;
+  --color-blue-400: #60A5FA;
+}
+
+:root {
+  --app-bg: #252525;
+  --sidebar-bg: #1E1E1E;
+  --card-bg: #333333;
+  --surface-secondary: #2D2D2D;
+  --surface-elevated: #383838;
+  --surface-hover: #3D3D3D;
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  --text-muted: #9CA3AF;
+  --border-color: #4B4B4B;
+  --accent-cyan: #22D3EE;
+  --indicator-success: #34D399;
+  --indicator-warning: #FBBF24;
+  --indicator-error: #FB7185;
+  --indicator-info: #60A5FA;
+}
+
 @layer base {
   body {
-    @apply bg-slate-950 text-slate-100 antialiased font-sans selection:bg-cyan-500 selection:text-white;
+    background-color: #252525;
+    color: #F9FAFB;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #22D3EE;
+    color: #1E1E1E;
   }
 }
 
-/* Custom scrollbars */
+/* Custom dark-grey scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.6);
+  background: #1E1E1E;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(51, 65, 85, 0.8);
+  background: #4B4B4B;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 116, 139, 1);
+  background: #6B7280;
 }
 
 /* Pulse glow animations */
@@ -33,4 +79,327 @@
 
 .animate-pulse-glow {
   animation: pulseGlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ==========================================================================
+   MedOps Dark-Grey Operations Command Center Theme
+   Main Background: #252525
+   Sidebar Background: #1E1E1E
+   Dashboard Cards & Panels: #333333
+   Secondary Panels & Elevated Surfaces: #2D2D2D
+   Primary Text: #F9FAFB
+   Secondary Text: #D1D5DB
+   Muted Text: #9CA3AF
+   Borders & Dividers: #4B4B4B
+   Accent / Active: #22D3EE
+   ========================================================================== */
+
+/* Main application layout & surfaces */
+#root,
+.app-container {
+  background-color: #252525;
+  color: #F9FAFB;
+  min-height: 100vh;
+}
+
+main {
+  background-color: #252525 !important;
+  color: #D1D5DB;
+}
+
+/* Dashboard cards, panels, containers */
+.bg-slate-900,
+main .bg-slate-900,
+.medops-modal-card,
+.medops-card {
+  background-color: #333333 !important;
+  border-color: #4B4B4B !important;
+}
+
+/* Secondary panels, stat wells, code blocks, subcards */
+.bg-slate-950,
+main .bg-slate-950,
+.medops-modal-card .bg-slate-950,
+.medops-drawer-card .bg-slate-950 {
+  background-color: #2D2D2D !important;
+  border-color: #4B4B4B !important;
+}
+
+/* Elevated interactive items, pill buttons, filter bars */
+.bg-slate-800,
+main .bg-slate-800,
+.medops-modal-card .bg-slate-800,
+.medops-drawer-card .bg-slate-800 {
+  background-color: #383838 !important;
+  border-color: #4B4B4B !important;
+}
+
+/* Hover states for surfaces */
+.hover\:bg-slate-800:hover,
+main .hover\:bg-slate-800:hover,
+main .hover\:bg-slate-800\/80:hover,
+main .hover\:bg-slate-800\/60:hover,
+main .hover\:bg-slate-800\/40:hover,
+main .hover\:bg-slate-700:hover,
+.hover\:bg-slate-700:hover {
+  background-color: #3D3D3D !important;
+}
+
+.hover\:border-slate-700:hover,
+main .hover\:border-slate-700:hover {
+  border-color: #60A5FA80 !important;
+}
+
+/* Borders & Dividers */
+.border-slate-800,
+.border-slate-700,
+.border-slate-600,
+main .border-slate-800,
+main .border-slate-700,
+main .border-slate-600,
+.medops-modal-card .border-slate-800,
+.medops-modal-card .border-slate-700,
+.medops-drawer-card .border-slate-800,
+.medops-drawer-card .border-slate-700 {
+  border-color: #4B4B4B !important;
+}
+
+.divide-slate-800 > :not([hidden]) ~ :not([hidden]),
+.divide-slate-700 > :not([hidden]) ~ :not([hidden]),
+main .divide-slate-800 > :not([hidden]) ~ :not([hidden]),
+main .divide-slate-700 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #4B4B4B !important;
+}
+
+/* Typography Hierarchy */
+.text-white,
+main .text-white,
+.medops-modal-card .text-white,
+.medops-drawer-card .text-white {
+  color: #F9FAFB !important;
+}
+
+.text-slate-100,
+main .text-slate-100 {
+  color: #F9FAFB !important;
+}
+
+.text-slate-200,
+.text-slate-300,
+main .text-slate-200,
+main .text-slate-300,
+.medops-modal-card .text-slate-200,
+.medops-modal-card .text-slate-300 {
+  color: #D1D5DB !important;
+}
+
+.text-slate-400,
+.text-slate-500,
+main .text-slate-400,
+main .text-slate-500,
+.medops-modal-card .text-slate-400,
+.medops-modal-card .text-slate-500 {
+  color: #9CA3AF !important;
+}
+
+.hover\:text-white:hover,
+main .hover\:text-white:hover {
+  color: #F9FAFB !important;
+}
+
+/* Accent & Indicator Badges */
+/* Success */
+.text-emerald-400,
+.text-emerald-300 {
+  color: #34D399 !important;
+}
+
+[class*="bg-emerald-950"],
+main [class*="bg-emerald-950"],
+.medops-modal-card [class*="bg-emerald-950"] {
+  background-color: rgba(52, 211, 153, 0.15) !important;
+  color: #34D399 !important;
+  border-color: rgba(52, 211, 153, 0.35) !important;
+}
+
+/* Warning */
+.text-amber-400,
+.text-amber-300 {
+  color: #FBBF24 !important;
+}
+
+[class*="bg-amber-950"],
+main [class*="bg-amber-950"],
+.medops-modal-card [class*="bg-amber-950"] {
+  background-color: rgba(251, 191, 36, 0.15) !important;
+  color: #FBBF24 !important;
+  border-color: rgba(251, 191, 36, 0.35) !important;
+}
+
+/* Error */
+.text-rose-400,
+.text-rose-300 {
+  color: #FB7185 !important;
+}
+
+[class*="bg-rose-950"],
+main [class*="bg-rose-950"],
+.medops-modal-card [class*="bg-rose-950"] {
+  background-color: rgba(251, 113, 133, 0.15) !important;
+  color: #FB7185 !important;
+  border-color: rgba(251, 113, 133, 0.35) !important;
+}
+
+/* Info */
+.text-blue-400,
+.text-blue-300 {
+  color: #60A5FA !important;
+}
+
+[class*="bg-blue-950"],
+main [class*="bg-blue-950"],
+.medops-modal-card [class*="bg-blue-950"] {
+  background-color: rgba(96, 165, 250, 0.15) !important;
+  color: #60A5FA !important;
+  border-color: rgba(96, 165, 250, 0.35) !important;
+}
+
+/* Cyan Accent */
+.text-cyan-400,
+.text-cyan-300 {
+  color: #22D3EE !important;
+}
+
+[class*="bg-cyan-950"],
+main [class*="bg-cyan-950"],
+.medops-modal-card [class*="bg-cyan-950"],
+.medops-drawer-card [class*="bg-cyan-950"] {
+  background-color: rgba(34, 211, 238, 0.15) !important;
+  color: #22D3EE !important;
+  border-color: rgba(34, 211, 238, 0.35) !important;
+}
+
+/* Tables and Data Grids */
+table {
+  color: #D1D5DB;
+}
+
+thead,
+main thead,
+.medops-modal-card thead {
+  background-color: #2D2D2D !important;
+  color: #F9FAFB !important;
+  border-bottom: 1px solid #4B4B4B !important;
+}
+
+thead th,
+main thead th,
+.medops-modal-card thead th {
+  color: #F9FAFB !important;
+  font-weight: 600 !important;
+  border-color: #4B4B4B !important;
+}
+
+tbody tr,
+main tbody tr,
+.medops-modal-card tbody tr {
+  border-bottom: 1px solid #4B4B4B !important;
+}
+
+tbody tr:hover,
+main tbody tr:hover,
+main tr.hover\:bg-slate-800\/40:hover,
+.medops-modal-card tbody tr:hover {
+  background-color: #383838 !important;
+}
+
+td,
+main td,
+.medops-modal-card td {
+  color: #D1D5DB !important;
+}
+
+td.text-white,
+main td.text-white,
+main td .text-white,
+.medops-modal-card td.text-white {
+  color: #F9FAFB !important;
+}
+
+/* Form Controls, Inputs, and Select Dropdowns */
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea,
+main input:not([type="checkbox"]):not([type="radio"]),
+main select,
+main textarea,
+.medops-modal-card input:not([type="checkbox"]):not([type="radio"]),
+.medops-modal-card select,
+.medops-drawer-card input:not([type="checkbox"]):not([type="radio"]) {
+  background-color: #2D2D2D !important;
+  border-color: #4B4B4B !important;
+  color: #F9FAFB !important;
+}
+
+input::placeholder,
+main input::placeholder,
+.medops-modal-card input::placeholder,
+.medops-drawer-card input::placeholder {
+  color: #9CA3AF !important;
+}
+
+select option,
+main select option,
+.medops-modal-card select option {
+  background-color: #2D2D2D !important;
+  color: #F9FAFB !important;
+}
+
+/* Recharts Visualizations */
+.recharts-cartesian-grid-line,
+main .recharts-cartesian-grid-line,
+.medops-modal-card .recharts-cartesian-grid-line {
+  stroke: #4B4B4B !important;
+  stroke-opacity: 0.6 !important;
+}
+
+.recharts-default-tooltip,
+main .recharts-default-tooltip,
+.medops-modal-card .recharts-default-tooltip,
+.medops-drawer-card .recharts-default-tooltip {
+  background-color: #2D2D2D !important;
+  border: 1px solid #4B4B4B !important;
+  border-radius: 0.75rem !important;
+  color: #F9FAFB !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.4) !important;
+}
+
+.recharts-tooltip-item,
+main .recharts-tooltip-item,
+.medops-modal-card .recharts-tooltip-item,
+.medops-drawer-card .recharts-tooltip-item {
+  color: #F9FAFB !important;
+}
+
+.recharts-tooltip-label,
+main .recharts-tooltip-label,
+.medops-modal-card .recharts-tooltip-label,
+.medops-drawer-card .recharts-tooltip-label {
+  color: #D1D5DB !important;
+  font-weight: 600 !important;
+}
+
+.recharts-legend-item-text,
+main .recharts-legend-item-text,
+.medops-modal-card .recharts-legend-item-text,
+.medops-drawer-card .recharts-legend-item-text {
+  color: #D1D5DB !important;
+  font-size: 11px !important;
+}
+
+.recharts-text,
+main .recharts-text,
+.medops-modal-card .recharts-text,
+.medops-drawer-card .recharts-text {
+  fill: #9CA3AF !important;
 }

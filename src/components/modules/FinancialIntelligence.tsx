@@ -118,7 +118,7 @@ export const FinancialIntelligence: React.FC<FinancialIntelligenceProps> = ({
       {!loading && !error && data && (
         <>
           {/* Financial Overview KPI Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Operating Profit / EBITDA Proxy Card */}
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1">
               <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
@@ -146,19 +146,6 @@ export const FinancialIntelligence: React.FC<FinancialIntelligenceProps> = ({
                 (kpis?.revenueVariance || 0) >= 0 ? 'text-cyan-400' : 'text-rose-400'
               }`}>
                 {(kpis?.revenueVariance || 0) >= 0 ? 'Favorable Revenue' : 'Unfavorable Revenue'} ({kpis?.revenueVariancePct}% vs Budget)
-              </p>
-            </div>
-
-            {/* Days Cash on Hand Card (Not available from dataset) */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1 opacity-80">
-              <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
-                Days Cash on Hand
-              </span>
-              <div className="text-sm font-bold text-slate-400 font-mono py-1.5">
-                {kpis?.daysCashOnHandFormatted || 'Not available from dataset'}
-              </div>
-              <p className="text-[10px] text-slate-500 font-mono">
-                Liquidity Metric: N/A (Not in dataset)
               </p>
             </div>
 
@@ -268,11 +255,11 @@ export const FinancialIntelligence: React.FC<FinancialIntelligenceProps> = ({
             <div className="h-64 w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={expenseCategories}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                  <XAxis dataKey="category" stroke="#64748b" fontSize={11} />
-                  <YAxis stroke="#64748b" fontSize={11} tickFormatter={(val) => `₹${(val / 1e6).toFixed(1)}M`} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#4B4B4B" />
+                  <XAxis dataKey="category" stroke="#9CA3AF" fontSize={11} />
+                  <YAxis stroke="#9CA3AF" fontSize={11} tickFormatter={(val) => `₹${(val / 1e6).toFixed(1)}M`} />
                   <Tooltip 
-                    contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '8px', fontSize: '12px' }}
+                    contentStyle={{ backgroundColor: '#2D2D2D', borderColor: '#4B4B4B', borderRadius: '8px', fontSize: '12px', color: '#F9FAFB' }}
                     formatter={(value: any) => [`₹${(Number(value) / 1e6).toFixed(2)} Million`, 'Expense Amount']}
                   />
                   <Bar dataKey="amount" fill="#34d399" radius={[4, 4, 0, 0]} />

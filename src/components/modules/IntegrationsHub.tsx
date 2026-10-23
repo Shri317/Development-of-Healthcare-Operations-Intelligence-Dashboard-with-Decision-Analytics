@@ -133,7 +133,7 @@ export const IntegrationsHub: React.FC<IntegrationsHubProps> = ({ onExecuteActio
             <div
               key={idx}
               className={`bg-slate-900 border rounded-2xl p-4 space-y-3 flex flex-col justify-between hover:border-slate-700 transition ${
-                item.isAws ? 'border-amber-500/30 bg-gradient-to-b from-amber-950/20 to-slate-900' : 'border-slate-800'
+                item.isAws ? 'border-amber-400/50' : 'border-slate-800'
               }`}
             >
               <div>

@@ -145,7 +145,6 @@ export const ExecutiveCommandCenter: React.FC<ExecutiveCommandCenterProps> = ({
 
       {/* Top Banner: Enterprise Operational Health Index */}
       <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
             <div className="flex items-center gap-3">
@@ -209,8 +208,6 @@ export const ExecutiveCommandCenter: React.FC<ExecutiveCommandCenterProps> = ({
 
       {/* AI-Generated Executive Operational Briefing Card */}
       <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 relative overflow-hidden space-y-5">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
-
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800/80 pb-4">
           <div className="flex items-center gap-3">
@@ -407,10 +404,10 @@ export const ExecutiveCommandCenter: React.FC<ExecutiveCommandCenterProps> = ({
                     <stop offset="95%" stopColor="#34d399" stopOpacity={0}/>
                   </linearGradient>
                 </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                <XAxis dataKey="month" stroke="#64748b" fontSize={11} />
-                <YAxis stroke="#64748b" fontSize={11} unit="M" />
-                <Tooltip contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '8px', fontSize: '12px' }} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#4B4B4B" />
+                <XAxis dataKey="month" stroke="#9CA3AF" fontSize={11} />
+                <YAxis stroke="#9CA3AF" fontSize={11} unit="M" />
+                <Tooltip contentStyle={{ backgroundColor: '#2D2D2D', borderColor: '#4B4B4B', borderRadius: '8px', fontSize: '12px', color: '#F9FAFB' }} />
                 <Area type="monotone" dataKey="Surgery" stroke="#34d399" fillOpacity={1} fill="url(#colorSurg)" />
                 <Area type="monotone" dataKey="Cardiology" stroke="#38bdf8" fillOpacity={1} fill="url(#colorCardio)" />
               </AreaChart>

@@ -170,7 +170,7 @@ export const InsuranceClaimsAutomation: React.FC<InsuranceClaimsAutomationProps>
                   </Pie>
                   <Tooltip 
                     formatter={(val: any) => [`${val} Claims`, 'Count']}
-                    contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', color: '#fff' }}
+                    contentStyle={{ backgroundColor: '#2D2D2D', borderColor: '#4B4B4B', color: '#F9FAFB' }}
                   />
                   <Legend />
                 </PieChart>

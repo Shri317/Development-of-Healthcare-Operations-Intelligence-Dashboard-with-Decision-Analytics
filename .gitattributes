@@ -1,2 +1,6 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Treat binaries explicitly to prevent line-ending alterations
+*.pdf binary
+*.docx binary
+*.png binary
+*.jpg binary
+*.jpeg binary

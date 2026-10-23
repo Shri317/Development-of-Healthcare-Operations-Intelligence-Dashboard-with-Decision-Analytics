@@ -169,7 +169,7 @@ export const BillingRevenueIntelligence: React.FC<BillingRevenueIntelligenceProp
                   </Pie>
                   <Tooltip 
                     formatter={(val: any) => [`₹${(Number(val || 0) / 1e6).toFixed(2)} M`, 'Revenue']}
-                    contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', color: '#fff' }}
+                    contentStyle={{ backgroundColor: '#2D2D2D', borderColor: '#4B4B4B', color: '#F9FAFB' }}
                   />
                   <Legend />
                 </PieChart>
@@ -189,12 +189,12 @@ export const BillingRevenueIntelligence: React.FC<BillingRevenueIntelligenceProp
             {deptData.length > 0 ? (
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={deptData} margin={{ top: 10, right: 10, left: -10, bottom: 20 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                  <XAxis dataKey="dept" stroke="#64748b" tick={{ fontSize: 10 }} interval={0} angle={-15} textAnchor="end" />
-                  <YAxis stroke="#64748b" tick={{ fontSize: 10 }} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#4B4B4B" />
+                  <XAxis dataKey="dept" stroke="#9CA3AF" tick={{ fontSize: 10 }} interval={0} angle={-15} textAnchor="end" />
+                  <YAxis stroke="#9CA3AF" tick={{ fontSize: 10 }} />
                   <Tooltip 
                     formatter={(val: any) => [`₹${val} M`, 'Net Revenue']}
-                    contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', color: '#fff' }}
+                    contentStyle={{ backgroundColor: '#2D2D2D', borderColor: '#4B4B4B', color: '#F9FAFB' }}
                   />
                   <Bar dataKey="revenue" fill="#34d399" radius={[4, 4, 0, 0]} />
                 </BarChart>

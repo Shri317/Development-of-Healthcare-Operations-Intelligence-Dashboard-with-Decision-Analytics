@@ -13,7 +13,6 @@ import {
   HeartHandshake, 
   Truck, 
   TrendingUp, 
-  Bot, 
   ChevronRight
 } from 'lucide-react';
 
@@ -30,8 +29,7 @@ export type ModuleId =
   | 'quality-compliance'
   | 'patient-exp'
   | 'supply-chain'
-  | 'financial-intel'
-  | 'ai-copilot-tab';
+  | 'financial-intel';
 
 interface SidebarProps {
   activeModule: ModuleId;
@@ -58,14 +56,14 @@ const navGroups: NavGroup[] = [
       { id: 'executive', label: 'Executive Command Center', icon: Building2 },
       { id: 'patient-ops', label: 'Patient Operations', icon: Users },
       { id: 'staff-intel', label: 'Doctor & Staff Intelligence', icon: Stethoscope },
-      { id: 'emergency-ops', label: 'Emergency & Critical Ops', icon: Siren, badge: 'Live', badgeColor: 'bg-rose-500 text-white' },
+      { id: 'emergency-ops', label: 'Emergency & Critical Ops', icon: Siren },
     ],
   },
   {
     groupName: 'Revenue Cycle & Finance',
     items: [
       { id: 'billing-rev', label: 'Billing & Revenue Intelligence', icon: DollarSign },
-      { id: 'claims-auto', label: 'Insurance & Claims Automation', icon: FileCheck2, badge: '88% AI Risk', badgeColor: 'bg-amber-500 text-slate-950' },
+      { id: 'claims-auto', label: 'Insurance & Claims Automation', icon: FileCheck2 },
       { id: 'coding-doc', label: 'Medical Coding & Documentation', icon: Code2 },
       { id: 'financial-intel', label: 'Financial Intelligence (P&L)', icon: TrendingUp },
     ],
@@ -74,16 +72,10 @@ const navGroups: NavGroup[] = [
     groupName: 'Clinical, Quality & Supply',
     items: [
       { id: 'lab-diag', label: 'Laboratory & Diagnostics', icon: TestTube },
-      { id: 'pharmacy-inv', label: 'Pharmacy & Inventory', icon: Pill, badge: '2 Low', badgeColor: 'bg-orange-500 text-white' },
+      { id: 'pharmacy-inv', label: 'Pharmacy & Inventory', icon: Pill },
       { id: 'quality-compliance', label: 'Quality & Compliance', icon: ShieldAlert },
       { id: 'patient-exp', label: 'Patient Experience', icon: HeartHandshake },
       { id: 'supply-chain', label: 'Supply Chain & Vendors', icon: Truck },
-    ],
-  },
-  {
-    groupName: 'AI Agent & Decision Support',
-    items: [
-      { id: 'ai-copilot-tab', label: 'Medical Operations AI Agent', icon: Bot },
     ],
   },
 ];
@@ -98,20 +90,20 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   return (
     <aside
-      className={`h-[calc(100vh-61px)] sticky top-[61px] bg-slate-900 border-r border-slate-800 transition-all duration-300 flex flex-col z-20 ${
+      className={`h-[calc(100vh-61px)] sticky top-[61px] bg-[#1E1E1E] border-r border-[#4B4B4B] transition-all duration-300 flex flex-col z-20 ${
         collapsed ? 'w-16' : 'w-72'
       }`}
     >
       {/* Collapse Toggle Bar */}
-      <div className="p-3 border-b border-slate-800 flex items-center justify-between">
+      <div className="p-3 border-b border-[#4B4B4B] flex items-center justify-between">
         {!collapsed && (
-          <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+          <span className="text-xs font-semibold uppercase tracking-wider text-[#9CA3AF]">
             System Modules ({totalModulesCount})
           </span>
         )}
         <button
           onClick={onToggleCollapse}
-          className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-200 text-xs flex items-center justify-center transition mx-auto"
+          className="p-1.5 rounded-lg bg-[#2D2D2D] hover:bg-[#383838] text-[#D1D5DB] hover:text-[#F9FAFB] text-xs flex items-center justify-center transition mx-auto border border-[#4B4B4B]"
           title={collapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
         >
           <ChevronRight className={`w-4 h-4 transition-transform ${collapsed ? '' : 'rotate-180'}`} />
@@ -123,7 +115,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {navGroups.map((group, idx) => (
           <div key={idx} className="space-y-1">
             {!collapsed && (
-              <h3 className="px-3 text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">
+              <h3 className="px-3 text-[11px] font-semibold text-[#9CA3AF] uppercase tracking-wider mb-1">
                 {group.groupName}
               </h3>
             )}
@@ -136,12 +128,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   onClick={() => onSelectModule(item.id)}
                   className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-medium transition text-left relative group ${
                     isActive
-                      ? 'bg-cyan-950/80 text-cyan-300 border border-cyan-700/60 font-semibold shadow-md shadow-cyan-950/40'
-                      : 'text-slate-400 hover:bg-slate-800/60 hover:text-slate-200'
+                      ? 'bg-[#22D3EE]/15 text-[#22D3EE] border border-[#22D3EE]/50 font-semibold shadow-sm'
+                      : 'text-[#D1D5DB] hover:bg-[#2D2D2D] hover:text-[#F9FAFB]'
                   }`}
                   title={collapsed ? item.label : undefined}
                 >
-                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-cyan-400' : 'text-slate-400 group-hover:text-slate-200'}`} />
+                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#22D3EE]' : 'text-[#9CA3AF] group-hover:text-[#F9FAFB]'}`} />
                   
                   {!collapsed && (
                     <span className="truncate flex-1">{item.label}</span>
@@ -150,7 +142,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   {!collapsed && item.badge && (
                     <span
                       className={`text-[9px] px-1.5 py-0.5 rounded-full font-bold uppercase ${
-                        item.badgeColor || 'bg-slate-800 text-slate-300'
+                        item.badgeColor || 'bg-[#2D2D2D] text-[#D1D5DB] border border-[#4B4B4B]'
                       }`}
                     >
                       {item.badge}
@@ -158,7 +150,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   )}
 
                   {collapsed && item.badge && (
-                    <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+                    <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-[#22D3EE] animate-ping" />
                   )}
                 </button>
               );
@@ -169,13 +161,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
       {/* Footer System Status */}
       {!collapsed && (
-        <div className="p-3 border-t border-slate-800 bg-slate-950/50">
-          <div className="flex items-center justify-between text-[11px] text-slate-400">
+        <div className="p-3 border-t border-[#4B4B4B] bg-[#1E1E1E]">
+          <div className="flex items-center justify-between text-[11px] text-[#9CA3AF]">
             <span className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#34D399] animate-pulse" />
               Analytics Gateway: Connected
             </span>
-            <span className="font-mono text-slate-500">v4.2</span>
+            <span className="font-mono text-[#9CA3AF]">v4.2</span>
           </div>
         </div>
       )}

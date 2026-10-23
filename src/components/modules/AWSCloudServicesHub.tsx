@@ -148,7 +148,7 @@ export const AWSCloudServicesHub: React.FC<AWSCloudServicesHubProps> = ({ onExec
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-slate-900 to-cyan-950/60 border border-slate-800 rounded-2xl p-6 flex flex-wrap items-center justify-between gap-4">
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-wrap items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2.5">
             <Cloud className="w-6 h-6 text-cyan-400" />

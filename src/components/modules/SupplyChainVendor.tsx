@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Truck, 
-  CheckCircle2, 
   AlertTriangle, 
-  FileSpreadsheet, 
-  DollarSign, 
   RefreshCw, 
   Search, 
-  ShieldCheck, 
-  Star,
-  Clock,
+  Star, 
   PackageCheck
 } from 'lucide-react';
 import { 
@@ -27,7 +22,7 @@ interface SupplyChainVendorProps {
 export const SupplyChainVendor: React.FC<SupplyChainVendorProps> = ({ 
   selectedFacility = 'all',
   selectedTimeframe = 'realtime',
-  onExecuteAction 
+  onExecuteAction: _onExecuteAction 
 }) => {
   const [data, setData] = useState<SupplyChainResponse | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -51,14 +46,33 @@ export const SupplyChainVendor: React.FC<SupplyChainVendorProps> = ({
   };
 
   useEffect(() => {
-    loadData();
+    let isMounted = true;
+    setLoading(true);
+    setError(null);
+
+    fetchSupplyChainVendors(selectedFacility, selectedTimeframe)
+      .then((res) => {
+        if (!isMounted) return;
+        setData(res);
+        setLoading(false);
+      })
+      .catch((err) => {
+        if (!isMounted) return;
+        console.error('Failed to load supply chain vendors:', err);
+        setError(err.message || 'Failed to fetch supply chain vendor data from backend API');
+        setLoading(false);
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, [selectedFacility, selectedTimeframe]);
 
   const kpis = data?.kpis;
   const vendors = data?.vendors || [];
-  const dataSource = loading ? 'Connecting to Amazon Athena...' : (data?.source || 'Local Fallback');
+  const dataSource = loading ? 'Connecting to Amazon Athena...' : (data?.source || 'Local Dataset');
 
-  const filteredVendors = vendors.filter((v) => {
+  const filteredVendors = vendors.filter((v: VendorRecord) => {
     const matchesSearch = 
       v.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       v.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -74,18 +88,21 @@ export const SupplyChainVendor: React.FC<SupplyChainVendorProps> = ({
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="flex flex-wrap items-center justify-between gap-4 bg-slate-900 border border-slate-800 rounded-2xl p-5">
+      <div className="flex flex-wrap items-center justify-between gap-4 bg-[#2D2D2D] border border-[#4B4B4B] rounded-2xl p-5">
         <div>
           <div className="flex items-center gap-2">
-            <h2 className="text-lg font-bold text-white flex items-center gap-2">
-              <Truck className="w-5 h-5 text-cyan-400" /> Supply Chain & Vendor Management
+            <h2 className="text-lg font-bold text-[#F9FAFB] flex items-center gap-2">
+              <Truck className="w-5 h-5 text-[#22D3EE]" /> Supply Chain & Vendor Management
             </h2>
-            <span className="px-2 py-0.5 text-[10px] font-mono font-bold uppercase bg-slate-950 text-cyan-400 border border-slate-800 rounded-md">
+            <span className="px-2 py-0.5 text-[10px] font-mono font-bold uppercase bg-[#1E1E1E] text-[#22D3EE] border border-[#4B4B4B] rounded-md">
               Data Source: {dataSource}
             </span>
           </div>
-          <p className="text-xs text-slate-400 mt-1">
-            Vendor scorecards, active purchase orders, lead times, and SLA compliance calculated from dataset
+          <p className="text-xs text-[#9CA3AF] mt-1 flex flex-wrap items-center gap-x-2">
+            <span>Vendor scorecards, active purchase orders, lead times, and SLA compliance calculated from dataset</span>
+            <span className="text-[#D1D5DB]">
+              • Scope: <strong className="text-[#22D3EE] font-mono font-semibold">{selectedFacility === 'all' ? 'All Facilities (Enterprise Group)' : selectedFacility}</strong>
+            </span>
           </p>
         </div>
 
@@ -93,7 +110,7 @@ export const SupplyChainVendor: React.FC<SupplyChainVendorProps> = ({
           <button
             onClick={loadData}
             disabled={loading}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition disabled:opacity-50"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#333333] hover:bg-[#3D3D3D] text-[#D1D5DB] text-xs font-semibold border border-[#4B4B4B] transition disabled:opacity-50 cursor-pointer"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
             <span>Refresh Vendors</span>
@@ -103,25 +120,25 @@ export const SupplyChainVendor: React.FC<SupplyChainVendorProps> = ({
 
       {/* Loading Skeleton */}
       {loading && (
-        <div className="p-8 bg-slate-900 border border-slate-800 rounded-2xl text-center text-slate-400 text-sm animate-pulse space-y-2">
-          <RefreshCw className="w-6 h-6 animate-spin mx-auto text-cyan-400" />
-          <p>Loading supply chain vendor analytics from Amazon Athena...</p>
+        <div className="p-8 bg-[#333333] border border-[#4B4B4B] rounded-2xl text-center text-[#9CA3AF] text-sm animate-pulse space-y-2">
+          <RefreshCw className="w-6 h-6 animate-spin mx-auto text-[#22D3EE]" />
+          <p>Loading supply chain vendor analytics for {selectedFacility === 'all' ? 'all facilities' : selectedFacility}...</p>
         </div>
       )}
 
       {/* Error State */}
       {!loading && error && (
-        <div className="p-6 bg-rose-950/40 border border-rose-800 rounded-2xl text-rose-300 flex items-center justify-between text-xs">
+        <div className="p-6 bg-[#881337]/30 border border-[#FB7185]/40 rounded-2xl text-[#FB7185] flex items-center justify-between text-xs">
           <div className="flex items-center gap-3">
-            <AlertTriangle className="w-5 h-5 text-rose-400 flex-shrink-0" />
+            <AlertTriangle className="w-5 h-5 text-[#FB7185] flex-shrink-0" />
             <div>
               <p className="font-bold">Supply Chain Data Error</p>
-              <p className="text-rose-300/80 mt-0.5">{error}</p>
+              <p className="text-[#FB7185]/80 mt-0.5">{error}</p>
             </div>
           </div>
           <button
             onClick={loadData}
-            className="px-3 py-1.5 bg-rose-900 hover:bg-rose-800 text-white font-semibold rounded-xl transition"
+            className="px-3 py-1.5 bg-[#881337] hover:bg-[#9f1239] text-[#F9FAFB] font-semibold rounded-xl transition cursor-pointer"
           >
             Retry Connection
           </button>
@@ -134,66 +151,66 @@ export const SupplyChainVendor: React.FC<SupplyChainVendorProps> = ({
           {/* Summary KPI Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Total Vendors Card */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1">
-              <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+            <div className="bg-[#333333] border border-[#4B4B4B] rounded-xl p-4 space-y-1">
+              <span className="text-[11px] font-semibold text-[#9CA3AF] uppercase tracking-wider">
                 Total Real Suppliers
               </span>
-              <div className="text-2xl font-bold text-white font-mono">
+              <div className="text-2xl font-bold text-[#F9FAFB] font-mono">
                 {kpis?.totalVendors || 0}
               </div>
-              <p className="text-[10px] text-emerald-400 font-semibold">
+              <p className="text-[10px] text-[#34D399] font-semibold">
                 {kpis?.compliantVendors || 0} Low Risk Compliant
               </p>
             </div>
 
             {/* On-Time Delivery Rate Card */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1">
-              <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+            <div className="bg-[#333333] border border-[#4B4B4B] rounded-xl p-4 space-y-1">
+              <span className="text-[11px] font-semibold text-[#9CA3AF] uppercase tracking-wider">
                 Avg On-Time Delivery %
               </span>
-              <div className="text-2xl font-bold text-emerald-400 font-mono">
+              <div className="text-2xl font-bold text-[#34D399] font-mono">
                 {kpis?.avgOnTimeDeliveryPct ?? 0}%
               </div>
-              <p className="text-[10px] text-teal-400 font-semibold">
-                Avg Quality Score: {kpis?.avgQualityScore ?? 0}%
+              <p className="text-[10px] text-[#34D399]/80 font-semibold">
+                Across vendor fulfillment SLAs
               </p>
             </div>
 
             {/* Total Active Purchase Orders Card */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1">
-              <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+            <div className="bg-[#333333] border border-[#4B4B4B] rounded-xl p-4 space-y-1">
+              <span className="text-[11px] font-semibold text-[#9CA3AF] uppercase tracking-wider">
                 Total Purchase Orders Value
               </span>
-              <div className="text-2xl font-bold text-cyan-400 font-mono">
+              <div className="text-2xl font-bold text-[#22D3EE] font-mono">
                 {kpis?.totalPOValueFormatted || '₹0.00'}
               </div>
-              <p className="text-[10px] text-slate-400 font-mono">
+              <p className="text-[10px] text-[#9CA3AF] font-mono">
                 {kpis?.totalPOCount || 0} Active Orders Processed
               </p>
             </div>
 
-            {/* Defect / Damage Rate Card (Not available from dataset) */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1 opacity-80">
-              <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
-                Defect / Damage Rate
+            {/* Vendor Quality Score Card */}
+            <div className="bg-[#333333] border border-[#4B4B4B] rounded-xl p-4 space-y-1">
+              <span className="text-[11px] font-semibold text-[#9CA3AF] uppercase tracking-wider">
+                Avg Vendor Quality Score
               </span>
-              <div className="text-sm font-bold text-slate-400 font-mono py-1.5">
-                {kpis?.defectRateFormatted || 'Not available from dataset'}
+              <div className="text-2xl font-bold text-[#22D3EE] font-mono">
+                {kpis?.avgQualityScore != null ? `${kpis.avgQualityScore}%` : 'N/A'}
               </div>
-              <p className="text-[10px] text-slate-500 font-mono">
-                Quality Defect Metric: N/A (Not in dataset)
+              <p className="text-[10px] text-[#22D3EE]/80 font-mono">
+                Evaluated from supplier performance audits
               </p>
             </div>
           </div>
 
           {/* Active Supplier Performance Scorecards Table */}
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
+          <div className="bg-[#333333] border border-[#4B4B4B] rounded-2xl p-5 space-y-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                  <PackageCheck className="w-4 h-4 text-cyan-400" /> Active Supplier Performance Scorecards
+                <h3 className="text-sm font-bold text-[#F9FAFB] flex items-center gap-2">
+                  <PackageCheck className="w-4 h-4 text-[#22D3EE]" /> Active Supplier Performance Scorecards
                 </h3>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-[#9CA3AF]">
                   Real vendor catalog loaded from vendor_performance.csv & purchase_orders.csv
                 </p>
               </div>
@@ -201,20 +218,20 @@ export const SupplyChainVendor: React.FC<SupplyChainVendorProps> = ({
               {/* Filters */}
               <div className="flex items-center gap-2">
                 <div className="relative">
-                  <Search className="w-3.5 h-3.5 text-slate-500 absolute left-3 top-2.5" />
+                  <Search className="w-3.5 h-3.5 text-[#9CA3AF] absolute left-3 top-2.5" />
                   <input
                     type="text"
                     placeholder="Search vendor or category..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="bg-slate-950 border border-slate-800 rounded-xl pl-8 pr-3 py-1 text-xs text-slate-200 outline-none focus:border-cyan-500 w-48"
+                    className="bg-[#252525] border border-[#4B4B4B] rounded-xl pl-8 pr-3 py-1 text-xs text-[#F9FAFB] placeholder-[#9CA3AF] outline-none focus:border-[#22D3EE] w-48"
                   />
                 </div>
 
                 <select
                   value={selectedRiskFilter}
                   onChange={(e) => setSelectedRiskFilter(e.target.value)}
-                  className="bg-slate-950 border border-slate-800 text-xs text-slate-300 rounded-xl px-2.5 py-1 outline-none cursor-pointer"
+                  className="bg-[#252525] border border-[#4B4B4B] text-xs text-[#D1D5DB] rounded-xl px-2.5 py-1 outline-none cursor-pointer focus:border-[#22D3EE]"
                 >
                   <option value="all">All Risk Levels</option>
                   <option value="low">Low Risk</option>
@@ -225,8 +242,8 @@ export const SupplyChainVendor: React.FC<SupplyChainVendorProps> = ({
             </div>
 
             <div className="overflow-x-auto max-h-[460px]">
-              <table className="w-full text-left text-xs text-slate-300">
-                <thead className="bg-slate-950 text-slate-400 uppercase text-[10px] tracking-wider border-b border-slate-800 sticky top-0 z-10">
+              <table className="w-full text-left text-xs text-[#D1D5DB]">
+                <thead className="bg-[#252525] text-[#9CA3AF] uppercase text-[10px] tracking-wider border-b border-[#4B4B4B] sticky top-0 z-10">
                   <tr>
                     <th className="py-3 px-3">Supplier Name & ID</th>
                     <th className="py-3 px-3">Category</th>
@@ -234,42 +251,38 @@ export const SupplyChainVendor: React.FC<SupplyChainVendorProps> = ({
                     <th className="py-3 px-3">On-Time Delivery %</th>
                     <th className="py-3 px-3">Quality Score</th>
                     <th className="py-3 px-3">Avg Lead Time</th>
-                    <th className="py-3 px-3">Defect / Damage Rate</th>
                     <th className="py-3 px-3">Active PO Value</th>
                     <th className="py-3 px-3">Risk & SLA Status</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-800/60 font-mono">
+                <tbody className="divide-y divide-[#4B4B4B]/60 font-mono">
                   {filteredVendors.length === 0 ? (
                     <tr>
-                      <td colSpan={9} className="py-8 text-center text-slate-500 font-sans">
+                      <td colSpan={8} className="py-8 text-center text-[#9CA3AF] font-sans">
                         No suppliers found matching your filter criteria.
                       </td>
                     </tr>
                   ) : (
-                    filteredVendors.map((v, i) => (
-                      <tr key={i} className="hover:bg-slate-800/40 transition">
+                    filteredVendors.map((v: VendorRecord, i: number) => (
+                      <tr key={v.vendorId || i} className="hover:bg-[#2D2D2D]/60 transition">
                         <td className="py-3 px-3 font-sans">
-                          <div className="font-bold text-white">{v.name}</div>
-                          <div className="text-[10px] text-slate-500 font-mono">{v.vendorId}</div>
+                          <div className="font-bold text-[#F9FAFB]">{v.name}</div>
+                          <div className="text-[10px] text-[#9CA3AF] font-mono">{v.vendorId}</div>
                         </td>
-                        <td className="py-3 px-3 text-slate-400 font-sans">{v.category}</td>
+                        <td className="py-3 px-3 text-[#9CA3AF] font-sans">{v.category}</td>
                         <td className="py-3 px-3 font-bold text-amber-300">
                           <span className="flex items-center gap-1">
                             <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
                             {v.rating.toFixed(1)}
                           </span>
                         </td>
-                        <td className="py-3 px-3 font-bold text-emerald-400">{v.onTimeDeliveryPct}%</td>
-                        <td className="py-3 px-3 font-bold text-cyan-400">{v.qualityScore}%</td>
-                        <td className="py-3 px-3 text-slate-300">{v.avgLeadTimeDays} days</td>
-                        <td className="py-3 px-3 text-slate-500 font-sans text-[11px]">
-                          {v.defectRateFormatted}
-                        </td>
-                        <td className="py-3 px-3 font-bold text-white">
+                        <td className="py-3 px-3 font-bold text-[#34D399]">{v.onTimeDeliveryPct}%</td>
+                        <td className="py-3 px-3 font-bold text-[#22D3EE]">{v.qualityScore}%</td>
+                        <td className="py-3 px-3 text-[#D1D5DB]">{v.avgLeadTimeDays} days</td>
+                        <td className="py-3 px-3 font-bold text-[#F9FAFB]">
                           {v.activePOValueFormatted}
                           {v.poCount > 0 && (
-                            <span className="block text-[10px] text-slate-500 font-normal">
+                            <span className="block text-[10px] text-[#9CA3AF] font-normal">
                               ({v.poCount} POs)
                             </span>
                           )}
@@ -277,10 +290,10 @@ export const SupplyChainVendor: React.FC<SupplyChainVendorProps> = ({
                         <td className="py-3 px-3 font-sans">
                           <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold border ${
                             v.riskLevel === 'Low' 
-                              ? 'bg-emerald-950 text-emerald-400 border-emerald-800' 
+                              ? 'bg-emerald-950/60 text-[#34D399] border-emerald-800/60' 
                               : v.riskLevel === 'Medium'
-                              ? 'bg-amber-950 text-amber-400 border-amber-800'
-                              : 'bg-rose-950 text-rose-400 border-rose-800'
+                              ? 'bg-amber-950/60 text-[#FBBF24] border-amber-800/60'
+                              : 'bg-rose-950/60 text-[#FB7185] border-rose-800/60'
                           }`}>
                             {v.riskLevel} Risk ({v.slaStatus})
                           </span>

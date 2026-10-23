@@ -18,16 +18,14 @@ from app.services.dashboard_service import (
     get_workflow_automation
 )
 
-logger = logging.getLogger(__name__)
+from app.services.facility_resolver import (
+    normalize_facility_id,
+    get_facility_canonical_name,
+    get_facility_display_label,
+    validate_and_sanitize_ai_response,
+)
 
-FACILITY_NAMES = {
-    'all': 'All Network Facilities',
-    'FAC001': 'Metro Health Center (FAC001)',
-    'FAC002': 'St. Jude Community Hospital (FAC002)',
-    'FAC003': 'Highland Regional Medical Center (FAC003)',
-    'FAC004': 'Valley Childrens & Specialty Clinic (FAC004)',
-    'FAC005': 'Lakeside Memorial Hospital (FAC005)'
-}
+logger = logging.getLogger(__name__)
 
 
 def is_conversational_query(query: str) -> bool:
@@ -73,7 +71,9 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
     without querying operational tables.
     """
     q_lower = user_query.lower()
-    facility_label = FACILITY_NAMES.get(facility_id, f"Facility {facility_id}")
+    norm_facility_id = normalize_facility_id(facility_id)
+    canonical_facility_name = get_facility_canonical_name(norm_facility_id)
+    facility_label = get_facility_display_label(norm_facility_id)
 
     # =========================================================================
     # 1. PURE CONVERSATIONAL INTENT (GREETINGS, HELP, CAPABILITIES)
@@ -110,7 +110,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
     # =========================================================================
     # DOMAIN: Pharmacy / Inventory
     elif any(k in q_lower for k in ['medicine', 'reorder', 'inventory', 'stock', 'pharmacy', 'depletion', 'drug']):
-        pharm = get_pharmacy_inventory_intelligence(facility_id)
+        pharm = get_pharmacy_inventory_intelligence(norm_facility_id)
         source = pharm.get('source', 'Local Dataset')
         tot_items = pharm.get('totalItems', 0)
         low_stock = pharm.get('lowStockCount', 0)
@@ -132,6 +132,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         ]
         method = "Calculated from inventory.csv and medicines.csv by evaluating current_stock against reorder_level."
         verified_data = {
+            "facility_id": norm_facility_id,
+            "facility_name": canonical_facility_name,
             "total_items_monitored": tot_items,
             "medicines_below_reorder_level": low_stock,
             "critical_stockouts_zero_units": out_stock,
@@ -150,7 +152,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
 
     # DOMAIN: Claims & Denial Intelligence
     elif any(k in q_lower for k in ['denial', 'denied', 'claim', 'rejection', 'payer']):
-        claims = get_claims_intelligence(facility_id)
+        claims = get_claims_intelligence(norm_facility_id)
         source = claims.get('source', 'Local Dataset')
         tot_claims = claims.get('totalClaims', 0)
         denied_claims = claims.get('deniedClaims', 0)
@@ -174,6 +176,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         ]
         method = "Aggregated from claims.csv by filtering claim_status == 'Denied' and computing percentage of total submissions."
         verified_data = {
+            "facility_id": norm_facility_id,
+            "facility_name": canonical_facility_name,
             "claim_denial_rate_pct": denial_rate,
             "total_claims_submitted": tot_claims,
             "denied_claims_count": denied_claims,
@@ -193,8 +197,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
 
     # DOMAIN: Bed Occupancy & Inpatient Capacity
     elif any(k in q_lower for k in ['bed', 'occupancy', 'census']):
-        exec_sum = get_executive_summary(facility_id)
-        p_ops = get_patient_ops_intelligence(facility_id)
+        exec_sum = get_executive_summary(norm_facility_id)
+        p_ops = get_patient_ops_intelligence(norm_facility_id)
         source = exec_sum.get('source', 'Local Dataset')
         raw = exec_sum.get('rawMetrics', {})
 
@@ -214,6 +218,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         ]
         method = "Calculated from beds.csv and admissions.csv evaluating occupied beds against total capacity."
         verified_data = {
+            "facility_id": norm_facility_id,
+            "facility_name": canonical_facility_name,
             "bed_occupancy_rate_pct": occupancy_rate,
             "total_inpatient_admissions": tot_adm,
             "average_length_of_stay_days": avg_los
@@ -231,7 +237,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
 
     # DOMAIN: Patient Operations & Admissions & Emergency
     elif any(k in q_lower for k in ['patient', 'admission', 'admitted', 'admit', 'inpatient', 'emergency', 'ed visit', 'ed wait', 'waiting time', 'length of stay', 'los', 'triage']):
-        p_ops = get_patient_ops_intelligence(facility_id)
+        p_ops = get_patient_ops_intelligence(norm_facility_id)
         source = p_ops.get('source', 'Local Dataset')
         
         tot_adm = p_ops.get('totalAdmissions', 0)
@@ -253,6 +259,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         ]
         method = "Aggregated from admissions.csv and emergency_visits.csv."
         verified_data = {
+            "facility_id": norm_facility_id,
+            "facility_name": canonical_facility_name,
             "total_admissions": tot_adm,
             "average_length_of_stay_days": avg_los,
             "emergency_visits": ed_count,
@@ -271,7 +279,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
 
     # DOMAIN: Billing & Financial Revenue
     elif any(k in q_lower for k in ['revenue', 'billed', 'billing', 'accounts receivable', ' ar ', 'collection', 'financial', 'p&l', 'profit', 'expenses']):
-        billing = get_billing_intelligence(facility_id)
+        billing = get_billing_intelligence(norm_facility_id)
         source = billing.get('source', 'Local Dataset')
         
         gross_rev = billing.get('grossRevenue', 0.0)
@@ -293,6 +301,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         ]
         method = "Calculated from billing.csv by summing gross_amount, paid_amount, and unpaid balances."
         verified_data = {
+            "facility_id": norm_facility_id,
+            "facility_name": canonical_facility_name,
             "gross_billed_revenue_inr": gross_rev,
             "net_collected_revenue_inr": net_collected,
             "outstanding_ar_inr": outstanding_ar,
@@ -311,7 +321,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
 
     # DOMAIN: Supply Chain & Vendors
     elif any(k in q_lower for k in ['supplier', 'vendor', 'purchase order', ' po ', 'po value', 'procurement', 'scar', 'lead time']):
-        sc = get_supply_chain_vendors(facility_id)
+        sc = get_supply_chain_vendors(norm_facility_id)
         source = sc.get('source', 'Local Dataset')
         kpis = sc.get('kpis', {})
         vendors = sc.get('vendors', [])
@@ -340,6 +350,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         ]
         method = "Aggregated from vendor_performance.csv, purchase_orders.csv, and supply_chain_purchase_orders.csv."
         verified_data = {
+            "facility_id": norm_facility_id,
+            "facility_name": canonical_facility_name,
             "total_vendors": tot_vendors,
             "high_risk_vendors_count": high_risk_cnt,
             "average_quality_score": avg_quality,
@@ -360,7 +372,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
 
     # DOMAIN: Quality, Compliance & CAPA
     elif any(k in q_lower for k in ['quality', 'incident', 'capa', 'corrective action', 'compliance', 'audit', 'hipaa', 'infection', 'complaint']):
-        qc = get_quality_compliance(facility_id)
+        qc = get_quality_compliance(norm_facility_id)
         source = qc.get('source', 'Local Dataset')
         kpis = qc.get('kpis', {})
         
@@ -387,6 +399,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         ]
         method = "Aggregated from quality_incidents.csv, quality_audits.csv, and corrective_actions.csv."
         verified_data = {
+            "facility_id": norm_facility_id,
+            "facility_name": canonical_facility_name,
             "total_incidents": tot_incidents,
             "critical_severity_incidents": crit_cnt,
             "high_severity_incidents": high_cnt,
@@ -407,7 +421,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
 
     # DOMAIN: Doctor & Staff Workload
     elif any(k in q_lower for k in ['doctor', 'physician', 'staff', 'nurse', 'workload', 'utilization', 'overtime', 'working hours']):
-        staff = get_doctor_staff_intelligence(facility_id)
+        staff = get_doctor_staff_intelligence(norm_facility_id)
         source = staff.get('source', 'Local Dataset')
         
         avg_util = staff.get('avgDoctorUtilization', 0.0)
@@ -430,6 +444,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         ]
         method = "Computed from doctor_workload.csv and doctors.csv."
         verified_data = {
+            "facility_id": norm_facility_id,
+            "facility_name": canonical_facility_name,
             "active_doctors_count": doc_cnt,
             "average_doctor_utilization_pct": avg_util,
             "total_working_hours": tot_hrs,
@@ -449,7 +465,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
 
     # DOMAIN: Laboratory & Diagnostics
     elif any(k in q_lower for k in ['lab', 'test', 'diagnostic', 'turnaround', 'tat', 'specimen', 'pathology']):
-        lab = get_laboratory_intelligence(facility_id)
+        lab = get_laboratory_intelligence(norm_facility_id)
         source = lab.get('source', 'Local Dataset')
         
         tot_orders = lab.get('totalOrders', 0)
@@ -472,6 +488,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         ]
         method = "Aggregated from lab_orders_results.csv and lab_tests.csv."
         verified_data = {
+            "facility_id": norm_facility_id,
+            "facility_name": canonical_facility_name,
             "total_diagnostic_orders": tot_orders,
             "average_turnaround_time_hours": avg_tat,
             "completed_results": completed,
@@ -490,7 +508,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
 
     # DOMAIN: Predictive Intelligence, Bottlenecks & Forecasts
     elif any(k in q_lower for k in ['forecast', 'predict', 'projection', 'bottleneck', 'no-show', 'anomaly']):
-        pred = get_ai_predictive_intelligence(facility_id)
+        pred = get_ai_predictive_intelligence(norm_facility_id)
         source = pred.get('source', 'Local Dataset')
         kpis = pred.get('kpis', {})
         
@@ -514,6 +532,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         ]
         method = "Generated via statistical time-series regression and historical operational variance models."
         verified_data = {
+            "facility_id": norm_facility_id,
+            "facility_name": canonical_facility_name,
             "forecast_encounter_volume": f_vol,
             "operational_risk_score": risk_score,
             "bottlenecks_count": bottleneck_count,
@@ -533,7 +553,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
 
     # DOMAIN: Executive Summary / General Operations (Default)
     else:
-        exec_sum = get_executive_summary(facility_id)
+        exec_sum = get_executive_summary(norm_facility_id)
         source = exec_sum.get('source', 'Local Dataset')
         raw = exec_sum.get('rawMetrics', {})
         
@@ -559,6 +579,8 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         ]
         method = "Aggregated across admissions.csv, billing.csv, claims.csv, and emergency_visits.csv."
         verified_data = {
+            "facility_id": norm_facility_id,
+            "facility_name": canonical_facility_name,
             "total_patient_admissions": tot_adm,
             "average_length_of_stay_days": avg_los,
             "net_realized_revenue_inr": tot_rev,
@@ -589,12 +611,27 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
     ai_status = f"{active_provider_name}: Standby"
     answer = fallback_template
 
+    authoritative_facility_block = (
+        f"AUTHORITATIVE FACILITY CONTEXT:\n"
+        f"- Target Facility Scope: {facility_label}\n"
+        f"- Canonical Facility Name: {canonical_facility_name}\n"
+        f"- Selected Facility ID: {norm_facility_id}\n\n"
+        f"CRITICAL FACILITY IDENTITY DIRECTIVES:\n"
+        f"1. Refer to this hospital facility ONLY by its canonical name '{canonical_facility_name}' (or '{facility_label}').\n"
+        f"2. NEVER invent, rename, or substitute facility names (e.g., do NOT use Metro Health, St. Jude, Highland Regional, Valley Childrens, or Lakeside Memorial).\n"
+        f"3. All metrics, facts, and conclusions apply specifically to {canonical_facility_name} ({norm_facility_id}).\n"
+        f"4. If facility_id is 'all', refer to 'All Network Facilities' across the entire healthcare system.\n\n"
+    )
+    final_prompt = f"{authoritative_facility_block}{prompt}"
+
     try:
-        ai_res = invoke_ai_summary(prompt)
+        ai_res = invoke_ai_summary(final_prompt)
         if ai_res.get('status') == 'success' and ai_res.get('summary'):
             ai_used = True
-            answer = ai_res['summary']
-            ai_explanation = ai_res['summary']
+            raw_summary = ai_res['summary']
+            sanitized_summary = validate_and_sanitize_ai_response(raw_summary, norm_facility_id)
+            answer = sanitized_summary
+            ai_explanation = sanitized_summary
             model_used = ai_res.get('modelId', model_used)
             provider_used = ai_res.get('provider', active_provider_name)
             ai_status = f"{provider_used}: Active ({model_used})"
@@ -602,7 +639,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
             err = ai_res.get('errorMessage') or 'Offline'
             provider_used = f"{active_provider_name} (Deterministic Fallback)"
             ai_status = f"{provider_used}: Standby ({err[:35]}...)"
-            answer = fallback_template
+            answer = validate_and_sanitize_ai_response(fallback_template, norm_facility_id)
             ai_explanation = (
                 f"Deterministic Analytics Mode: Query resolved directly from verified {source} telemetry. "
                 f"Calculations performed across operational records for {facility_label}. "
@@ -612,7 +649,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         logger.warning(f"AI invocation error: {e}")
         provider_used = f"{active_provider_name} (Deterministic Fallback)"
         ai_status = f"{provider_used}: Error ({type(e).__name__})"
-        answer = fallback_template
+        answer = validate_and_sanitize_ai_response(fallback_template, norm_facility_id)
         ai_explanation = (
             f"Deterministic Analytics Mode: Query resolved directly from verified {source} telemetry. "
             f"Calculations performed across operational records for {facility_label}. "
@@ -636,5 +673,7 @@ def process_copilot_query(user_query: str, facility_id: str = 'all') -> Dict[str
         "is_fallback": is_fallback,
         "ai_explanation": ai_explanation,
         "ai_status": ai_status,
-        "facility_id": facility_id
+        "facility_id": norm_facility_id,
+        "facility_name": canonical_facility_name,
+        "facility_label": facility_label
     }

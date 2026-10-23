@@ -45,7 +45,7 @@ export const UserAccountMenu: React.FC = () => {
       {/* Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2.5 pl-2 pr-3 py-1.5 rounded-xl bg-slate-950/80 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 transition cursor-pointer text-left focus:outline-none focus:ring-1 focus:ring-cyan-500/50"
+        className="flex items-center gap-2.5 pl-2 pr-3 py-1.5 rounded-xl bg-[#2D2D2D] hover:bg-[#383838] border border-[#4B4B4B] hover:border-[#60A5FA] transition cursor-pointer text-left focus:outline-none focus:ring-1 focus:ring-[#22D3EE]/50"
         title="View User Account & Cognito Session"
       >
         {/* Avatar with Status indicator */}
@@ -57,7 +57,7 @@ export const UserAccountMenu: React.FC = () => {
           </div>
           {/* Green Live Authenticated Dot */}
           <span 
-            className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-slate-900 animate-pulse" 
+            className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#34D399] border-2 border-[#1E1E1E] animate-pulse" 
             title="Authenticated Session"
           />
         </div>
@@ -65,43 +65,43 @@ export const UserAccountMenu: React.FC = () => {
         {/* User Info labels (hidden on very small screens) */}
         <div className="hidden lg:flex flex-col text-left">
           <div className="flex items-center gap-1.5">
-            <span className="text-xs font-semibold text-slate-200 max-w-[140px] truncate leading-tight">
+            <span className="text-xs font-semibold text-[#F9FAFB] max-w-[140px] truncate leading-tight">
               {user.email}
             </span>
           </div>
           <div className="flex items-center gap-1 mt-0.5">
-            <span className="px-1.5 py-0.2 text-[9px] font-bold uppercase tracking-wider bg-cyan-950/80 text-cyan-400 border border-cyan-800/60 rounded">
+            <span className="px-1.5 py-0.2 text-[9px] font-bold uppercase tracking-wider bg-[#22D3EE]/15 text-[#22D3EE] border border-[#22D3EE]/30 rounded">
               {primaryGroup}
             </span>
-            <span className="text-[10px] text-emerald-400 font-medium flex items-center gap-0.5">
+            <span className="text-[10px] text-[#34D399] font-medium flex items-center gap-0.5">
               • Auth
             </span>
           </div>
         </div>
 
-        <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${isOpen ? 'rotate-180 text-cyan-400' : ''}`} />
+        <ChevronDown className={`w-3.5 h-3.5 text-[#9CA3AF] transition-transform duration-200 ${isOpen ? 'rotate-180 text-[#22D3EE]' : ''}`} />
       </button>
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-80 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-2xl backdrop-blur-xl z-50 p-4 animate-in fade-in slide-in-from-top-2 duration-150">
+        <div className="absolute right-0 mt-2 w-80 bg-[#2D2D2D] border border-[#4B4B4B] rounded-2xl shadow-2xl backdrop-blur-xl z-50 p-4 animate-in fade-in slide-in-from-top-2 duration-150">
           {/* Header Identity Section */}
-          <div className="flex items-start gap-3 pb-3 border-b border-slate-800">
+          <div className="flex items-start gap-3 pb-3 border-b border-[#4B4B4B]">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-600 to-teal-600 p-0.5 shadow-lg flex items-center justify-center flex-shrink-0">
               <span className="text-sm font-bold text-white">
                 {initials}
               </span>
             </div>
             <div className="overflow-hidden flex-1">
-              <p className="text-xs font-bold text-white truncate">
+              <p className="text-xs font-bold text-[#F9FAFB] truncate">
                 {user.email}
               </p>
               <div className="flex items-center gap-1.5 mt-1">
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-semibold bg-emerald-950/90 text-emerald-400 border border-emerald-800/60 rounded-full">
-                  <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-semibold bg-[#34D399]/15 text-[#34D399] border border-[#34D399]/30 rounded-full">
+                  <CheckCircle2 className="w-3 h-3 text-[#34D399]" />
                   Authenticated
                 </span>
-                <span className="text-[10px] text-slate-400">
+                <span className="text-[10px] text-[#9CA3AF]">
                   Cognito SSO
                 </span>
               </div>
@@ -109,13 +109,13 @@ export const UserAccountMenu: React.FC = () => {
           </div>
 
           {/* User Roles & Groups */}
-          <div className="py-3 border-b border-slate-800 space-y-2">
-            <div className="flex items-center justify-between text-xs text-slate-400">
+          <div className="py-3 border-b border-[#4B4B4B] space-y-2">
+            <div className="flex items-center justify-between text-xs text-[#9CA3AF]">
               <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
+                <ShieldCheck className="w-3.5 h-3.5 text-[#22D3EE]" />
                 Cognito Group / Role
               </span>
-              <span className="text-[10px] font-mono text-slate-500">
+              <span className="text-[10px] font-mono text-[#9CA3AF]">
                 OIDC Claims
               </span>
             </div>
@@ -125,15 +125,15 @@ export const UserAccountMenu: React.FC = () => {
                 user.groups.map((group) => (
                   <span
                     key={group}
-                    className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold bg-cyan-950/80 text-cyan-300 border border-cyan-800/70 rounded-lg"
+                    className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold bg-[#22D3EE]/15 text-[#22D3EE] border border-[#22D3EE]/30 rounded-lg"
                   >
-                    <Layers className="w-3 h-3 text-cyan-400" />
+                    <Layers className="w-3 h-3 text-[#22D3EE]" />
                     {group}
                   </span>
                 ))
               ) : (
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium bg-slate-800/80 text-slate-300 border border-slate-700 rounded-lg">
-                  <UserIcon className="w-3 h-3 text-slate-400" />
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium bg-[#383838] text-[#D1D5DB] border border-[#4B4B4B] rounded-lg">
+                  <UserIcon className="w-3 h-3 text-[#9CA3AF]" />
                   Role Not Assigned
                 </span>
               )}
@@ -141,14 +141,14 @@ export const UserAccountMenu: React.FC = () => {
           </div>
 
           {/* User Pool & Infrastructure Info */}
-          <div className="py-2.5 border-b border-slate-800/70 text-[10px] text-slate-500 space-y-1 font-mono">
+          <div className="py-2.5 border-b border-[#4B4B4B] text-[10px] text-[#9CA3AF] space-y-1 font-mono">
             <div className="flex justify-between">
               <span>Identity Provider:</span>
-              <span className="text-slate-400">AWS Cognito (us-east-1)</span>
+              <span className="text-[#D1D5DB]">AWS Cognito (us-east-1)</span>
             </div>
             <div className="flex justify-between">
               <span>Security Flow:</span>
-              <span className="text-slate-400">Authorization Code + PKCE</span>
+              <span className="text-[#D1D5DB]">Authorization Code + PKCE</span>
             </div>
           </div>
 
@@ -159,10 +159,10 @@ export const UserAccountMenu: React.FC = () => {
                 setIsOpen(false);
                 logout();
               }}
-              className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-rose-950/50 hover:bg-rose-900/60 border border-rose-800/50 hover:border-rose-700 text-rose-300 hover:text-rose-200 text-xs font-semibold transition cursor-pointer shadow-sm shadow-rose-950/40"
+              className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-[#FB7185]/15 hover:bg-[#FB7185]/25 border border-[#FB7185]/40 text-[#FB7185] text-xs font-semibold transition cursor-pointer shadow-sm"
               title="Terminate Cognito Session & Sign Out"
             >
-              <LogOut className="w-3.5 h-3.5 text-rose-400" />
+              <LogOut className="w-3.5 h-3.5 text-[#FB7185]" />
               <span>Sign Out of MedOps</span>
             </button>
           </div>

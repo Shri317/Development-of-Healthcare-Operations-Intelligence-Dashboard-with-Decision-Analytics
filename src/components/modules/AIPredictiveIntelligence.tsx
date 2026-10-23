@@ -216,13 +216,14 @@ export const AIPredictiveIntelligence: React.FC<AIPredictiveIntelligenceProps> =
             <div className="h-64 w-full pt-2">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={data.forecastChart}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                  <XAxis dataKey="day" stroke="#64748b" fontSize={11} />
-                  <YAxis stroke="#64748b" fontSize={11} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#4B4B4B" />
+                  <XAxis dataKey="day" stroke="#9CA3AF" fontSize={11} />
+                  <YAxis stroke="#9CA3AF" fontSize={11} />
                   <Tooltip 
                     contentStyle={{ 
-                      backgroundColor: '#0f172a', 
-                      borderColor: '#334155', 
+                      backgroundColor: '#2D2D2D', 
+                      borderColor: '#4B4B4B',
+                      color: '#F9FAFB', 
                       borderRadius: '8px', 
                       fontSize: '12px' 
                     }} 

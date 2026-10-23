@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none" aria-labelledby="medops-logo-title">
+  <title id="medops-logo-title">MedOps</title>
+  <!-- Minimalist Medical Cross in Navy Blue (#0F172A) with Medical Teal (#14B8A6) Border -->
+  <path d="M 18,7 A 3,3 0 0,1 21,4 H 27 A 3,3 0 0,1 30,7 V 18 H 41 A 3,3 0 0,1 44,21 V 27 A 3,3 0 0,1 41,30 H 30 V 41 A 3,3 0 0,1 27,44 H 21 A 3,3 0 0,1 18,41 V 30 H 7 A 3,3 0 0,1 4,27 V 21 A 3,3 0 0,1 7,18 H 18 Z" fill="#0F172A" stroke="#14B8A6" stroke-width="2" stroke-linejoin="round"/>
+  <!-- ECG Pulse Line in Medical Teal (#14B8A6) -->
+  <path d="M 4,24 H 14 L 16.5,21 L 19,25.5 L 22.5,10 L 25.5,36 L 28.5,20.5 L 31,24 H 44" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

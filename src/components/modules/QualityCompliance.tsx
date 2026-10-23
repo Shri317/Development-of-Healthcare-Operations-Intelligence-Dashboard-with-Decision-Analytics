@@ -183,45 +183,47 @@ export const QualityCompliance: React.FC<QualityComplianceProps> = ({
               </p>
             </div>
 
-            {/* HIPAA Compliance Score: Not available from dataset */}
+            {/* Data Privacy Compliance Score */}
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1">
               <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider flex items-center justify-between">
-                <span>HIPAA Audit Score</span>
-                <span className="px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400 text-[9px] font-mono">Real Schema</span>
+                <span>Data Privacy Compliance</span>
+                <span className="px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-400 text-[9px] font-mono">Audit Record</span>
               </span>
-              <div className="text-sm font-bold text-amber-400 font-mono pt-1 pb-0.5">
-                {data.kpis.hipaaComplianceScoreFormatted}
+              <div className="text-2xl font-bold text-sky-400 font-mono">
+                {data.kpis.dataPrivacyComplianceScoreFormatted ?? data.kpis.hipaaComplianceScoreFormatted ?? 'N/A'}
               </div>
               <p className="text-[10px] text-slate-400">
-                General & Data Privacy audits available
+                Audited data privacy & governance score
               </p>
             </div>
 
-            {/* Hospital Acquired Infection Rate: Not available from dataset */}
+            {/* Infection Incident Rate */}
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1">
               <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider flex items-center justify-between">
-                <span>Infection (HAI) Rate</span>
-                <span className="px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400 text-[9px] font-mono">Real Schema</span>
+                <span>Infection Incident Rate</span>
+                <span className="px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-400 text-[9px] font-mono">Clinical</span>
               </span>
-              <div className="text-sm font-bold text-amber-400 font-mono pt-1 pb-0.5">
+              <div className="text-2xl font-bold text-rose-400 font-mono">
                 {data.kpis.infectionRateFormatted}
               </div>
               <p className="text-[10px] text-slate-400">
-                {data.kpis.totalInfectionIncidents} Infection incidents tracked
+                {data.kpis.totalInfectionIncidents} incidents across period admissions
               </p>
             </div>
 
-            {/* Medication Errors Today: Not available from dataset */}
+            {/* Medication Errors */}
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-1">
               <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider flex items-center justify-between">
-                <span>Medication Errors (Today)</span>
-                <span className="px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400 text-[9px] font-mono">Real Schema</span>
+                <span>Medication Errors</span>
+                <span className="px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400 text-[9px] font-mono">
+                  Today: {data.kpis.medicationErrorsToday ?? 0}
+                </span>
               </span>
-              <div className="text-sm font-bold text-amber-400 font-mono pt-1 pb-0.5">
-                {data.kpis.medicationErrorsTodayFormatted}
+              <div className="text-2xl font-bold text-amber-400 font-mono">
+                {data.kpis.totalMedicationErrors}
               </div>
               <p className="text-[10px] text-slate-400">
-                {data.kpis.totalMedicationErrors} Total medication errors in dataset
+                Today: {data.kpis.medicationErrorsToday ?? 0} · Reporting period: {data.kpis.totalMedicationErrors}
               </p>
             </div>
           </div>

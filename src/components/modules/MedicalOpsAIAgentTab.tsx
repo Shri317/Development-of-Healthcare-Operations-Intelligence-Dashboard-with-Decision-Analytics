@@ -32,11 +32,11 @@ interface MedicalOpsAIAgentTabProps {
 
 const FACILITY_NAMES: Record<string, string> = {
   all: 'All Network Facilities',
-  FAC001: 'Metro Health Center (FAC001)',
-  FAC002: 'St. Jude Community Hospital (FAC002)',
-  FAC003: 'Highland Regional Medical Center (FAC003)',
-  FAC004: 'Valley Childrens & Specialty Clinic (FAC004)',
-  FAC005: 'Lakeside Memorial Hospital (FAC005)'
+  FAC001: 'Hyderabad Central Hospital (FAC001)',
+  FAC002: 'Hyderabad West Clinic (FAC002)',
+  FAC003: 'Secunderabad Medical Center (FAC003)',
+  FAC004: 'Bengaluru Care Hospital (FAC004)',
+  FAC005: 'Chennai Health Center (FAC005)'
 };
 
 const SUGGESTED_QUERIES = [

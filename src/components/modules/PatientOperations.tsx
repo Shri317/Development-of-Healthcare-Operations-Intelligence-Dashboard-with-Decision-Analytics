@@ -77,12 +77,12 @@ export const PatientOperations: React.FC<PatientOperationsProps> = ({
     );
   }
 
-  if (!data || data.totalAdmissions === 0) {
+  if (!data) {
     return (
       <div className="flex flex-col items-center justify-center p-12 bg-slate-900 border border-slate-800 rounded-2xl text-slate-400 text-center min-h-[300px]">
         <Database className="w-10 h-10 text-slate-500 mb-2" />
-        <h3 className="text-base font-bold text-slate-200 mb-1">No Patient Records Found</h3>
-        <p className="text-xs text-slate-400">No patient admission records match the selected scope ({selectedFacility}).</p>
+        <h3 className="text-base font-bold text-slate-200 mb-1">No Data Available</h3>
+        <p className="text-xs text-slate-400">Unable to load patient operations data for the selected scope ({selectedFacility}).</p>
       </div>
     );
   }
@@ -165,7 +165,7 @@ export const PatientOperations: React.FC<PatientOperationsProps> = ({
                   </Pie>
                   <Tooltip 
                     formatter={(val: any) => [`${val} Patients`, 'Count']}
-                    contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', color: '#fff' }}
+                    contentStyle={{ backgroundColor: '#2D2D2D', borderColor: '#4B4B4B', color: '#F9FAFB' }}
                   />
                   <Legend />
                 </PieChart>
@@ -185,12 +185,12 @@ export const PatientOperations: React.FC<PatientOperationsProps> = ({
             {disStatusData.length > 0 ? (
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={disStatusData} margin={{ top: 10, right: 10, left: -10, bottom: 20 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                  <XAxis dataKey="status" stroke="#64748b" tick={{ fontSize: 10 }} interval={0} angle={-15} textAnchor="end" />
-                  <YAxis stroke="#64748b" tick={{ fontSize: 10 }} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#4B4B4B" />
+                  <XAxis dataKey="status" stroke="#9CA3AF" tick={{ fontSize: 10 }} interval={0} angle={-15} textAnchor="end" />
+                  <YAxis stroke="#9CA3AF" tick={{ fontSize: 10 }} />
                   <Tooltip 
                     formatter={(val: any) => [`${val} Patients`, 'Discharged']}
-                    contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', color: '#fff' }}
+                    contentStyle={{ backgroundColor: '#2D2D2D', borderColor: '#4B4B4B', color: '#F9FAFB' }}
                   />
                   <Bar dataKey="count" fill="#38bdf8" radius={[4, 4, 0, 0]} />
                 </BarChart>
